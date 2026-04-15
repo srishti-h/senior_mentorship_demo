@@ -1,7 +1,5 @@
 import { useState, useEffect } from 'react'
 
-// All requests go to /api/* — Vite proxies this to http://127.0.0.1:5000/*
-// This eliminates CORS entirely. The browser only ever talks to localhost:5173.
 const API = '/api'
 
 export function useModelStatus() {
@@ -14,12 +12,12 @@ export function useModelStatus() {
         if (d.model_loaded) {
           setStatus({ online: true, cvR2: d.cv_r2, message: 'Model ready' })
         } else {
-          setStatus({ online: false, cvR2: null, message: 'Model not loaded — run notebook first' })
+          setStatus({ online: false, cvR2: null, message: 'Model not loaded' })
         }
       })
       .catch(err => {
         console.error('Health check failed:', err)
-        setStatus({ online: false, cvR2: null, message: 'Backend offline — start app.py' })
+        setStatus({ online: false, cvR2: null, message: 'Backend offline' })
       })
   }, [])
 

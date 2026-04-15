@@ -58,23 +58,26 @@ export default function Predict() {
   return (
     <div style={{ maxWidth: 1200, margin: '0 auto', padding: '3rem 6vw 6rem' }}>
 
-      {/* Header */}
       <div style={{ marginBottom: '3rem', paddingBottom: '2rem', borderBottom: '1px solid var(--border)' }}>
-        <div style={{ fontFamily: 'var(--mono)', fontSize: '.62rem', letterSpacing: '.25em', textTransform: 'uppercase', color: 'var(--accent)', marginBottom: '.7rem' }}>
-          NIL Valuation Engine
-        </div>
-        <h1 style={{ fontFamily: 'var(--cond)', fontSize: 'clamp(2.2rem, 5vw, 3.5rem)', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '.03em', color: '#fff', marginBottom: '.5rem' }}>
-          Player Predictor
-        </h1>
-        <p style={{ fontSize: '.88rem', color: 'var(--text-dim)' }}>
-          Fill in the athlete's metrics and click Generate Valuation.
-        </p>
+<h1
+  style={{
+    fontFamily: 'var(--cond)',
+    fontSize: 'clamp(2.2rem, 5vw, 3.5rem)',
+    fontWeight: 900,
+    textTransform: 'uppercase',
+    letterSpacing: '.03em',
+    color: '#000',
+    marginBottom: '.5rem',
+    textAlign: 'center',
+    borderBottom: 'none'
+  }}
+>
+  Player Predictor
+</h1>
       </div>
 
-      {/* Two-column layout */}
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2.5rem', alignItems: 'start' }}>
 
-        {/* Form */}
         <form onSubmit={handleSubmit} style={panelStyle}>
           <div style={panelTitleStyle}>Athlete Metrics</div>
 
@@ -188,7 +191,6 @@ export default function Predict() {
           </button>
         </form>
 
-        {/* Results */}
         <ResultPanel result={result} loading={loading} error={error} modelStatus={modelStatus} />
 
       </div>
