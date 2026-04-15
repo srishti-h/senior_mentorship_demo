@@ -1,0 +1,294 @@
+{
+  "all_features": [
+    "log_followers",
+    "log_followers_sq",
+    "followers_per_game",
+    "brand_signal",
+    "team_FPI",
+    "program_tier",
+    "elite_program",
+    "team_nil_mean",
+    "height_in_zscore",
+    "weight_lb_zscore",
+    "phys_score",
+    "perf_score",
+    "pass_yards",
+    "rec_yards",
+    "rush_yards",
+    "scoring_td",
+    "def_tackles",
+    "def_sacks",
+    "class_num",
+    "games_played",
+    "games_x_QB",
+    "games_x_SKILL",
+    "games_x_DL",
+    "pos_DL",
+    "pos_LB",
+    "pos_OL",
+    "pos_QB",
+    "pos_SKILL",
+    "log_followers_x_pos_DL",
+    "log_followers_x_pos_LB",
+    "log_followers_x_pos_OL",
+    "log_followers_x_pos_QB",
+    "log_followers_x_pos_SKILL",
+    "pass_yards_x_pos_DL",
+    "pass_yards_x_pos_LB",
+    "pass_yards_x_pos_OL",
+    "pass_yards_x_pos_QB",
+    "pass_yards_x_pos_SKILL",
+    "rec_yards_x_pos_DL",
+    "rec_yards_x_pos_LB",
+    "rec_yards_x_pos_OL",
+    "rec_yards_x_pos_QB",
+    "rec_yards_x_pos_SKILL",
+    "rush_yards_x_pos_DL",
+    "rush_yards_x_pos_LB",
+    "rush_yards_x_pos_OL",
+    "rush_yards_x_pos_QB",
+    "rush_yards_x_pos_SKILL",
+    "scoring_td_x_pos_DL",
+    "scoring_td_x_pos_LB",
+    "scoring_td_x_pos_OL",
+    "scoring_td_x_pos_QB",
+    "scoring_td_x_pos_SKILL",
+    "def_tackles_x_pos_DL",
+    "def_tackles_x_pos_LB",
+    "def_tackles_x_pos_OL",
+    "def_tackles_x_pos_QB",
+    "def_tackles_x_pos_SKILL",
+    "def_sacks_x_pos_DL",
+    "def_sacks_x_pos_LB",
+    "def_sacks_x_pos_OL",
+    "def_sacks_x_pos_QB",
+    "def_sacks_x_pos_SKILL"
+  ],
+  "pos_cols": [
+    "pos_DL",
+    "pos_LB",
+    "pos_OL",
+    "pos_QB",
+    "pos_SKILL"
+  ],
+  "perf_cols": [
+    "pass_yards",
+    "rec_yards",
+    "rush_yards",
+    "scoring_td",
+    "def_tackles",
+    "def_sacks"
+  ],
+  "follower_pos_features": [
+    "log_followers_x_pos_DL",
+    "log_followers_x_pos_LB",
+    "log_followers_x_pos_OL",
+    "log_followers_x_pos_QB",
+    "log_followers_x_pos_SKILL"
+  ],
+  "pos_map": {
+    "QB": "QB",
+    "WR": "SKILL",
+    "TE": "SKILL",
+    "RB": "SKILL",
+    "BCK": "SKILL",
+    "OL": "OL",
+    "OT": "OL",
+    "IOL": "OL",
+    "LS": "OL",
+    "DB": "DEF_BACK",
+    "CB": "DEF_BACK",
+    "S": "DEF_BACK",
+    "LB": "LB",
+    "ILB": "LB",
+    "OLB": "LB",
+    "DL": "DL",
+    "DT": "DL",
+    "DE": "DL",
+    "EDGE": "DL",
+    "EDG": "DL"
+  },
+  "class_map": {
+    "FR": 1,
+    "SO": 2,
+    "JR": 3,
+    "SR": 4,
+    "GR": 5
+  },
+  "class_season_weight": {
+    "FR": 0.8,
+    "SO": 0.55,
+    "JR": 0.4,
+    "SR": 0.3,
+    "GR": 0.25
+  },
+  "PERF_WEIGHTS": {
+    "QB": {
+      "season_pass_yards": 0.3,
+      "career_pass_yards": 0.2,
+      "season_scoring_td": 0.25,
+      "career_scoring_td": 0.1,
+      "season_rush_yards": 0.1,
+      "career_rush_yards": 0.05
+    },
+    "SKILL": {
+      "season_rec_yards": 0.3,
+      "career_rec_yards": 0.2,
+      "season_rush_yards": 0.15,
+      "career_rush_yards": 0.1,
+      "season_scoring_td": 0.15,
+      "career_scoring_td": 0.1
+    },
+    "DEF_BACK": {
+      "season_def_tackles": 0.35,
+      "career_def_tackles": 0.3,
+      "season_def_sacks": 0.2,
+      "career_def_sacks": 0.15
+    },
+    "LB": {
+      "season_def_tackles": 0.4,
+      "career_def_tackles": 0.3,
+      "season_def_sacks": 0.18,
+      "career_def_sacks": 0.12
+    },
+    "DL": {
+      "season_def_sacks": 0.4,
+      "career_def_sacks": 0.3,
+      "season_def_tackles": 0.18,
+      "career_def_tackles": 0.12
+    },
+    "OL": {}
+  },
+  "PHYSICAL_WEIGHTS": {
+    "QB": {
+      "height": 0.3,
+      "weight": 0.3
+    },
+    "SKILL": {
+      "height": 0.4,
+      "weight": 0.2
+    },
+    "DEF_BACK": {
+      "height": 0.2,
+      "weight": 0.5
+    },
+    "LB": {
+      "height": 0.3,
+      "weight": 0.4
+    },
+    "DL": {
+      "height": 0.3,
+      "weight": 0.5
+    },
+    "OL": {
+      "height": 0.4,
+      "weight": 0.5
+    }
+  },
+  "stat_pairs": [
+    [
+      "pass_yards",
+      "season_pass_yards",
+      "career_pass_yards"
+    ],
+    [
+      "rec_yards",
+      "season_rec_yards",
+      "career_rec_yards"
+    ],
+    [
+      "rush_yards",
+      "season_rush_yards",
+      "career_rush_yards"
+    ],
+    [
+      "scoring_td",
+      "season_scoring_td",
+      "career_scoring_td"
+    ],
+    [
+      "def_tackles",
+      "season_def_tackles",
+      "career_def_tackles"
+    ],
+    [
+      "def_sacks",
+      "season_def_sacks",
+      "career_def_sacks"
+    ]
+  ],
+  "best_cv_r2": 0.5303917948182042,
+  "perf_stats_mean": {
+    "DEF_BACK": 20.477551020408164,
+    "DL": 9.598333333333333,
+    "LB": 54.645384615384614,
+    "OL": 0.0,
+    "QB": 924.9354166666667,
+    "SKILL": 208.61636363636362
+  },
+  "perf_stats_std": {
+    "DEF_BACK": 23.3397278690766,
+    "DL": 10.133592368243074,
+    "LB": 32.884095515099,
+    "OL": 0.0,
+    "QB": 908.8855633566195,
+    "SKILL": 204.46167938854418
+  },
+  "team_nil_mean": {
+    "Alabama Crimson Tide": 12.836408434247408,
+    "Arkansas Razorbacks": 13.044354499873677,
+    "Auburn Tigers": 12.511606113952904,
+    "Florida Gators": 12.382239148409749,
+    "Georgia Bulldogs": 12.71993659775693,
+    "Kentucky Wildcats": 12.795436282420217,
+    "LSU Tigers": 12.749536412101039,
+    "Mississippi State Bulldogs": 12.55405195163096,
+    "Missouri Tigers": 12.245134824881095,
+    "Oklahoma Sooners": 12.840546140795132,
+    "Ole Miss Rebels": 12.713755825269601,
+    "South Carolina Gamecocks": 13.024467322244035,
+    "Tennessee Volunteers": 12.853117662966019,
+    "Texas A&M Aggies": 12.548295007346896,
+    "Texas Longhorns": 13.34145395527594,
+    "Vanderbilt Commodores": 12.238919697127855
+  },
+  "global_nil_mean": 12.720260380083758,
+  "phys_stats": {
+    "height_in": {
+      "mean": {
+        "DEF_BACK": 72.67857142857143,
+        "DL": 76.03472222222223,
+        "LB": 73.46153846153847,
+        "OL": 77.16935483870968,
+        "QB": 74.67708333333333,
+        "SKILL": 72.52727272727273
+      },
+      "std": {
+        "DEF_BACK": 1.6169673259943536,
+        "DL": 1.516754968648739,
+        "LB": 1.174079017128548,
+        "OL": 1.283528821865383,
+        "QB": 1.675396070412494,
+        "SKILL": 3.3130189066913367
+      }
+    },
+    "weight_lb": {
+      "mean": {
+        "DEF_BACK": 186.9387755102041,
+        "DL": 269.80555555555554,
+        "LB": 223.1153846153846,
+        "OL": 304.5806451612903,
+        "QB": 207.75,
+        "SKILL": 199.72727272727272
+      },
+      "std": {
+        "DEF_BACK": 14.679078313574546,
+        "DL": 29.662693687954192,
+        "LB": 16.836453125470147,
+        "OL": 27.624595554865465,
+        "QB": 16.796091677892623,
+        "SKILL": 26.249130176385563
+      }
+    }
+  }
+}

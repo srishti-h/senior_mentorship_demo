@@ -1,0 +1,321 @@
+team,name,position,class,height_in,weight_lb,games_played,follower_count,instagram_user,engagement_rate,team_FPI,team_RK,program_tier,season_pass_yards,career_pass_yards,season_rec_yards,career_rec_yards,season_rush_yards,career_rush_yards,season_scoring_td,career_scoring_td,season_def_tackles,career_def_tackles,season_def_sacks,career_def_sacks,performance_data_status,nil_value
+Alabama Crimson Tide,Ryan Williams,WR,SO,73,178,27,"755,457",,0.2459,19,10,2,0,0,689,1554,21,69,4,14,0,0,0,0,1,1600000
+Alabama Crimson Tide,Keelon Russell,QB,FR,75,194,2,105414,,0.1075,19,10,2,143,143,0,0,17,17,0,0,0,0,0,0,1,1300000
+Alabama Crimson Tide,Yhonzae Pierre,LB,SO,75,248,26,15848,,0.6129,19,10,2,0,0,0,0,0,0,0,0,52,58,8,8,1,976000
+Alabama Crimson Tide,Michael Carroll,OL,FR,78,321,14,"6,803",,1.6513,19,10,2,0,0,0,0,0,0,0,0,0,0,0,0,0,808000
+Alabama Crimson Tide,Austin Mack,QB,SO,78,235,5,"30,298",,0.321,19,10,2,228,267,0,0,22,22,1,1,0,0,0,0,1,678000
+Alabama Crimson Tide,Zabien Brown,DB,SO,72,192,28,"63,821",,0.3444,19,10,2,0,0,0,0,0,0,2,3,39,57,0,0,1,624000
+Alabama Crimson Tide,Bray Hubbard,DB,JR,74,213,37,"38,759",,0.3529,19,10,2,0,0,0,0,0,0,0,0,74,132,2,2,1,598000
+Alabama Crimson Tide,Keon Sabb,DB,JR,73,204,40,"50,244",,0.1859,19,10,2,0,0,0,0,0,0,1,1,52,119,1,1.5,1,529000
+Alabama Crimson Tide,Jackson Lloyd,OL,FR,79,318,5,"4,468",,0.7522,19,10,2,0,0,0,0,0,0,0,0,0,0,0,0,0,414000
+Alabama Crimson Tide,Dijon Lee Jr.,DB,FR,76,202,15,"31,591",,0.3123,19,10,2,0,0,0,0,0,0,0,0,32,32,0,0,1,393000
+Alabama Crimson Tide,Kam Dewberry,OL,SR,76,332,46,"10,209",,0.4331,19,10,2,0,0,0,0,0,0,0,0,0,0,0,0,0,330000
+Alabama Crimson Tide,Qua Russaw,LB,SO,74,243,22,"14,751",,1.4124,19,10,2,0,0,0,0,0,0,0,0,13,49,1,2,1,291000
+Alabama Crimson Tide,Deontae Lawson,LB,SR,74,228,52,"51,269",,0.1958,19,10,2,0,0,0,0,0,0,0,0,80,274,1.5,6.5,1,264000
+Alabama Crimson Tide,Kelby Collins,DL,JR,76,275,32,"20,701",,0.1688,19,10,2,0,0,0,0,0,0,0,0,10,39,2,3.5,1,201000
+Alabama Crimson Tide,Chuck McDonald III,DB,FR,73,194,6,"13,283",,0.1282,19,10,2,0,0,0,0,0,0,0,0,1,1,0,0,1,177000
+Alabama Crimson Tide,Justin Hill,LB,FR,75,242,15,"16,160",,0.556,19,10,2,0,0,0,0,0,0,0,0,10,10,0,0,1,173000
+Alabama Crimson Tide,Ivan Taylor,DB,FR,72,194,15,"7,393",,0.6304,19,10,2,0,0,0,0,0,0,0,0,14,14,0,0,1,171000
+Alabama Crimson Tide,Nikhai Hill-Green,LB,SR,74,235,55,"14,927",,0.1855,19,10,2,0,0,0,0,0,0,0,0,54,260,0,4,1,151000
+Alabama Crimson Tide,Marshall Pritchett,TE,FR,77,248,15,"27,439",,0.2561,19,10,2,0,0,0,0,0,0,0,0,1,1,0,0,1,149000
+Alabama Crimson Tide,Lotzeir Brooks,WR,FR,69,191,14,"30,565",,0.8871,19,10,2,0,0,441,441,7,7,2,2,3,3,0,0,1,146000
+Arkansas Razorbacks,Corey Robinson II,OL,SR,77,216,48,"10,224",,0.1138,6.6,42,12,0,0,0,0,0,0,0,0,0,0,0,0,0,467000
+Arkansas Razorbacks,"Quincy Rhodes, Jr.",DL,JR,78,275,33,"8,358",,0.2011,6.6,42,12,0,0,0,0,0,0,0,0,43,59,8,9,1,458000
+Arkansas Razorbacks,Tavion Wallace,LB,FR,73,239,9,"6,260",,0.1243,6.6,42,12,0,0,0,0,0,0,0,0,2,2,0,0,1,NA
+Arkansas Razorbacks,Courtney Crutchfield,WR,FR,74,195,13,"8,584",,0.2306,6.6,42,12,0,0,26,26,0,0,0,0,0,0,0,0,1,NA
+Arkansas Razorbacks,Jalen Brown,WR,SO,73,171,17,"20,165",,0.0801,6.6,42,12,0,0,167,242,0,0,2,2,1,1,0,0,1,NA
+Arkansas Razorbacks,Grayson Wilson,QB,FR,75,215,0,"6,140",,0.3377,6.6,42,12,0,0,0,0,0,0,0,0,0,0,0,0,0,NA
+Arkansas Razorbacks,Keiundre Johnson,DL,FR,75,281,1,"4,679",,0.0975,6.6,42,12,0,0,0,0,0,0,0,0,0,0,0,0,0,NA
+Arkansas Razorbacks,KJ Jackson,QB,FR,76,225,6,"15,685",,0.1409,6.6,42,12,441,500,0,0,52,55,2,2,0,0,0,0,1,NA
+Arkansas Razorbacks,AJ Green,RB,SR,70,216,32,"18,752",,0.0272,6.6,42,12,0,0,25,184,11,962,3,8,2,4,0,0,1,NA
+Arkansas Razorbacks,Kevin Oatis,DL,FR,75,289,4,"4,837",,0.2274,6.6,42,12,0,0,0,0,0,0,0,0,2,2,0,0,1,NA
+Arkansas Razorbacks,Caleb Wooden,DB,SR,73,195,40,"17,953",,0.0706,6.6,42,12,0,0,0,0,0,0,1,1,59,100,0,1,1,NA
+Arkansas Razorbacks,Kavion Henderson,DL,FR,74,257,3,"19,803",,0.0548,6.6,42,12,0,0,0,0,0,0,0,0,2,2,0,0,1,NA
+Arkansas Razorbacks,Nigel Pringle,DB,FR,74,177,8,"6,178",,0.1899,6.6,42,12,0,0,0,0,0,0,0,0,2,2,0,0,1,NA
+Arkansas Razorbacks,Jordan Young,DB,SR,72,198,48,"12,093",,0.0555,6.6,42,12,0,0,0,0,0,0,0,0,15,15,0,0,1,NA
+Arkansas Razorbacks,Cam Settles,RB,FR,71,206,9,"1,165",,0.3412,6.6,42,12,0,0,16,16,16,16,0,0,0,0,0,0,1,NA
+Arkansas Razorbacks,Ken Talley,DL,JR,75,255,18,"11,134",,0.1902,6.6,42,12,0,0,0,0,0,0,0,0,3,14,0,1.5,1,NA
+Arkansas Razorbacks,Braylen Russell,RB,SO,73,238,19,"15,181",,0.0864,6.6,42,12,0,0,27,45,286,640,5,8,1,1,0,0,1,NA
+Arkansas Razorbacks,Trever Jackson,QB,FR,75,202,2,"12,705",,0.4711,6.6,42,12,0,0,0,0,2,2,0,0,0,0,0,0,1,NA
+Arkansas Razorbacks,Reginald Vaughn,DL,FR,74,303,2,"2,181",,0.2936,6.6,42,12,0,0,0,0,0,0,0,0,2,2,0,0,1,NA
+Arkansas Razorbacks,Keshawn Davila,DB,JR,73,165,12,"10,894",,0.2071,6.6,42,12,0,0,0,0,0,0,0,0,2,2,0,0,1,NA
+Auburn Tigers,Byrum Brown,QB,SR,75,193,35,"39,309",,0.4605,11.1,24,9,3158,7690,12,48,1008,2265,14,32,2,3,0,0,1,1900000
+Auburn Tigers,Deuce Knight,QB,FR,76,217,2,"47,245",,0.182,11.1,24,9,259,259,0,0,178,178,4,4,0,0,0,0,1,776000
+Auburn Tigers,Jackson Arnold,QB,JR,73,219,27,"46,033",,0.1501,11.1,24,9,1309,3293,16,16,311,871,8,13,0,0,0,0,1,752000
+Auburn Tigers,Xavier Atkins,LB,SO,72,210,19,"15,716",,0.2777,11.1,24,9,0,0,0,0,0,0,0,0,84,87,9,9,1,679000
+Auburn Tigers,Jeremiah Cobb,RB,JR,71,200,37,"12,533",,0.3793,11.1,24,9,0,0,83,175,969,1283,5,9,1,2,0,0,1,656000
+Auburn Tigers,Jay Crawford,CB,SO,71,181,22,"9,396",,0.7943,11.1,24,9,0,0,0,0,0,0,0,0,15,30,0,0,1,344000
+Auburn Tigers,Malik Autry,DL,FR,77,330,9,"13,567",,0.1651,11.1,24,9,0,0,0,0,0,0,0,0,8,8,0,0,1,195000
+Auburn Tigers,Alvin Henderson,RB,FR,69,202,1,"33,406",,0.0992,11.1,24,9,0,0,0,0,0,0,0,0,0,0,0,0,0,181000
+Auburn Tigers,Jared Smith,DE,FR,78,260,11,"10,789",,0.1762,11.1,24,9,0,0,0,0,0,0,0,0,5,5,2,2,1,172000
+Auburn Tigers,Elijah Melendez,LB,FR,72,228,12,"19,410",,0.1088,11.1,24,9,0,0,0,0,0,0,1,1,29,29,1,1,1,163000
+Auburn Tigers,AnQuon Fegans,S,FR,72,191,12,"14,856",,0.1493,11.1,24,9,0,0,0,0,0,0,0,0,24,24,0,0,1,154000
+Auburn Tigers,Blake Woodby,CB,FR,71,180,11,"14,184",,0.1577,11.1,24,9,0,0,0,0,0,0,0,0,2,2,0,0,1,151000
+Auburn Tigers,Antonio Coleman,DL,FR,73,256,50,"16,347",,0.0329,11.1,24,9,0,0,0,0,0,0,0,0,0,0,0,0,0,148000
+Auburn Tigers,Eric Winters,S,FR,72,219,12,"6,965",,0.3519,11.1,24,9,0,0,0,0,0,0,0,0,33,33,1,1,1,146000
+Auburn Tigers,Jamonta Waller,BCK,FR,72,256,1,"12,942",,0.1144,11.1,24,9,0,0,0,0,0,0,0,0,2,2,0,0,1,103000
+Auburn Tigers,Jourdin Crawford,DL,FR,72,337,9,"6,158",,0.8691,11.1,24,9,0,0,0,0,0,0,0,0,2,2,0,0,1,100000
+Auburn Tigers,Bryce Cain,WR,FR,70,165,15,"12,527",,0.4034,11.1,24,9,0,0,25,58,0,0,0,0,0,0,0,0,1,NA
+Auburn Tigers,Demarcus Riddick,LB,SO,74,228,22,"11,097",,0.2663,11.1,24,9,0,0,0,0,0,0,0,0,13,40,1,4,1,NA
+Auburn Tigers,Perry Thompson,WR,SO,75,220,22,"26,902",,0.2514,11.1,24,9,0,0,154,280,0,0,1,1,0,0,0,0,1,NA
+Auburn Tigers,Malcolm Simmons,WR,SO,72,186,24,17639,,0.4664,11.1,24,9,0,0,457,908,42,55,3,7,3,3,0,0,1,NA
+Florida Gators,DJ Lagway,QB,SO,75,247,24,"108,066",,0.0836,8.2,37,3,2264,4179,0,0,136,237,1,2,3,3,0,0,1,1200000
+Florida Gators,Jayden Woods,EDG,FR,75,248,12,"7,646",,1.0396,8.2,37,3,0,0,0,0,0,0,0,0,27,27,3.5,3.5,1,800000
+Florida Gators,Vernell Brown III,WR,FR,71,178,10,"58,313",,0.2458,8.2,37,3,0,0,512,512,14,14,0,0,1,1,0,0,1,322000
+Florida Gators,Myles Graham,ILB,SO,72,228,25,"22,230",,0.2447,8.2,37,3,0,0,0,0,0,0,0,0,76,106,2,3,1,309000
+Florida Gators,Kamran James,EDG,JR,77,270,37,"13,369",,0.1645,8.2,37,3,0,0,0,0,0,0,0,0,44,76,3.5,5.5,1,296000
+Florida Gators,Bryce Thornton,DB,JR,70,211,33,"8,119",,0.3514,8.2,37,3,0,0,0,0,0,0,1,1,56,131,1,1.5,1,288000
+Florida Gators,Cormani McClain,DB,SO,73,189,22,"128,445",,0.109,8.2,37,3,0,0,0,0,0,0,1,1,17,35,0,0,1,225000
+Florida Gators,Ben Hanks III,DB,FR,73,192,36,"24,139",,0.5566,8.2,37,3,0,0,0,0,0,0,0,0,8,8,0,0,1,221000
+Florida Gators,LJ McCray,EDG,SO,78,268,14,"13,275",,0.1285,8.2,37,3,0,0,0,0,0,0,0,0,13,13,0.5,0.5,1,212000
+Florida Gators,Dallas Wilson,WR,FR,75,213,4,"40,460",,0.2339,8.2,37,3,0,0,174,174,0,0,3,3,0,0,0,0,1,205000
+Florida Gators,Tramell Jones Jr.,QB,FR,72,203,2,"13,450",,0.3318,8.2,37,3,191,191,0,0,10,10,0,0,0,0,0,0,1,160000
+Florida Gators,J'Vari Flowers,DB,FR,70,187,12,"16,944",,0.2425,8.2,37,3,0,0,0,0,0,0,0,0,17,17,0,0,1,125000
+Florida Gators,Byron Louis,RB,FR,59,211,1,"9,355",byronlouis_,0.1849,8.2,37,3,0,0,0,0,-2,-2,0,0,0,0,0,0,1,120000
+Florida Gators,Joseph Mbatchou,DL,FR,76,300,9,"1,934",joembatchou,0.3061,8.2,37,3,0,0,0,0,0,0,0,0,11,11,0,0,1,109000
+Florida Gators,Jalen Wiggins,EDG,FR,76,268,3,"4,316",d1_.jalen,0,8.2,37,3,0,0,0,0,0,0,0,0,2,2,0,0,1,100000
+Florida Gators,KD Daniels,RB,FR,59,203,14,"12,712",_kahnendaniels,0.2683,8.2,37,3,0,0,17,17,120,197,1,2,1,1,0,0,1,NA
+Florida Gators,TJ Abrams,WR,FR,58,196,15,"15,505",tj_abrams4,0.1292,8.2,37,3,0,0,202,236,0,0,0,0,0,0,0,0,1,NA
+Florida Gators,Jason Zandamela,OL,FR,74,308,1,"10,525",jason.zandamela,0.0694,8.2,37,3,0,0,0,0,0,0,0,0,0,0,0,0,0,NA
+Florida Gators,Tank Hawkins,WR,SO,69,178,12,"10,783",1ktankk_,0.1695,8.2,37,3,0,0,16,116,11,11,1,1,0,0,0,0,1,NA
+Florida Gators,Fletcher Westphal,OL,FR,80,342,3,"2,971",Fletcher_westphal,0.2412,8.2,37,3,0,0,0,0,0,0,0,0,0,0,0,0,0,NA
+Florida Gators,Harrison Bailey,QB,SR,76,237,19,"23,172",5hb,0.1809,8.2,37,3,227,1190,0,0,17,-4,0,2,0,0,0,0,1,NA
+Georgia Bulldogs,Gunner Stockton,QB,JR,73,215,23,"110,986",,0.1235,21.4,7,1,2898,3482,0,0,462,512,10,10,0,0,0,0,1,1300000
+Georgia Bulldogs,Nate Frazier,RB,SO,70,205,27,"51,703",,0.1713,21.4,7,1,0,0,116,201,947,1618,7,15,0,0,0,0,1,979000
+Georgia Bulldogs,"Earnest Greene, III",OL,JR,76,320,34,"7,774",,0.9028,21.4,7,1,0,0,0,0,0,0,0,0,0,0,0,0,0,779000
+Georgia Bulldogs,KJ Bolden,DB,SO,72,195,28,"92,710",,0.1246,21.4,7,1,0,0,0,0,0,0,0,0,76,135,0,1,1,758000
+Georgia Bulldogs,Drew Bobo,OL,JR,77,305,32,"11,465",_drewbobo,0.2251,21.4,7,1,0,0,0,0,0,0,0,0,0,0,0,0,0,701000
+Georgia Bulldogs,Chris Cole,ILB,SO,75,235,28,"18,525",_chrisdatboii,0.2156,21.4,7,1,0,0,0,0,0,0,1,1,60,76,4.5,4.5,1,478000
+Georgia Bulldogs,Elijah Griffin,DL,FR,76,310,14,871,iamelijahgriffin,0.3981,21.4,7,1,0,0,0,0,0,0,0,0,22,22,1,1,1,415000
+Georgia Bulldogs,Isaiah Gibson,DE,FR,76,255,3,"15,336",2ccoldd.ike,0.1054,21.4,7,1,0,0,0,0,0,0,0,0,1,1,0,0,1,391000
+Georgia Bulldogs,Zayden Walker,ILB,FR,73,225,10,"8,995",zayy2hollywood,0.2257,21.4,7,1,0,0,0,0,0,0,0,0,6,6,2,2,1,386000
+Georgia Bulldogs,Talyn Taylor,WR,FR,72,190,6,"12,274",talynt1,0.2895,21.4,7,1,0,0,28,28,0,0,0,0,2,2,0,0,1,386000
+Georgia Bulldogs,Justin Williams,ILB,SO,74,225,26,"11,520",4_timezz,0.2498,21.4,7,1,0,0,0,0,0,0,0,0,36,38,0,0,1,287000
+Georgia Bulldogs,Ellis Robinson IV,DB,FR,72,180,18,"42,371",ellis_.2.0,0.4615,21.4,7,1,0,0,0,0,0,0,0,0,20,23,0,0,1,263000
+Georgia Bulldogs,Joseph Jonah-Ajonye,DL,FR,76,275,18,"5,224",NigerianNightmar3,0.3416,21.4,7,1,0,0,0,0,0,0,0,0,9,10,0,0,1,232000
+Georgia Bulldogs,Ryan Montgomery,QB,FR,75,215,1,"10,951",_ryanmontyy_,0.3829,21.4,7,1,12,12,0,0,0,0,0,0,0,0,0,0,1,224000
+Georgia Bulldogs,Juan Gaston,OL,FR,79,360,13,"8,137",juangaston73,0.2381,21.4,7,1,0,0,0,0,0,0,0,0,0,0,0,0,0,166000
+Georgia Bulldogs,Dominick Kelly,DB,FR,73,190,10,"17,859",dlock.23,0.1752,21.4,7,1,0,0,0,0,0,0,0,0,3,3,0,0,1,155000
+Georgia Bulldogs,Jontae Gilbert,DB,FR,73,190,1,"11,564",behumble.tae,0.3621,21.4,7,1,0,0,0,0,0,0,0,0,0,0,0,0,0,152000
+Georgia Bulldogs,Jaylan Morgan,DB,FR,72,195,1,"11,091",jaylann.2,0.3853,21.4,7,1,0,0,0,0,0,0,0,0,0,0,0,0,0,150000
+Georgia Bulldogs,CJ Wiley,WR,FR,76,210,8,"8,131",cjwiley_4,0.8847,21.4,7,1,0,0,20,20,0,0,0,0,0,0,0,0,1,149000
+Georgia Bulldogs,Chase Linton,OLB,FR,76,230,4,"4,327",c_king2209,0.1732,21.4,7,1,0,0,0,0,0,0,0,0,1,1,0,0,1,146000
+Kentucky Wildcats,Tavion Gadson,DL,SO,77,298,17,"1,572",,0.2884,5.1,47,12,0,0,0,0,0,0,0,0,28,29,2.5,2.5,1,887000
+Kentucky Wildcats,Lance Heard,OL,JR,78,330,36,"6,101",,0.3899,5.1,47,12,0,0,0,0,0,0,0,0,0,0,0,0,0,823000
+Kentucky Wildcats,Brennen Ward,QB,FR,76,222,1,"2,481",ward.brennen,0.4558,5.1,47,12,25,25,0,0,0,0,0,0,0,0,0,0,1,227000
+Kentucky Wildcats,Mikkel Skinner,TE,FR,76,231,4,"12,265",kelzontop,0.5677,5.1,47,12,0,0,0,0,0,0,0,0,0,0,0,0,0,102000
+Kentucky Wildcats,"Martels Carter, Jr.",DB,FR,72,200,4,"12,124",ldg.mj4,0.1443,5.1,47,12,0,0,0,0,0,0,0,0,4,4,0,0,1,NA
+Kentucky Wildcats,Andrew Purcell,DB,FR,70,193,2,"3,354",purcell_andrew4,0.146,5.1,47,12,0,0,0,0,0,0,0,0,2,2,0,0,1,NA
+Kentucky Wildcats,Elijah Brown,TE,JR,78,258,12,"4,357",eb_knows,0.202,5.1,47,12,0,0,22,22,0,0,0,0,0,0,0,0,1,NA
+Kentucky Wildcats,Hardley Gilmore IV,WR,SO,73,183,19,"7,846",hardleygilmore_,0.2886,5.1,47,12,0,0,313,466,0,9,1,2,0,0,0,0,1,NA
+Kentucky Wildcats,Jacob Smith,OLB,FR,76,242,7,"6,108",jjls_14,0.2519,5.1,47,12,0,0,0,0,0,0,0,0,1,2,0,0,1,NA
+Kentucky Wildcats,Cam Dooley,DB,SO,74,208,24,"10,561",cdooley.5,0.3625,5.1,47,12,0,0,0,0,0,0,0,0,29,32,0,0,1,NA
+Kentucky Wildcats,Zach Calzada,QB,SR,76,230,18,"24,932",zach.calzada,0.2136,5.1,47,12,238,8898,0,0,23,403,1,63,1,2,0,0,1,NA
+Kentucky Wildcats,Brian Robinson,DL,FR,77,265,2,"4,666",B_Rob2323,0.2433,5.1,47,12,0,0,0,0,0,0,0,0,0,0,0,0,0,NA
+Kentucky Wildcats,Jerod Smith II,DL,SO,76,275,24,"4,611",smith_jerod,0,5.1,47,12,0,0,0,0,0,0,0,0,27,34,1,1,1,NA
+Kentucky Wildcats,Darrin Strey,OL,FR,79,322,4,"2,112",daronivich69,0.7608,5.1,47,12,0,0,0,0,0,0,0,0,0,0,0,0,0,NA
+Kentucky Wildcats,Javeon Campbell,DL,FR,77,246,1,"2,202",javeon.campbell,0.2639,5.1,47,12,0,0,0,0,0,0,0,0,1,1,0,0,1,NA
+Kentucky Wildcats,"Alex Afari, Jr.",ILB,SR,74,227,48,"4,975",afari_2,0.2623,5.1,47,12,0,0,0,0,0,0,0,0,61,193,2.5,6,1,NA
+Kentucky Wildcats,Troy Stellato,WR,SR,73,184,27,"22,156",troystellatoo,0.1059,5.1,47,12,0,0,4,620,11,11,1,2,0,0,0,0,1,NA
+Kentucky Wildcats,DJ Miller,WR,FR,75,204,7,"2,508",dejerrian,0.4336,5.1,47,12,0,0,175,175,0,0,2,2,0,0,0,0,1,NA
+Kentucky Wildcats,Ashton Cozart,WR,SO,75,197,4,"9,563",ashtoncozart,0.1282,5.1,47,12,0,0,24,24,0,0,0,0,0,0,0,0,1,NA
+Kentucky Wildcats,Beau Allen,QB,SR,74,211,7,"7,349",beaua11en,0.2122,5.1,47,12,0,2968,0,0,-4,93,3,4,0,0,0,0,1,NA
+LSU Tigers,Sam Leavitt,QB,JR,74,195,24,"58,710",,0.1657,10.7,26,2,1628,4652,0,0,306,816,5,13,0,0,0,0,1,4000000
+LSU Tigers,Braelin Moore,OL,JR,74,300,40,"4,431",,0.6904,10.7,26,2,0,0,0,0,0,0,0,0,0,0,0,0,0,788000
+LSU Tigers,Trey'Dez Green,TE,SO,79,240,24,"51,991",1._eraa,0.2514,10.7,26,2,0,0,433,534,0,0,7,11,0,0,0,0,1,767000
+LSU Tigers,DJ Pickett,CB,FR,77,195,13,"42,070",damienpickettjr,0.3422,10.7,26,2,0,0,0,0,0,0,0,0,35,35,2,2,1,687000
+LSU Tigers,Josh Thompson,OL,SR,77,315,6,"2,442",,0.5539,10.7,26,2,0,0,0,0,0,0,0,0,0,0,0,0,0,514000
+LSU Tigers,Nic Anderson,WR,JR,76,208,27,"17,344",nicanderson04,0.2554,10.7,26,2,0,0,106,904,5,5,2,12,0,0,0,0,1,472000
+LSU Tigers,Whit Weeks,LB,JR,74,225,32,"100,033",whit.weeks,0.1839,10.7,26,2,0,0,0,0,0,0,0,0,28,198,1,5,1,414000
+LSU Tigers,Harlem Berry,RB,FR,71,190,13,"30,393",hb.25k,0.1118,10.7,26,2,0,0,32,32,491,491,2,2,0,0,0,0,1,330000
+LSU Tigers,Carius Curne,OL,FR,77,320,8,"3,471",curnecarius,1.619,10.7,26,2,0,0,0,0,0,0,0,0,0,0,0,0,0,188000
+LSU Tigers,Damien Shanklin,DE,FR,77,260,5,"14,628",damegotfanz_,0.0912,10.7,26,2,0,0,0,0,0,0,0,0,2,2,2,2,1,137000
+LSU Tigers,Jhase Thomas,S,FR,73,180,5,"30,393",jhasethomas,0.1142,10.7,26,2,0,0,0,0,0,0,0,0,0,0,0,0,0,131000
+LSU Tigers,Phillip Wright III,WR,FR,72,175,2,"8,556",_phillyy2x,0.351,10.7,26,2,0,0,2,2,0,0,0,0,1,1,0,0,1,130000
+LSU Tigers,Aidan Anding,CB,FR,71,170,8,"8,291",aidan_anding1,0.2041,10.7,26,2,0,0,0,0,0,0,0,0,2,2,0,0,1,129000
+LSU Tigers,Dominick McKinley,DT,SO,78,308,23,"6,188",Datboi_.dom,2.0142,10.7,26,2,0,0,0,0,0,0,0,0,12,19,1,4,1,106000
+LSU Tigers,Gabriel Reliford,DE,SO,75,265,17,"16,341",ga9riel,0.1081,10.7,26,2,0,0,0,0,0,0,0,0,8,18,0,0.5,1,NA
+LSU Tigers,Davhon Keys,LB,SO,72,230,25,"5,741",k3ys.ig,0.5437,10.7,26,2,0,0,0,0,0,0,1,1,88,119,0.5,2,1,NA
+LSU Tigers,Joel Rogers,S,FR,72,198,14,"12,171",joelprogers5,0.0996,10.7,26,2,0,0,0,0,0,0,0,0,3,4,0,0,1,NA
+LSU Tigers,Tylen Singleton,LB,FR,73,226,17,"3,035",tyydollaaa,0,10.7,26,2,0,0,0,0,0,0,0,0,15,17,0,0,1,NA
+LSU Tigers,Kolaj Cobbins,DE,FR,75,238,9,"4,273",tut_kolaj3,0.405,10.7,26,2,0,0,0,0,0,0,0,0,2,2,0,0,1,NA
+LSU Tigers,Dashawn Spears,S,SO,75,208,26,"20,213",shawnzvv,0.1204,10.7,26,2,0,0,0,0,0,0,1,1,28,53,1,1,1,NA
+Mississippi State Bulldogs,Isaac Smith,S,JR,72,220,33,"11,604",,0.1998,3.4,58,16,0,0,0,0,0,0,0,0,64,206,1,1,1,356000
+Mississippi State Bulldogs,Anthony Evans III,WR,JR,71,180,32,"44,215",4K_AE3,0.2175,3.4,58,16,0,0,831,954,47,99,4,5,0,0,0,0,1,439000
+Mississippi State Bulldogs,Fluff Bothwell,RB,SO,70,230,23,"9,275",,0.3502,3.4,58,16,0,0,105,197,677,1509,6,19,1,1,0,0,1,349000
+Mississippi State Bulldogs,Tyler Lockhart,LB,FR,74,225,12,"3,797",,0.1907,3.4,58,16,0,0,0,0,0,0,0,0,34,34,0,0,1,118000
+Mississippi State Bulldogs,Derion Gullette,LB,SO,75,240,15,"6,114",d4gullette,0.1539,3.4,58,16,0,0,0,0,0,0,0,0,38,40,1.5,1.5,1,NA
+Mississippi State Bulldogs,Kyle Johnson,CB,FR,71,185,17,"6,787",kyle1k_,0.1739,3.4,58,16,0,0,0,0,0,0,0,0,0,0,0,0,0,NA
+Mississippi State Bulldogs,Ayden Williams,WR,JR,75,205,32,"13,581",cantguard_.uno,0.1737,3.4,58,16,0,0,252,371,0,0,0,0,0,0,0,0,1,NA
+Mississippi State Bulldogs,Ricky Johnson,WR,FR,74,185,17,"24,470",lil.p8_,0.1046,3.4,58,16,0,0,17,26,-7,-7,0,0,0,0,0,0,1,NA
+Mississippi State Bulldogs,Blake Shapen,QB,SR,73,210,42,"17,618",bshape8,0.1222,3.4,58,16,2433,8981,-6,-6,28,248,3,11,1,1,0,0,1,NA
+Mississippi State Bulldogs,Gracen Harris,WR,FR,71,175,2,"12,462",hollywood_g1,0.1373,3.4,58,16,0,0,4,4,0,0,0,0,0,0,0,0,1,NA
+Mississippi State Bulldogs,AJ Rice,LB,FR,73,240,2,"2,856",aj.rice2,0.2416,3.4,58,16,0,0,0,0,0,0,0,0,1,1,0,0,1,NA
+Mississippi State Bulldogs,Brylan Lanier,S,SR,73,190,36,"14,462",1gsbrylo,0.133,3.4,58,16,0,0,0,0,0,0,0,0,67,132,1,2,1,NA
+Mississippi State Bulldogs,Kolin Wilson,RB,FR,69,190,5,"3,660",Kolinwilson0,0.1572,3.4,58,16,0,0,8,8,26,26,0,0,0,0,0,0,1,NA
+Mississippi State Bulldogs,Xavier Gayten,RB,SO,72,205,24,"2,628",xaviergayten4,0.4394,3.4,58,16,0,0,2,12,157,272,2,3,1,1,0,0,1,NA
+Mississippi State Bulldogs,Hunter Washington,S,SR,71,200,40,"10,306",hunterwashington,0.0979,3.4,58,16,0,0,0,0,0,0,0,0,44,108,0,0,1,NA
+Mississippi State Bulldogs,Markus Allen,WR,SR,74,215,32,"7,286",iamm3rkus,0.0959,3.4,58,16,0,0,7,814,4,4,3,4,0,0,0,0,1,NA
+Mississippi State Bulldogs,Breyden Turnage,OL,FR,79,320,1,"2,085",breyden_turnage,0.1776,3.4,58,16,0,0,0,0,0,0,0,0,0,0,0,0,0,NA
+Mississippi State Bulldogs,Branden Jennings,LB,SR,75,240,37,"4,627",b_brandxn,0.1574,3.4,58,16,0,0,0,0,0,0,0,0,44,126,0,1.5,1,NA
+Mississippi State Bulldogs,Sanfrisco Magee,WR,FR,74,200,9,"6,598",friscom._,0.2975,3.4,58,16,0,0,80,86,0,0,1,1,0,0,0,0,1,NA
+Mississippi State Bulldogs,Jordan Mosley,WR,SR,72,195,40,"6,237",jm4.__,0.5722,3.4,58,16,0,0,168,668,0,0,1,5,1,2,0,0,1,NA
+Missouri Tigers,Cayden Green,OT,SR,76.5,315,35,"5,994",_caydengreen,0.1569,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1200000
+Missouri Tigers,Ahmad Hardy,RB,SO,70,210,25,"17,198",d1_hardy,0.2123,13.1,22,8,0,0,22,94,1649,3000,16,29,0,0,0,0,1,1100000
+Missouri Tigers,Beau Pribula,QB,JR,74,203,34,"52,055",beauprib,0.3802,13.1,22,8,1941,2365,0,0,297,868,6,16,0,0,0,0,1,1000000
+Missouri Tigers,Matt Zollers,QB,SO,75.5,203,8,"16,625",mattzollers,0.3649,13.1,22,8,503,503,0,0,-23,-23,0,0,0,0,0,0,1,436000
+Missouri Tigers,Robert Woodyard Jr.,LB,SR,73,210,29,"11,652",slivery.1,0.2369,13.1,22,8,0,0,0,0,0,0,0,0,67,88,2,2,1,330000
+Missouri Tigers,Nicholas Rodriguez,LB,JR,72,195,24,"5,173",n.rodriguez5,0.2691,13.1,22,8,0,0,0,0,0,0,0,0,61,79,1.5,1.5,1,317000
+Missouri Tigers,Dominick Giudice,IOL,SR,77,275,31,"2,203",dommymutzz,0.4004,13.1,22,8,0,0,0,0,0,0,0,0,0,0,0,0,0,284000
+Missouri Tigers,Javion Hilson,EDGE,FR,75.5,225,3,"4,832",d1.hilson,0.4577,13.1,22,8,0,0,0,0,0,0,0,0,1,1,0,0,1,169000
+Missouri Tigers,Elijah Dotson,S,SO,73,170,12,"14,376",elijahhdotson,0.4433,13.1,22,8,0,0,0,0,0,0,0,0,11,11,0,0,1,133000
+Missouri Tigers,Devyn Butler,CB,JR,70,175,1,"6,079",devynsbutler,0.0995,13.1,22,8,0,0,0,0,0,0,0,0,0,0,0,0,0,132000
+Missouri Tigers,Donovan Olugbode,WR,SO,73,200,13,"14,330",donovan25_,0.2877,13.1,22,8,0,0,401,401,0,0,2,2,0,0,0,0,1,121000
+Missouri Tigers,Austin Simmons,QB,JR,74,210,17,"51,438",austnsimmons,0.2827,13.1,22,8,744,1026,0,0,71,85,1,1,1,1,0,0,1,118000
+Missouri Tigers,JaDon Blair,S,SO,76.5,195,1,"4,347",4.upnext_,1.7485,13.1,22,8,0,0,0,0,0,0,0,0,1,1,0,0,1,118000
+Missouri Tigers,Chance Luper,WR,JR,74,180,12,"3,991",chanceluper_,0,13.1,22,8,0,0,203,272,2,2,1,1,1,1,0,0,1,117000
+Missouri Tigers,Tyler Hibbler,S,SO,74,198,20,"3,110",t_hibb2x,0,13.1,22,8,0,0,0,0,0,0,0,0,2,3,0,0,1,117000
+Missouri Tigers,Santana Banner,S,JR,75,188,30,"3,173",gottaluv.s,0.3147,13.1,22,8,0,0,0,0,0,0,0,0,59,113,0,0,1,116000
+Missouri Tigers,Nathaniel Peat,RB,SR,68,175,54,"3,354",gog_peat,0,13.1,22,8,0,0,0,0,0,0,0,0,0,0,0,0,0,116000
+Missouri Tigers,Naeshaun Montgomery,WR,SO,73,165,4,"22,014",primetime_nae3,0.0252,13.1,22,8,0,0,26,26,0,0,0,0,0,0,0,0,1,115000
+Missouri Tigers,Chad Bailey,LB,SR,72,238,49,"2,045",chaddyb__,0.3945,13.1,22,8,0,0,0,0,0,0,0,0,17,140,1,4.5,1,115000
+Missouri Tigers,Nyles Gaddy,DL,SR,76,226,14,"15,084",nylesgaddy,0.0745,13.1,22,8,0,0,0,0,0,0,0,0,22,55,4,11.5,1,110000
+Oklahoma Sooners,John Mateer,QB,JR,73,215,36,"81,388",johnmateer10,0.1972,15.9,15,3,2885,6291,21,35,431,1408,8,26,2,3,0,0,1,2000000
+Oklahoma Sooners,David Stone,DL,JR,75,285,26,"37,969",iamdavidstonejr,0.2805,15.9,15,3,0,0,0,0,0,0,0,0,43,49,1.5,2.5,1,1900000
+Oklahoma Sooners,Michael Fasusi,OT,FR,78,299,11,"9,583",mike5o_,0.4478,15.9,15,3,0,0,0,0,0,0,0,0,0,0,0,0,0,933000
+Oklahoma Sooners,Isaiah Sategna,WR,SR,70,161,41,"28,331",isaiahsategna,0.4961,15.9,15,3,0,0,965,1597,24,67,8,12,0,0,0,0,1,878000
+Oklahoma Sooners,Taylor Wein,EDGE,JR,78,245,26,"7,608",taylor_weinn,1.0942,15.9,15,3,0,0,0,0,0,0,0,0,39,41,7,7,1,842000
+Oklahoma Sooners,Eli Bowen,CB,JR,71,170,20,"14,054",eli.bowen23,0.4634,15.9,15,3,0,0,0,0,0,0,1,1,24,53,0,0,1,732000
+Oklahoma Sooners,Kip Lewis,LB,SR,72,200,44,"11,076",_kiplewis,0.757,15.9,15,3,0,0,0,0,0,0,2,2,76,207,4,5,1,620000
+Oklahoma Sooners,Courtland Guillory,CB,SO,72,170,13,"20,720",c0urtlandd,0.2492,15.9,15,3,0,0,0,0,0,0,0,0,41,41,0,0,1,449000
+Oklahoma Sooners,Jake Maikkula,IOL,SR,77,265,31,"4,480",jakemaikkula,0.4555,15.9,15,3,0,0,0,0,0,0,0,0,0,0,0,0,0,300000
+Oklahoma Sooners,Peyton Bowen,S,SR,72,180,39,"23,663",peyton_bowen22,0.1868,15.9,15,3,0,0,0,0,0,0,0,0,46,115,0,1,1,294000
+Oklahoma Sooners,Casey Thompson,QB,SR,78,195,34,"101,696",caseythompson_,0.0107,15.9,15,3,509,5338,0,0,2,191,0,10,2,2,0,0,1,148000
+Oklahoma Sooners,Ryan Fodje,OT,FR,78,295,13,"3,460",ryanfodjee,0.9382,15.9,15,3,0,0,0,0,0,0,0,0,0,0,0,0,0,139000
+Oklahoma Sooners,Elijah Thomas,WR,FR,72,180,13,"6,474",elijahthomas_____,0.5556,15.9,15,3,0,0,5,5,0,0,0,0,7,7,0,0,1,122000
+Oklahoma Sooners,Trystan Haynes,CB,FR,74,160,1,3385,trystan.haynes6,,15.9,15,3,0,0,0,0,0,0,0,0,1,1,0,0,1,121000
+Oklahoma Sooners,Austin Stogner,TE,SR,78,235,59,15067,austin_stogner,,15.9,15,3,0,0,0,0,0,0,0,0,0,0,0,0,0,114000
+Oklahoma Sooners,Jaydan Hardy,S,SO,73,165,26,12296,jaydan.hardy,,15.9,15,3,0,0,0,0,0,0,0,0,11,17,0,0,1,103000
+Oklahoma Sooners,Reggie Pearson Jr.,S,SR,70,180,53,4347,therealreggie.jr,0,15.9,15,3,0,0,0,0,0,0,0,0,30,204,1,1,1,NA
+Oklahoma Sooners,Rondell Bothroyd,EDGE,SR,75,250,61,5010,_dellron,,15.9,15,3,0,0,0,0,0,0,0,0,0,0,0,0,0,NA
+Oklahoma Sooners,CJ Nickson,EDGE,FR,77,216,0,5527,cj_nickson,,15.9,15,3,0,0,0,0,0,0,0,0,0,0,0,0,0,NA
+Oklahoma Sooners,Pierce Hudgens,RB,JR,73,200,10,2066,pierce_hudgens,,15.9,15,3,0,0,0,0,0,0,0,0,0,0,0,0,0,NA
+Ole Miss Rebels,Trinidad Chambliss,QB,SR,73,200,15,"160,107",,0.2779,19.3,9,3,3937,3937,8,8,527,527,8,13,1,1,0,0,1,1600000
+Ole Miss Rebels,Princewill Umanmielen,LB,JR,77,245,38,10512,hoodiiewill_,,19.3,9,3,0,0,0,0,0,0,0,0,45,80,9,10.5,1,
+Ole Miss Rebels,Will Echoles,DT,SO,75,310,23,"14,829",,0.2088,19.3,9,3,0,0,0,0,0,0,0,0,68,77,5,5.5,1,1000000
+Ole Miss Rebels,Kewan Lacy,RB,SO,71,210,21,"137,625",,0.2201,19.3,9,3,0,0,177,186,1567,1671,24,24,0,0,0,0,1,1000000
+Ole Miss Rebels,Kam Franklin,EDGE,JR,77,260,22,19748,hbk.kam5,,19.3,9,3,0,0,0,0,0,0,0,0,69,80,5,7.5,1,613000
+Ole Miss Rebels,Suntarine Perkins,EDGE,SR,73,205,41,4642,601.sipbaby3,,19.3,9,3,0,0,0,0,0,0,0,0,81,179,4.5,18.5,1,519000
+Ole Miss Rebels,Caleb Odom,TE,JR,76,220,27,20082,ca1ebodom,,19.3,9,3,0,0,197,262,0,0,2,2,0,0,0,0,1,519000
+Ole Miss Rebels,Deuce Alexander,WR,JR,71,155,29,27622,deuce2____,,19.3,9,3,0,0,684,1114,122,128,2,5,1,1,0,0,1,323000
+Ole Miss Rebels,Trey Washington,S,SR,72,195,52,6269,trwyy_,,19.3,9,3,0,0,0,0,0,0,0,0,4,4,0,0,1,297000
+Ole Miss Rebels,Jeremy James,OT,SR,77,315,57,3069,jjames78_,,19.3,9,3,0,0,0,0,0,0,0,0,0,0,0,0,0,290000
+Ole Miss Rebels,Caleb Warren,OT,SR,76,305,51,3006,big_warren76,,19.3,9,3,0,0,0,0,0,0,0,0,0,0,0,0,0,289000
+Ole Miss Rebels,Caden Prieskorn,TE,SR,77,255,52,61152,cadenprieskorn14,,19.3,9,3,0,0,0,0,0,0,0,0,0,0,0,0,0,287000
+Ole Miss Rebels,Dayton Wade,WR,SR,72,172,49,1185,4doubleyou,,19.3,9,3,0,0,0,0,0,0,0,0,0,0,0,0,0,236000
+Ole Miss Rebels,Patrick Kutas,IOL,SR,77,284,41,6346,patrickkutas,,19.3,9,3,0,0,0,0,0,0,0,0,0,0,0,0,0,232000
+Ole Miss Rebels,Caleb Cunningham,WR,FR,74,180,3,16052,calebcunningham_3,,19.3,9,3,0,0,19,19,0,0,0,0,0,0,0,0,0,228000
+Ole Miss Rebels,Winston Watkins Jr.,WR,FR,69,175,15,125508,winstonwatkinsjr,,19.3,9,3,0,0,373,373,21,21,1,1,0,0,0,0,1,212000
+Ole Miss Rebels,Dashawn Womack,EDGE,JR,76,250,35,12010,womxck15,,19.3,9,3,0,0,0,0,0,0,0,0,27,50,2,4.5,1,206000
+Ole Miss Rebels,DeShawn Gaddie Jr.,CB,SR,72,170,60,5899,lulgaddie,,19.3,9,3,0,0,0,0,0,0,0,0,0,0,0,0,0,140000
+Ole Miss Rebels,Jaylon Braxton,CB,JR,71,165,22,14577,jaylon4braxton,,19.3,9,3,0,0,0,0,0,0,1,1,24,45,0,0,1,134000
+Ole Miss Rebels,Zamari Walton,CB,SR,75,175,61,16761,zamari.walton21,,19.3,9,3,0,0,0,0,0,0,0,0,0,0,0,0,0,130000
+South Carolina Gamecocks,LaNorris Sellers,QB,SO,75,240,27,"99,056",lanorrisellers,0.0872,9,34,3,2437,5057,21,21,270,995,5,13,1,2,0,0,1,2700000
+South Carolina Gamecocks,Dylan Stewart,EDGE,JR,77,250,24,"43,954",,0.162,9,34,3,0,0,0,0,0,0,0,0,33,56,4.5,11,1,2500000
+South Carolina Gamecocks,Jaccarius Peak,OT,SR,77,310,38,17304,jacarriusp,,9,34,3,0,0,0,0,0,0,0,0,0,0,0,0,0,1200000
+South Carolina Gamecocks,Gabriel Brownlow-Dindy,DL,JR,75,279,20,"6,043",,0.0586,9,34,3,0,0,0,0,0,0,0,0,18,22,0,0.5,1,767000
+South Carolina Gamecocks,Nyck Harbor,WR,SR,77,225,36,98517,nyck1k,,9,34,3,0,0,618,1189,12,23,6,10,3,6,0,0,1,343000
+South Carolina Gamecocks,Justin Okoronkwo,LB,SO,75,225,25,5624,justin.okrw,,9,34,3,0,0,0,0,0,0,0,0,63,77,0,0,1,269000
+South Carolina Gamecocks,Peyton Williams,S,SR,72,198,28,"2,183",,0.383,9,34,3,0,0,0,0,0,0,0,0,50,72,1,1,1,218000
+South Carolina Gamecocks,Josiah Thompson,OT,SO,78,265,24,4126,jthompson.74,,9,34,3,0,0,0,0,0,0,0,0,0,0,0,0,0,182000
+South Carolina Gamecocks,Malik Clark,WR,FR,74,180,4,5996,themalikclark,,9,34,3,0,0,9,9,0,0,0,0,0,0,0,0,1,148000
+South Carolina Gamecocks,Dakereon Joyner,RB,SR,73,229,55,36594,kereonjoyner,,9,34,3,101,430,117,559,120,445,5,9,1,2,0,0,1,109000
+South Carolina Gamecocks,Air Noland,QB,SR,74,195,2,49348,airnoland_,,9,34,3,13,13,0,0,4,4,0,0,0,0,0,0,1,NA
+South Carolina Gamecocks,Donovan Murph,WR,FR,73,190,12,13633,donovan6k_,,9,34,3,0,0,197,197,0,0,1,1,0,0,0,0,1,NA
+South Carolina Gamecocks,Mazeo Bennett,WR,SO,71,180,24,28578,themazeobennett,,9,34,3,0,0,62,399,0,0,3,3,1,1,0,0,1,NA
+South Carolina Gamecocks,Donovan Darden,EDGE,FR,76,225,10,1802,d5_killaa,,9,34,3,0,0,0,0,0,0,0,0,1,1,0,0,1,NA
+South Carolina Gamecocks,Jaquavious Dodd,EDGE,FR,77,235,2,2334,quaydodd,,9,34,3,0,0,0,0,0,0,0,0,1,1,1,1,1,NA
+South Carolina Gamecocks,Colten Gauthier,QB,SO,75,208,2,4477,coltengauthier,,9,34,3,15,34,0,0,0,0,0,0,0,0,0,0,1,NA
+South Carolina Gamecocks,Ahmarean Brown,WR,SR,69,169,54,7301,ahmareanbrown,,9,34,3,0,0,0,0,0,0,0,0,0,0,0,0,0,NA
+South Carolina Gamecocks,Landon Samson,WR,FR,72,191,1,5274,landon_samson,,9,34,3,0,0,0,0,0,0,0,0,0,0,0,0,0,NA
+South Carolina Gamecocks,Isaiah Norris,CB,SR,71,183,9,4983,zayy__1,,9,34,3,0,0,0,0,0,0,1,1,1,33,0,0,1,NA
+South Carolina Gamecocks,Donovan Westmoreland,EDGE,SO,73,211,23,1925,donovan.10k,,9,34,3,0,0,0,0,0,0,0,0,37,37,4,4,1,NA
+Tennessee Volunteers,David Sanders Jr.,OT,SO,77.75,276,9,30499,clt_bigdave,,19,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,891000
+Tennessee Volunteers,Faizon Brandon,QB,FR,75.5,195,0,36333,imjust.faizon_,,19,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,864000
+Tennessee Volunteers,Braylon Staley,WR,SO,72,180,17,19221,br6y_,,19,3,0,0,0,837,858,0,0,6,6,0,0,0,0,1,755000
+Tennessee Volunteers,Desean Bishop,RB,JR,70,190,23,13723,dbishhhhhh,,19,3,0,0,0,135,145,1076,1531,16,19,1,1,0,0,1,627000
+Tennessee Volunteers,Boo Carter,S,SO,70,180,22,54849,boo.carter6,,19,3,0,0,0,0,0,0,0,0,0,25,63,1,2,1,562000
+Tennessee Volunteers,Tyler Redmond,CB,SO,73,175,0,5813,tyyredmond,,19,3,0,0,0,0,0,0,0,0,0,43,43,0,0,1,550000
+Tennessee Volunteers,Ethan Davis,TE,JR,76,225,24,25204,iamethandavis,,19,3,0,0,0,257,390,0,0,2,4,0,0,0,0,1,537000
+Tennessee Volunteers,Tristen Keys,WR,FR,74.5,195,0,47489,5ways.tk,,19,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,396000
+Tennessee Volunteers,Wendell Moe,IOL,SR,75,330,40,2552,wowo75mo3,,19,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,390000
+Tennessee Volunteers,Isaiah Campbell,DL,SO,75.5,265,8,3019,chris_2bre3zy,,19,3,0,0,0,0,0,0,0,0,0,4,4,0.5,0.5,1,387000
+Tennessee Volunteers,George MacIntyre,QB,FR,74.25,190,2,43848,gmac4_,,19,3,0,69,69,0,0,0,0,0,0,0,0,0,,1,376000
+Tennessee Volunteers,Mike Matthews,WR,JR,72,180,24,28927,mike.matthewss,,19,3,0,0,0,813,903,32,32,4,6,0,0,0,0,1,376000
+Tennessee Volunteers,Amare Campbell,LB,JR,72,230,37,5982,amarecampbell_,,19,3,0,0,0,0,0,0,0,1,1,103,193,3,10.5,1,257000
+Tennessee Volunteers,John Campbell,OT,SR,77,315,54,20153,jcamp.74,,19,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,255000
+Tennessee Volunteers,Omari Thomas,DL,SR,76,305,61,14404,__big0,,19,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,253000
+Tennessee Volunteers,Javontez Spraggins,IOL,SR,75,315,56,9653,javontez_spraggins,,19,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,246000
+Tennessee Volunteers,Andrej Karic,IOL,SR,76,296,44,2746,_andrejkaric,,19,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,245000
+Tennessee Volunteers,Edwin Spillman,LB,SO,73,220,17,11018,edwin_spillman,,19,3,0,0,0,0,0,0,0,0,0,81,87,2.5,2.5,1,231000
+Tennessee Volunteers,Gabriel Osenda,OT,FR,79.5,345,0,3826,3k_golden,,19,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,213000
+Tennessee Volunteers,Mariyon Dye,DL,FR,77,264,7,6614,99booda,,19,3,0,0,0,0,0,0,0,0,0,8,8,1,1,1,174000
+Texas Longhorns,Arch Manning,QB,SO,76,195,25,"623,674",,0.0757,18.6,11,1,3163,4132,4,4,399,514,11,15,0,0,0,0,1,5400000
+Texas Longhorns,Cam Coleman,WR,SO,75,214,23,"104,385",,0.3272,18.6,11,1,0,0,708,1306,0,0,5,13,0,0,0,0,1,2900000
+Texas Longhorns,Colin Simmons,EDGE,JR,74.5,225,29,91781,colinsimmons,,18.6,11,1,0,0,0,0,0,0,0,0,43,91,12,21,1,1500000
+Texas Longhorns,Ryan Wingo,WR,SO,74,214,29,"40,226",,0.2546,18.6,11,1,0,0,834,1306,42,142,7,9,1,1,0,0,1,1400000
+Texas Longhorns,Justus Terry,DL,FR,77,268,10,"22,882", 706jaay,,18.6,11,1,0,0,0,0,0,0,0,0,8,8,0,0,1,825000
+Texas Longhorns,Hero Kanu,DL,SR,76.5,296,42,11261,herokanu93,,18.6,11,1,0,0,0,0,0,0,0,0,31,45,2,3,1,655000
+Texas Longhorns,Rasheem Biles,LB,SR,74,180,31,9682,heem3biles_,,18.6,11,1,0,0,0,0,0,0,3,4,100,183,4.5,10.5,1,595000
+Texas Longhorns,Melvin Siani,OT,SR,78,275,28,9505,melly1of1,,18.6,11,1,0,0,0,0,0,0,0,0,0,0,0,0,0,565000
+Texas Longhorns,Hollywood Smothers,RB,SR,70.5,190,26,44954,h3llywood,,18.6,11,1,-4,-4,189,453,939,1552,1,3,2,2,0,0,1,550000
+Texas Longhorns,Raleek Brown,RB,SR,67.5,165,30,43832,bandaidleekfo3,,18.6,11,1,0,0,239,438,1141,1426,6,13,0,0,0,0,1,535000
+Texas Longhorns,Jonah Williams,S,FR,75.25,206,8,29207,409.jonah,,18.6,11,1,0,0,0,0,0,0,0,0,9,9,0,0,1,442000
+Texas Longhorns,Brandon Baker,OT,JR,76.5,300,21,7896,emanielex,,18.6,11,1,0,0,0,0,0,0,0,0,0,0,0,0,0,440000
+Texas Longhorns,Kaliq Lockett,WR,FR,73.5,175,5,14146,k5liq_,,18.6,11,1,0,0,47,47,0,0,1,1,0,0,0,0,1,425000
+Texas Longhorns,Kade Phillips,CB,FR,72.5,185,12,6652,thekadephillips,,18.6,11,1,0,0,0,0,0,0,0,0,22,22,0,0,1,422000
+Texas Longhorns,Lance Jackson,EDGE,SO,77.25,270,13,11369,l4ncejacks0n,,18.6,11,1,0,0,0,0,0,0,0,0,16,16,2,2,1,328000
+Texas Longhorns,Jelani McDonald,S,SR,74,180,39,7926,thejelanimcdonald,,18.6,11,1,0,0,0,0,0,0,0,0,80,115,0,0,1,304000
+Texas Longhorns,CJ Baxter,RB,JR,73,216,22,46573,c4era,,18.6,11,1,0,0,41,197,196,855,1,6,0,0,0,0,1,275000
+Texas Longhorns,Morice Blackwell,LB,SR,73,196,48,13782,moriceblackwelljr,,18.6,11,1,0,0,0,0,0,0,0,0,30,64,0,0,1,274000
+Texas Longhorns,Gavin Holmes,CB,SR,71,178,57,6123,gavinh0lmes,,18.6,11,1,0,0,0,0,0,0,0,0,0,0,0,0,0,266000
+Texas A&M Aggies,Marcel Reed,QB,SO,73,185,27,"116,488",marcel.reed,0.0741,18.4,12,3,3169,5407,4,4,493,1085,6,14,1,1,0,0,1,1100000
+Texas A&M Aggies,Mario Craver,WR,SO,69,165,21,"47,002",craverrr,0.0865,18.4,12,3,0,0,917,1285,81,88,5,9,2,2,0,0,1,1000000
+Texas A&M Aggies,Lamont Rogers,OT,FR,79,325,4,3075,lamontrogers79,,18.4,12,3,0,0,0,0,0,0,0,0,0,0,0,0,0,684000
+Texas A&M Aggies,Marcus Ratcliffe,S,JR,74,209,38,"4,031",z0ne.3,1.0921,18.4,12,3,0,0,0,0,0,0,0,0,66,164,0,0,1,624000
+Texas A&M Aggies,Wilkin Formby,OT,JR,79,300,27,15158,wilkinformby,,18.4,12,3,0,0,0,0,0,0,0,0,0,0,0,0,0,454000
+Texas A&M Aggies,Brandon Arrington,CB,FR,74,185,0,75320,brandon2jubie,,18.4,12,3,0,0,0,0,0,0,0,0,0,0,0,0,0,406000
+Texas A&M Aggies,Daymion Sanford,LB,SR,74,205,39,11338,daymionsanford,,18.4,12,3,0,0,0,0,0,0,0,0,57,94,3.5,4.5,1,365000
+Texas A&M Aggies,Jerome Myles,WR,FR,75,215,0,10012,jeromemyles6,,18.4,12,3,0,0,0,0,0,0,0,0,0,0,0,0,0,333000
+Texas A&M Aggies,Marco Jones,EDGE,SO,77,242,13,14233,the_halfrican10,,18.4,12,3,0,0,0,0,0,0,0,0,21,21,2.5,2.5,1,288000
+Texas A&M Aggies,Isaiah Horton,WR,SR,75,205,44,69481,isaiahhorton_,,18.4,12,3,0,0,511,1301,0,0,8,14,0,0,0,0,1,188000
+Texas A&M Aggies,Helaman Casuga,QB,FR,72,215,0,7134,helamancasuga,,18.4,12,3,0,0,0,0,0,0,0,0,0,0,0,0,0,187000
+Texas A&M Aggies,Julian Humphrey,CB,SR,73,189,33,91123,julian.12k,,18.4,12,3,0,0,0,0,0,0,0,0,7,28,0,0,1,187000
+Texas A&M Aggies,Bryce Perry-Wright,EDGE,FR,73,250,0,10040,brycepw_,,18.4,12,3,0,0,0,0,0,0,0,0,0,0,0,0,0,182000
+Texas A&M Aggies,Aaron Gregory,WR,FR,75,178,0,123123,aarongregory_07,,18.4,12,3,0,0,0,0,0,0,0,0,0,0,0,0,0,179000
+Texas A&M Aggies,KJ Edwards,RB,FR,70,190,1,14148,Kjtooofficial0_,,18.4,12,3,0,0,0,0,0,0,0,0,0,0,0,0,0,175000
+Texas A&M Aggies,Dezz Ricks,CB,JR,73,175,28,21845,dezzricks,,18.4,12,3,0,0,0,0,0,0,0,0,26,46,0,0,1,167000
+Texas A&M Aggies,Brady Hart,QB,FR,77,185,2,15980,bradyhart_13,,18.4,12,3,62,62,0,0,9,9,0,0,0,0,0,0,1,165000
+Texas A&M Aggies,Terry Bussey,WR,JR,70,180,25,33626,tbussey.x,,18.4,12,3,0,0,195,411,1,103,1,3,1,1,0,0,1,153000
+Texas A&M Aggies,Adonyss Currie,CB,FR,72,160,3,13857,adonysscurrie,,18.4,12,3,0,0,0,0,0,0,0,0,0,0,1,0,1,149000
+Texas A&M Aggies,Max Wright,TE,SR,76,265,53,6815,maxwright2k18,,18.4,12,3,0,0,247,441,0,0,1,2,1,4,0,0,1,138000
+Vanderbilt Commodores,Bryan Longwell,LB,JR,73,240,38,"1,643",_willfaris,0.2933,17,14,8,0,0,0,0,0,0,0,0,70,195,1,2.5,1,236000
+Vanderbilt Commodores,Langston Patterson,LB,SR,73,235,47,"2,368",langston.patterson,0.2974,17,14,8,0,0,0,0,0,0,0,0,69,226,0,1,1,181000
+Vanderbilt Commodores,Aaron Bryant,DL,SR,75,290,24,2790,aaronbryant.55,,17,14,8,0,0,0,0,0,0,0,0,3,5,0,0,1,NA
+Vanderbilt Commodores,Errington Truesdell,LB,JR,72,215,16,2033,errithetruth,,17,14,8,0,0,0,0,0,0,0,0,6,14,0,0,1,NA
+Vanderbilt Commodores,Carson Lawrence,S,FR,74,185,13,3881,carsonlawrence__,,17,14,8,0,0,0,0,0,0,0,0,9,9,0,0,1,NA
+Vanderbilt Commodores,Kane Patterson,LB,SR,73,212,59,2447,kane_patterson4,,17,14,8,0,0,0,0,0,0,0,0,43,113,2,5.5,1,NA
+Vanderbilt Commodores,Jaylen Mahoney,CB,SR,71,180,54,8249,jaylenmahoney_,,17,14,8,0,0,0,0,0,0,0,0,3,3,0,0,1,NA
+Vanderbilt Commodores,Wilson Long,WR,SR,72,180,1,1858,_wilsonlong,,17,14,8,0,0,0,0,0,0,0,0,0,0,0,0,0,NA
+Vanderbilt Commodores,Quantaves Gaskins,CB,SO,73,180,5,1330,_.quantaves,,17,14,8,0,0,0,0,0,0,0,0,0,0,0,0,0,NA
+Vanderbilt Commodores,Alex Brown,EDGE,SR,75,225,9,1106,alexander.brown56,,17,14,8,0,0,0,0,0,0,0,0,4,5,0,0,1,NA
+Vanderbilt Commodores,Wesley Schelling,LS,SR,77,240,37,4504,wesleyschelling,,17,14,8,0,0,0,0,0,0,0,0,0,0,0,0,0,NA
+Vanderbilt Commodores,Jordan Matthews,CB,SO,73,175,30,,jordan_matthews,,17,14,8,0,0,0,0,0,0,0,0,19,23,0,0,1,NA
+Vanderbilt Commodores,Daevion Davis,DL,SR,73,315,31,1954,daevion9davis,,17,14,8,0,0,0,0,0,0,0,0,2,59,0,2,1,NA
+Vanderbilt Commodores,Michael Spencer,DL,SR,76,220,26,1555,mvspencer22,,17,14,8,0,0,0,0,0,0,0,0,3,9,0,0,1,NA
+Vanderbilt Commodores,Bradley Ashmore,OT,SR,78,280,40,1847,_ashmore_,,17,14,8,0,0,0,0,0,0,0,0,0,0,0,0,0,NA
+Vanderbilt Commodores,Brayden Bapst,DL,SR,78,270,20,1296,brayden_bapst,,17,14,8,0,0,0,0,0,0,0,0,4,5,0,0,1,NA
+Vanderbilt Commodores,BJ Anderson,CB,SR,74,172,35,2079,bj_andersonnn,,17,14,8,0,0,0,0,0,0,0,0,8,76,0,1,1,NA
+Vanderbilt Commodores,CJ Heard,S,SO,71,200,25,41057,cjheard_,,17,14,8,0,0,0,0,0,0,0,0,71,151,2,2,1,NA
+Vanderbilt Commodores,Austin Howard,LB,FR,75,225,13,4184,_.thr3ezip,,17,14,8,0,0,0,0,0,0,0,0,8,8,0,0,1,NA
+Vanderbilt Commodores,Dontae Carter,S,SO,73,185,26,13843,itzcarter.boy,,17,14,8,0,0,0,0,0,0,0,0,33,44,0,0,1,NA
