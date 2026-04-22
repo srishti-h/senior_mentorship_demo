@@ -13,7 +13,7 @@ if _here not in sys.path:
     sys.path.insert(0, _here)
 
 import joblib
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 from flask_cors import CORS
 
 from config import ARTIFACTS_DIR, HOST, PORT, DEBUG
@@ -52,6 +52,11 @@ def _load_model():
         logger.info(f"Model loaded — CV R² = {meta.get('best_cv_r2', 'n/a'):.4f}")
     except Exception as e:
         logger.warning(f"Model not loaded: {e}  →  /predict will return 503")
+
+# ─── Frontend ─────────────────────────────────────────────────────────────────
+@app.get("/")
+def index():
+    return render_template("index.html")
 
 # ─── Health check ─────────────────────────────────────────────────────────────
 @app.get("/health")

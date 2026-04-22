@@ -1,0 +1,823 @@
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+#app{background:#0d0d0d;color:#fff;font-family:'Inter','Helvetica Neue',sans-serif;min-height:600px}
+.ticker{background:#111;border-bottom:1px solid #1e1e1e;padding:7px 0;overflow:hidden;white-space:nowrap}
+.ticker-track{display:inline-flex;gap:56px;animation:tick 40s linear infinite}
+.ticker-track span{font-size:11px;color:#888}
+.ticker-track .up{color:#e84343}
+.t-badge{background:#e84343;color:#fff;font-size:10px;font-weight:700;padding:2px 7px;border-radius:3px;margin-right:14px;letter-spacing:.08em}
+@keyframes tick{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+nav{display:flex;align-items:center;justify-content:space-between;padding:13px 24px;border-bottom:1px solid #1e1e1e}
+.logo{font-size:14px;font-weight:800;letter-spacing:.14em}.logo span{color:#e84343}
+.nav-links{display:flex;gap:4px}
+.nb{background:none;border:1px solid transparent;color:#666;font-size:12px;padding:6px 14px;border-radius:6px;cursor:pointer;letter-spacing:.05em;transition:all .15s}
+.nb:hover{color:#fff;background:#1a1a1a}
+.nb.active{color:#fff;background:#181818;border-color:#2a2a2a}
+.live{display:flex;align-items:center;gap:6px;font-size:11px;color:#e84343;font-weight:700;letter-spacing:.1em}
+.live::before{content:'';width:6px;height:6px;border-radius:50%;background:#e84343;animation:pulse 1.5s ease-in-out infinite}
+.api-status{display:flex;align-items:center;gap:5px;font-size:10px;font-weight:700;letter-spacing:.08em;padding:4px 10px;border-radius:4px;border:1px solid #222;color:#444}
+.api-status.ok{color:#22c55e;border-color:#14532d;background:#071a0d}
+.api-status.err{color:#e84343;border-color:#3a1a1a;background:#0d0505}
+.api-status::before{content:'';width:5px;height:5px;border-radius:50%;background:currentColor}
+.stats-section{margin-bottom:15px}
+.stats-section-title{font-size:10px;color:#555;letter-spacing:.1em;font-weight:700;border-left:2px solid #e84343;padding-left:8px;margin-bottom:10px}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.page{display:none;padding:22px 24px}
+.page.active{display:block}
+
+/* OVERVIEW */
+.pg-title{font-size:21px;font-weight:800;letter-spacing:.1em;margin-bottom:3px}
+.pg-sub{font-size:11px;color:#555;margin-bottom:18px;letter-spacing:.06em}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:16px}
+.sc{background:#111;border:1px solid #1e1e1e;border-left:3px solid #e84343;border-radius:8px;padding:14px 18px}
+.sc-label{font-size:10px;color:#555;letter-spacing:.1em;margin-bottom:8px}
+.sc-val{font-size:24px;font-weight:800}
+.sc-val.red{color:#e84343}
+.two-col{display:grid;grid-template-columns:1fr 370px;gap:14px}
+.card-box{background:#111;border:1px solid #1e1e1e;border-radius:8px;padding:18px}
+.box-title{font-size:12px;font-weight:700;letter-spacing:.1em;color:#ccc;margin-bottom:14px}
+.chart-legend{display:flex;gap:14px;margin-bottom:12px}
+.cl-item{display:flex;align-items:center;gap:5px;font-size:10px;color:#666}
+.cl-dot{width:9px;height:9px;border-radius:2px}
+.depth-row{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid #181818}
+.depth-row:last-child{border-bottom:none}
+.d-rank{font-size:12px;color:#444;width:14px;flex-shrink:0}
+.pos-badge{width:30px;height:30px;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:800;flex-shrink:0}
+.d-info{flex:1}.d-name{font-size:12px;font-weight:700}.d-school{font-size:10px;color:#555;margin-top:1px}
+.d-val{font-size:13px;font-weight:800;margin-right:6px}
+.arr{font-size:11px}.arr.up{color:#e84343}.arr.dn{color:#444}
+
+/* EXPLORER */
+.search-bar{display:flex;gap:10px;margin-bottom:14px}
+.sbox{flex:1;background:#111;border:1px solid #252525;border-radius:7px;padding:9px 14px;color:#fff;font-size:13px;outline:none}
+.sbox:focus{border-color:#e84343}
+.sbox::placeholder{color:#3a3a3a}
+.sbtn{background:#e84343;color:#fff;border:none;border-radius:7px;padding:9px 18px;font-size:12px;font-weight:700;letter-spacing:.08em;cursor:pointer}
+.filter-bar{display:flex;gap:6px;align-items:center;margin-bottom:18px;flex-wrap:wrap}
+.fl-lbl{font-size:11px;color:#444;letter-spacing:.07em;margin-right:4px}
+.fb{background:#111;border:1px solid #222;color:#666;font-size:11px;font-weight:700;padding:5px 12px;border-radius:5px;cursor:pointer;letter-spacing:.06em;transition:all .15s}
+.fb:hover{color:#fff;border-color:#333}
+.fb.active{background:#e84343;color:#fff;border-color:#e84343}
+.sort-info{font-size:10px;color:#333;letter-spacing:.06em;margin-left:auto}
+.ag{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.ac{border-radius:9px;padding:16px;cursor:pointer;transition:all .15s;border:2px solid transparent;position:relative;overflow:hidden}
+.ac:hover{transform:translateY(-2px)}
+.ac-rank{position:absolute;top:10px;right:10px;font-size:9px;font-weight:700;opacity:.45;letter-spacing:.04em}
+.ac-top{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.avatar{width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;flex-shrink:0;border:2px solid rgba(255,255,255,.15)}
+.ptag{font-size:9px;font-weight:800;padding:3px 7px;border-radius:4px;letter-spacing:.05em}
+.ac-nameblock{flex:1;min-width:0}
+.ac-name{font-size:13px;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ac-school{font-size:10px;margin-top:1px;opacity:.65}
+.sep{width:100%;height:1px;background:rgba(255,255,255,.07);margin:10px 0}
+.val-lbl{font-size:9px;letter-spacing:.1em;margin-bottom:3px;opacity:.55}
+.ac-bot{display:flex;align-items:center;justify-content:space-between}
+.val-num{font-size:22px;font-weight:800}
+
+/* PROFILE */
+.profile-back{background:none;border:1px solid #222;color:#666;font-size:11px;cursor:pointer;letter-spacing:.06em;margin-bottom:18px;padding:6px 14px;border-radius:6px;transition:all .15s}
+.profile-back:hover{color:#fff;border-color:#444}
+.profile-hero{display:grid;grid-template-columns:auto 1fr auto;gap:20px;align-items:start;background:#111;border:1px solid #1e1e1e;border-radius:10px;padding:22px;margin-bottom:14px}
+.p-avatar{width:88px;height:88px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:800;border:3px solid rgba(255,255,255,.15);flex-shrink:0}
+.profile-name{font-size:22px;font-weight:800;margin-bottom:6px}
+.profile-meta{font-size:12px;color:#666;margin-bottom:12px;display:flex;gap:14px;flex-wrap:wrap}
+.profile-tags{display:flex;gap:8px;flex-wrap:wrap}
+.ptag2{font-size:10px;padding:4px 10px;border-radius:4px;font-weight:700;letter-spacing:.05em}
+.pval-block{text-align:right;flex-shrink:0}
+.pval-lbl{font-size:10px;color:#555;letter-spacing:.1em;margin-bottom:6px}
+.pval-big{font-size:34px;font-weight:800}
+.pval-trend{font-size:12px;margin-top:3px}
+.pval-rank{font-size:11px;color:#444;margin-top:2px}
+.p3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:14px}
+.p2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.pstat{background:#111;border:1px solid #1e1e1e;border-radius:8px;padding:14px 16px}
+.pstat-lbl{font-size:10px;color:#555;letter-spacing:.1em;margin-bottom:6px}
+.pstat-val{font-size:20px;font-weight:800}
+.pstat-sub{font-size:10px;color:#444;margin-top:3px}
+.news-item{display:flex;gap:10px;padding:11px 0;border-bottom:1px solid #181818}
+.news-item:last-child{border-bottom:none}
+.news-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;margin-top:4px}
+.news-src{font-size:9px;font-weight:700;letter-spacing:.1em;margin-bottom:3px}
+.news-hl{font-size:12px;font-weight:600;line-height:1.5;color:#ccc}
+.news-time{font-size:10px;color:#333;margin-top:2px}
+.bbar-row{display:flex;align-items:center;gap:8px;margin-bottom:7px}
+.bbar-lbl{font-size:11px;color:#777;width:130px;flex-shrink:0}
+.bbar-track{flex:1;height:4px;background:#1e1e1e;border-radius:2px;overflow:hidden}
+.bbar-fill{height:100%;border-radius:2px}
+.bbar-pct{font-size:11px;color:#444;width:30px;text-align:right}
+.comp-row{display:flex;align-items:center;gap:8px;padding:7px 0;border-bottom:1px solid #181818}
+.comp-row:last-child{border-bottom:none}
+.comp-name{flex:1;font-size:12px;color:#aaa}
+.comp-bar-w{width:70px;height:3px;background:#1e1e1e;border-radius:2px;overflow:hidden}
+.comp-bar-f{height:100%;border-radius:2px}
+.comp-val{font-size:12px;font-weight:700;width:40px;text-align:right}
+
+/* PREDICTOR */
+.pred-wrap{max-width:860px;margin:0 auto;text-align:center}
+.pred-title{font-size:26px;font-weight:800;letter-spacing:.12em;margin-bottom:8px}
+.pred-sub{font-size:12px;color:#555;margin-bottom:24px;line-height:1.7}
+.pred-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;text-align:left}
+.pf{background:#111;border:1px solid #1e1e1e;border-radius:9px;padding:22px}
+.pf-title{font-size:11px;font-weight:700;letter-spacing:.12em;color:#777;border-left:3px solid #e84343;padding-left:10px;margin-bottom:18px}
+.fg{margin-bottom:15px}
+.fl2{display:block;font-size:10px;color:#555;letter-spacing:.09em;margin-bottom:6px}
+.fi{width:100%;background:#181818;border:1px solid #242424;border-radius:6px;color:#fff;padding:9px 11px;font-size:13px;outline:none}
+.fi:focus{border-color:#e84343}
+.fi option{background:#181818}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.rw{display:flex;align-items:center;gap:8px}
+.fr{flex:1;accent-color:#e84343}
+.rv{background:#181818;border:1px solid #242424;border-radius:4px;padding:4px 9px;font-size:12px;color:#fff;min-width:48px;text-align:center}
+.gbtn{width:100%;background:#e84343;color:#fff;border:none;border-radius:7px;padding:13px;font-size:12px;font-weight:800;letter-spacing:.1em;cursor:pointer;margin-top:6px;transition:background .15s}
+.gbtn:hover{background:#c93636}
+.gbtn:disabled{background:#3a1a1a;color:#555;cursor:not-allowed}
+.result-box{background:#0a0a0a;border:1px solid #2a2a2a;border-radius:9px;padding:22px;display:flex;flex-direction:column;gap:14px;min-height:400px;justify-content:center}
+.res-lbl{font-size:10px;color:#e84343;letter-spacing:.12em;text-align:center;font-weight:700}
+.res-big{font-size:38px;font-weight:800;color:#e84343;text-align:center}
+.res-ci{font-size:10px;color:#444;text-align:center;letter-spacing:.07em;margin-top:-8px}
+.res-sep{height:1px;background:#1e1e1e}
+.res-breakdown-title{font-size:10px;color:#555;letter-spacing:.1em;font-weight:700}
+.bar-row{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.bar-lbl{font-size:11px;color:#888;width:155px;flex-shrink:0}
+.bar-track{flex:1;height:4px;background:#1e1e1e;border-radius:2px;overflow:hidden}
+.bar-fill{height:100%;background:#e84343;border-radius:2px}
+.bar-pct{font-size:11px;color:#555;width:30px;text-align:right}
+.res-text{font-size:12px;color:#777;line-height:1.8}
+.placeholder-msg{text-align:center;color:#2a2a2a;font-size:13px}
+.ldots{display:inline-flex;gap:4px}
+.ldots span{width:6px;height:6px;border-radius:50%;background:#e84343;animation:dp 1.2s ease-in-out infinite}
+.ldots span:nth-child(2){animation-delay:.2s}
+.ldots span:nth-child(3){animation-delay:.4s}
+@keyframes dp{0%,80%,100%{opacity:.15}40%{opacity:1}}
+</style>
+
+<div id="app">
+<div class="ticker"><div class="ticker-track">
+  <span class="t-badge">BREAKING</span>
+  <span>↑ Arch Manning trending <span class="up">+18%</span> after SEC title run</span>
+  <span>↑ Ryan Williams signs Nike apparel deal</span>
+  <span>SEC announces new collective guidelines for 2026</span>
+  <span>↑ Jackson Arnold QB market surges after bowl win</span>
+  <span>NIL market volume up <span class="up">23%</span> YTD across SEC</span>
+  <span class="t-badge">BREAKING</span>
+  <span>↑ Arch Manning trending <span class="up">+18%</span> after SEC title run</span>
+  <span>↑ Ryan Williams signs Nike apparel deal</span>
+  <span>SEC announces new collective guidelines for 2026</span>
+  <span>↑ Jackson Arnold QB market surges after bowl win</span>
+  <span>NIL market volume up <span class="up">23%</span> YTD across SEC</span>
+</div></div>
+
+<nav>
+  <div class="logo">NIL<span>X</span> MARKET</div>
+  <div class="nav-links">
+    <button class="nb active" id="nav-overview" onclick="showPage('overview')">MARKET OVERVIEW</button>
+    <button class="nb" id="nav-explorer" onclick="showPage('explorer')">ATHLETE EXPLORER</button>
+    <button class="nb" id="nav-predictor" onclick="showPage('predictor')">NIL PREDICTOR</button>
+  </div>
+  <div style="display:flex;align-items:center;gap:10px">
+    <div class="api-status" id="api-status">API —</div>
+    <div class="live">LIVE</div>
+  </div>
+</nav>
+
+<!-- OVERVIEW -->
+<div class="page active" id="page-overview">
+  <div class="pg-title">MARKET OVERVIEW</div>
+  <div class="pg-sub">SEC Conference Real-time Data</div>
+  <div class="stats-grid">
+    <div class="sc"><div class="sc-label">ATHLETES TRACKED</div><div class="sc-val">52</div></div>
+    <div class="sc"><div class="sc-label">AVG NIL VALUE</div><div class="sc-val">$1.4M</div></div>
+    <div class="sc"><div class="sc-label">MARKET VOLUME</div><div class="sc-val">$74.8M</div></div>
+    <div class="sc"><div class="sc-label">TRENDING UP</div><div class="sc-val red">↗ 23%</div></div>
+  </div>
+  <div class="two-col">
+    <div class="card-box">
+      <div class="box-title">VALUATION DISTRIBUTION (YTD)</div>
+      <div class="chart-legend">
+        <div class="cl-item"><div class="cl-dot" style="background:#e84343"></div>TOP TIER</div>
+        <div class="cl-item"><div class="cl-dot" style="background:#555"></div>AVG TIER</div>
+      </div>
+      <div style="position:relative;height:200px"><canvas id="overviewChart" role="img" aria-label="NIL valuation chart">NIL market trends by month.</canvas></div>
+    </div>
+    <div class="card-box">
+      <div class="box-title">DEPTH CHART: TOP 5</div>
+      <div id="depth-list"></div>
+    </div>
+  </div>
+</div>
+
+<!-- EXPLORER -->
+<div class="page" id="page-explorer">
+  <div class="search-bar">
+    <input class="sbox" id="searchInput" placeholder="Search athletes, schools, positions..." oninput="filterAthletes()">
+    <button class="sbtn">SEARCH</button>
+  </div>
+  <div class="filter-bar">
+    <span class="fl-lbl">POSITION:</span>
+    <button class="fb active" onclick="setFilter('ALL',this)">ALL</button>
+    <button class="fb" onclick="setFilter('QB',this)">QB</button>
+    <button class="fb" onclick="setFilter('WR',this)">WR</button>
+    <button class="fb" onclick="setFilter('RB',this)">RB</button>
+    <button class="fb" onclick="setFilter('TE',this)">TE</button>
+    <button class="fb" onclick="setFilter('DEF',this)">DEF</button>
+    <button class="fb" onclick="setFilter('OL',this)">OL</button>
+    <span class="sort-info">↓ SORTED BY MARKET VALUE</span>
+  </div>
+  <div class="ag" id="athletes-grid"></div>
+</div>
+
+<!-- PROFILE -->
+<div class="page" id="page-profile">
+  <button class="profile-back" onclick="showPage('explorer')">← BACK TO EXPLORER</button>
+  <div id="profile-content"></div>
+</div>
+
+<!-- PREDICTOR -->
+<div class="page" id="page-predictor">
+  <div class="pred-wrap">
+    <div class="pred-title">NIL VALUE PREDICTOR</div>
+    <div class="pred-sub">Input athlete metrics to generate a fair market valuation based on current SEC comparables.</div>
+    <div class="pred-grid">
+      <div class="pf" style="overflow-y:auto;max-height:580px">
+        <div class="pf-title">ATHLETE METRICS</div>
+
+        <div class="stats-section">
+          <div class="stats-section-title">IDENTITY</div>
+          <div class="fg frow">
+            <div><label class="fl2">ATHLETE NAME</label>
+              <input class="fi" id="p-name" placeholder="e.g. Arch Manning">
+            </div>
+            <div><label class="fl2">CLASS</label>
+              <select class="fi" id="p-class">
+                <option value="FR">FR</option>
+                <option value="SO">SO</option>
+                <option value="JR" selected>JR</option>
+                <option value="SR">SR</option>
+              </select>
+            </div>
+          </div>
+          <div class="fg frow">
+            <div><label class="fl2">HEIGHT (inches)</label>
+              <input class="fi" id="p-height" type="number" value="74" min="60" max="84">
+            </div>
+            <div><label class="fl2">WEIGHT (lbs)</label>
+              <input class="fi" id="p-weight" type="number" value="215" min="150" max="380">
+            </div>
+          </div>
+        </div>
+
+        <div class="stats-section">
+          <div class="stats-section-title">PROGRAM</div>
+          <div class="fg frow">
+            <div><label class="fl2">SEC SCHOOL</label>
+              <select class="fi" id="p-school" onchange="onSchoolChange()">
+                <option>Alabama</option><option>Georgia</option><option>LSU</option>
+                <option>Tennessee</option><option>Texas A&M</option><option>Florida</option>
+                <option>Auburn</option><option>Ole Miss</option><option>Texas</option>
+                <option>Oklahoma</option><option>Arkansas</option><option>Missouri</option>
+                <option>South Carolina</option><option>Kentucky</option>
+                <option>Mississippi State</option><option>Vanderbilt</option>
+              </select>
+            </div>
+            <div><label class="fl2">POSITION</label>
+              <select class="fi" id="p-pos" onchange="onPositionChange()">
+                <option value="QB">QB</option>
+                <option value="WR">WR</option>
+                <option value="RB">RB</option>
+                <option value="TE">TE</option>
+                <option value="DE">DE</option>
+                <option value="CB">CB</option>
+                <option value="LB">LB</option>
+                <option value="S">S</option>
+                <option value="OL">OL</option>
+              </select>
+            </div>
+          </div>
+          <div class="fg frow">
+            <div><label class="fl2">GAMES PLAYED</label>
+              <input class="fi" id="p-games" type="number" value="12" min="1" max="17">
+            </div>
+            <div><label class="fl2">FOLLOWERS (TOTAL)</label>
+              <input class="fi" id="p-followers" type="number" value="150000">
+            </div>
+          </div>
+        </div>
+
+        <div class="stats-section" id="stats-passing" style="display:none">
+          <div class="stats-section-title">PASSING STATS (SEASON)</div>
+          <div class="fg frow">
+            <div><label class="fl2">PASS YARDS</label>
+              <input class="fi" id="p-pass-yards" type="number" value="2800">
+            </div>
+            <div><label class="fl2">PASSING TDs</label>
+              <input class="fi" id="p-pass-td" type="number" value="22">
+            </div>
+          </div>
+        </div>
+
+        <div class="stats-section" id="stats-receiving" style="display:none">
+          <div class="stats-section-title">RECEIVING STATS (SEASON)</div>
+          <div class="fg frow">
+            <div><label class="fl2">REC YARDS</label>
+              <input class="fi" id="p-rec-yards" type="number" value="800">
+            </div>
+            <div><label class="fl2">RECEIVING TDs</label>
+              <input class="fi" id="p-rec-td" type="number" value="6">
+            </div>
+          </div>
+        </div>
+
+        <div class="stats-section" id="stats-rushing" style="display:none">
+          <div class="stats-section-title">RUSHING STATS (SEASON)</div>
+          <div class="fg frow">
+            <div><label class="fl2">RUSH YARDS</label>
+              <input class="fi" id="p-rush-yards" type="number" value="900">
+            </div>
+            <div><label class="fl2">RUSHING TDs</label>
+              <input class="fi" id="p-rush-td" type="number" value="8">
+            </div>
+          </div>
+        </div>
+
+        <div class="stats-section" id="stats-defense" style="display:none">
+          <div class="stats-section-title">DEFENSIVE STATS (SEASON)</div>
+          <div class="fg frow">
+            <div><label class="fl2">TACKLES</label>
+              <input class="fi" id="p-tackles" type="number" value="55">
+            </div>
+            <div><label class="fl2">SACKS</label>
+              <input class="fi" id="p-sacks" type="number" value="4">
+            </div>
+          </div>
+        </div>
+
+        <button class="gbtn" id="gen-btn" onclick="generateValuation()">GENERATE VALUATION</button>
+      </div>
+
+      <div class="result-box" id="result-box">
+        <div id="res-placeholder" class="placeholder-msg">
+          <div style="font-size:36px;opacity:.15;margin-bottom:10px">◎</div>
+          <div>Enter metrics and generate a valuation</div>
+        </div>
+        <div id="res-loading" style="display:none;flex-direction:column;align-items:center;gap:12px">
+          <div class="ldots"><span></span><span></span><span></span></div>
+          <div style="font-size:11px;color:#444;letter-spacing:.08em">ANALYZING MARKET DATA...</div>
+        </div>
+        <div id="res-content" style="display:none;flex-direction:column;gap:14px">
+          <div class="res-lbl">ESTIMATED MARKET VALUE</div>
+          <div class="res-big" id="res-big"></div>
+          <div class="res-ci" id="res-ci"></div>
+          <div class="res-sep"></div>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="res-breakdown-title">MODEL DETAILS</div>
+            <div id="res-posgroup" style="font-size:10px;color:#555;letter-spacing:.08em"></div>
+          </div>
+          <div id="res-r2-row" style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+            <div style="font-size:11px;color:#777;width:155px;flex-shrink:0">Model CV R²</div>
+            <div class="bar-track"><div class="bar-fill" id="bar-r2" style="width:0%"></div></div>
+            <div class="bar-pct" id="pct-r2"></div>
+          </div>
+          <div class="res-sep"></div>
+          <div class="res-text" id="res-text"></div>
+        </div>
+        <div id="res-error" style="display:none;text-align:center;color:#e84343;font-size:12px;padding:20px"></div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+const SC = {
+  Alabama:{bg:'#1a0909',border:'#6b1a1a',accent:'#e84343',text:'#f87171',ab:'#6b1a1a'},
+  Georgia:{bg:'#090f1a',border:'#1a306b',accent:'#4a90e2',text:'#7ab3f0',ab:'#1a306b'},
+  Texas:{bg:'#091a0e',border:'#145228',accent:'#22c55e',text:'#4ade80',ab:'#145228'},
+  LSU:{bg:'#1a1209',border:'#6b3d0e',accent:'#f59e0b',text:'#fbbf24',ab:'#6b3d0e'},
+  Florida:{bg:'#090f1a',border:'#0e2e54',accent:'#38bdf8',text:'#7dd3fc',ab:'#0e2e54'},
+  Oklahoma:{bg:'#110916',border:'#3d1570',accent:'#a855f7',text:'#c084fc',ab:'#3d1570'},
+  Tennessee:{bg:'#1a0e09',border:'#6b3210',accent:'#fb923c',text:'#fdba74',ab:'#6b3210'},
+  Auburn:{bg:'#090f09',border:'#123d12',accent:'#16a34a',text:'#4ade80',ab:'#123d12'},
+  'Ole Miss':{bg:'#0e0816',border:'#4a1890',accent:'#8b5cf6',text:'#c4b5fd',ab:'#4a1890'},
+  'South Carolina':{bg:'#16090d',border:'#7c0f2e',accent:'#fb7185',text:'#fda4af',ab:'#7c0f2e'},
+  'Texas A&M':{bg:'#09140a',border:'#135228',accent:'#34d399',text:'#6ee7b7',ab:'#135228'},
+  Arkansas:{bg:'#0e0916',border:'#3a2ea0',accent:'#818cf8',text:'#a5b4fc',ab:'#3a2ea0'},
+  'Mississippi State':{bg:'#141409',border:'#4a4a00',accent:'#c4b500',text:'#e0d000',ab:'#4a4a00'},
+  Kentucky:{bg:'#09091a',border:'#1040b8',accent:'#60a5fa',text:'#93c5fd',ab:'#1040b8'},
+  'Arizona State':{bg:'#160c09',border:'#7a3508',accent:'#f97316',text:'#fdba74',ab:'#7a3508'},
+  Illinois:{bg:'#160909',border:'#881616',accent:'#f87171',text:'#fca5a5',ab:'#881616'},
+  Miami:{bg:'#09160f',border:'#065040',accent:'#2dd4bf',text:'#5eead4',ab:'#065040'},
+  'West Virginia':{bg:'#160e09',border:'#7a3e08',accent:'#eab308',text:'#fde047',ab:'#7a3e08'},
+};
+const PC={QB:{bg:'#5c1515',t:'#f87171'},WR:{bg:'#152552',t:'#60a5fa'},RB:{bg:'#0f3d1e',t:'#4ade80'},TE:{bg:'#2e1260',t:'#c084fc'},CB:{bg:'#523d0f',t:'#fbbf24'},DE:{bg:'#0f2840',t:'#38bdf8'},S:{bg:'#152515',t:'#86efac'},LB:{bg:'#2e1515',t:'#fca5a5'},OL:{bg:'#252525',t:'#d1d5db'}};
+function ps(pos){const c=PC[pos]||PC.OL;return`background:${c.bg};color:${c.t}`}
+function sc2(s){return SC[s]||{bg:'#111',border:'#333',accent:'#888',text:'#aaa',ab:'#333'}}
+
+const NEWS={
+  'Arch Manning':['Texas QB Arch Manning projected as top NFL Draft pick for 2027','Manning leads SEC in passer rating for second consecutive season','Arch Manning secures national campaign with Gatorade'],
+  'Ryan Williams':['Ryan Williams named SEC Freshman of the Year after record-breaking season','Alabama WR Ryan Williams tops receiving yards in conference','Nike signs Williams to multi-year endorsement deal'],
+  default:(n,s,p)=>[`${n} named to SEC All-Conference Watch List`,`${s} collective secures NIL package for ${n.split(' ')[0]}`,`Analyst: ${n} among top ${p} NIL earners in conference`]
+};
+
+const ATHLETES=[
+  {name:"Arch Manning",pos:"QB",school:"Texas",initials:"AM",val:5.2,trend:"up",followers:980000,engage:8.2,perf:9.5},
+  {name:"Ryan Williams",pos:"WR",school:"Alabama",initials:"RW",val:3.9,trend:"up",followers:420000,engage:7.1,perf:9.2},
+  {name:"Jackson Arnold",pos:"QB",school:"Oklahoma",initials:"JA",val:2.8,trend:"up",followers:310000,engage:5.8,perf:8.7},
+  {name:"DJ Lagway",pos:"QB",school:"Florida",initials:"DL",val:2.5,trend:"up",followers:280000,engage:6.2,perf:8.4},
+  {name:"John Mateer",pos:"QB",school:"Oklahoma",initials:"JM",val:2.2,trend:"up",followers:195000,engage:5.1,perf:8.1},
+  {name:"Cam Coleman",pos:"WR",school:"Auburn",initials:"CC",val:2.1,trend:"up",followers:175000,engage:4.9,perf:8.0},
+  {name:"LaNorris Sellers",pos:"QB",school:"South Carolina",initials:"LS",val:1.9,trend:"up",followers:160000,engage:5.4,perf:7.8},
+  {name:"Michael Carroll",pos:"WR",school:"Alabama",initials:"MC",val:1.8,trend:"up",followers:145000,engage:4.5,perf:7.5},
+  {name:"Sam Leavitt",pos:"QB",school:"Arizona State",initials:"SL",val:1.8,trend:"up",followers:155000,engage:4.8,perf:7.6},
+  {name:"Nate Frazier",pos:"RB",school:"Georgia",initials:"NF",val:1.7,trend:"up",followers:138000,engage:4.3,perf:7.8},
+  {name:"Marcel Reed",pos:"QB",school:"Texas A&M",initials:"MR",val:1.7,trend:"up",followers:132000,engage:4.6,perf:7.5},
+  {name:"Gunner Stockton",pos:"QB",school:"Georgia",initials:"GS",val:1.6,trend:"up",followers:128000,engage:4.2,perf:7.4},
+  {name:"Ryan Wingo",pos:"WR",school:"Texas",initials:"RW",val:1.6,trend:"up",followers:122000,engage:4.0,perf:7.6},
+  {name:"Zabien Brown",pos:"CB",school:"Alabama",initials:"ZB",val:1.5,trend:"up",followers:120000,engage:3.8,perf:7.5},
+  {name:"Kewan Lacy",pos:"RB",school:"LSU",initials:"KL",val:1.4,trend:"up",followers:115000,engage:3.9,perf:7.3},
+  {name:"Jayden Woods",pos:"TE",school:"Georgia",initials:"JW",val:1.4,trend:"up",followers:110000,engage:3.7,perf:7.2},
+  {name:"Byrum Brown",pos:"QB",school:"Florida",initials:"BB",val:1.3,trend:"dn",followers:105000,engage:3.5,perf:7.0},
+  {name:"Fluff Bothwell",pos:"WR",school:"LSU",initials:"FB",val:1.3,trend:"up",followers:108000,engage:3.6,perf:7.1},
+  {name:"David Stone",pos:"DE",school:"Oklahoma",initials:"DS",val:1.3,trend:"up",followers:100000,engage:3.4,perf:7.3},
+  {name:"Austin Mack",pos:"WR",school:"Georgia",initials:"AM",val:1.2,trend:"up",followers:98000,engage:3.3,perf:7.0},
+  {name:"Lance Heard",pos:"WR",school:"Texas",initials:"LH",val:1.2,trend:"dn",followers:95000,engage:3.2,perf:6.9},
+  {name:"Gabriel Brownlow-Dindy",pos:"DE",school:"Texas",initials:"GB",val:1.2,trend:"up",followers:92000,engage:3.1,perf:7.2},
+  {name:"Corey Robinson II",pos:"WR",school:"South Carolina",initials:"CR",val:1.1,trend:"up",followers:88000,engage:3.0,perf:6.8},
+  {name:"Kamran James",pos:"CB",school:"LSU",initials:"KJ",val:1.1,trend:"up",followers:85000,engage:2.9,perf:7.0},
+  {name:"Trinidad Chambliss",pos:"WR",school:"Auburn",initials:"TC",val:1.1,trend:"up",followers:83000,engage:2.8,perf:6.9},
+  {name:"Justus Terry",pos:"DE",school:"Georgia",initials:"JT",val:1.1,trend:"up",followers:80000,engage:2.7,perf:7.1},
+  {name:"Deuce Knight",pos:"RB",school:"Ole Miss",initials:"DK",val:1.0,trend:"up",followers:78000,engage:2.6,perf:6.8},
+  {name:"KJ Bolden",pos:"S",school:"Georgia",initials:"KB",val:1.0,trend:"up",followers:76000,engage:2.5,perf:6.7},
+  {name:"Isaac Smith",pos:"LB",school:"Alabama",initials:"IS",val:1.0,trend:"up",followers:74000,engage:2.4,perf:6.9},
+  {name:"DeSean Bishop",pos:"WR",school:"West Virginia",initials:"DB",val:1.0,trend:"up",followers:72000,engage:2.3,perf:6.8},
+  {name:"Dylan Stewart",pos:"DE",school:"South Carolina",initials:"DS",val:1.0,trend:"up",followers:70000,engage:2.2,perf:7.0},
+  {name:"Mario Craver",pos:"WR",school:"Alabama",initials:"MC",val:1.0,trend:"dn",followers:68000,engage:2.1,perf:6.6},
+  {name:"Bray Hubbard",pos:"RB",school:"Florida",initials:"BH",val:0.9,trend:"dn",followers:65000,engage:2.0,perf:6.5},
+  {name:"Quincy Rhodes Jr.",pos:"WR",school:"Tennessee",initials:"QR",val:0.9,trend:"up",followers:63000,engage:1.9,perf:6.4},
+  {name:"Vernell Brown III",pos:"WR",school:"Texas",initials:"VB",val:0.9,trend:"dn",followers:60000,engage:1.8,perf:6.3},
+  {name:"Josh Thompson",pos:"CB",school:"Texas",initials:"JT",val:0.9,trend:"dn",followers:58000,engage:1.7,perf:6.5},
+  {name:"Isaiah Sategna III",pos:"WR",school:"Arkansas",initials:"IS",val:0.9,trend:"up",followers:56000,engage:1.6,perf:6.4},
+  {name:"David Sanders Jr.",pos:"DE",school:"Arkansas",initials:"DS",val:0.9,trend:"up",followers:54000,engage:1.5,perf:6.6},
+  {name:"Ahmad Hardy",pos:"RB",school:"Florida",initials:"AH",val:0.8,trend:"up",followers:52000,engage:1.4,perf:6.2},
+  {name:"Tavion Gadson",pos:"RB",school:"Tennessee",initials:"TG",val:0.8,trend:"up",followers:50000,engage:1.3,perf:6.1},
+  {name:"Will Echoles",pos:"CB",school:"Tennessee",initials:"WE",val:0.8,trend:"dn",followers:48000,engage:1.2,perf:6.3},
+  {name:"Braelin Moore",pos:"WR",school:"Oklahoma",initials:"BM",val:0.7,trend:"up",followers:45000,engage:1.1,perf:6.0},
+  {name:"Earnest Greene III",pos:"OL",school:"Georgia",initials:"EG",val:0.7,trend:"dn",followers:43000,engage:1.0,perf:6.2},
+  {name:"Boo Carter",pos:"RB",school:"Mississippi State",initials:"BC",val:0.7,trend:"dn",followers:40000,engage:0.9,perf:5.9},
+  {name:"Marcus Ratcliffe",pos:"LB",school:"Ole Miss",initials:"MR",val:0.7,trend:"dn",followers:38000,engage:0.8,perf:6.0},
+  {name:"Matt Zollers",pos:"TE",school:"Illinois",initials:"MZ",val:0.7,trend:"up",followers:36000,engage:0.7,perf:6.1},
+  {name:"Peyton Williams",pos:"TE",school:"Oklahoma",initials:"PW",val:0.7,trend:"dn",followers:28000,engage:0.5,perf:5.8},
+  {name:"Tyler Lockhart",pos:"S",school:"Mississippi State",initials:"TL",val:0.6,trend:"dn",followers:34000,engage:0.6,perf:5.8},
+  {name:"Eli Bowen",pos:"TE",school:"Kentucky",initials:"EB",val:0.6,trend:"dn",followers:32000,engage:0.5,perf:5.9},
+  {name:"Langston Patterson",pos:"TE",school:"Arkansas",initials:"LP",val:0.6,trend:"up",followers:30000,engage:0.5,perf:6.0},
+  {name:"Nicholas Rodriguez",pos:"OL",school:"Miami",initials:"NR",val:0.5,trend:"dn",followers:25000,engage:0.4,perf:5.7},
+  {name:"Bryan Longwell",pos:"OL",school:"Arkansas",initials:"BL",val:0.4,trend:"dn",followers:20000,engage:0.3,perf:5.5},
+];
+const SORTED=[...ATHLETES].sort((a,b)=>b.val-a.val);
+
+let currentFilter='ALL';
+let profileChartInst=null;
+
+function showPage(id){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.nb').forEach(b=>b.classList.remove('active'));
+  document.getElementById('page-'+id).classList.add('active');
+  const navBtn=document.getElementById('nav-'+id);
+  if(navBtn)navBtn.classList.add('active');
+}
+
+function setFilter(f,btn){
+  currentFilter=f;
+  document.querySelectorAll('.fb').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  filterAthletes();
+}
+
+function filterAthletes(){
+  const q=(document.getElementById('searchInput').value||'').toLowerCase();
+  const DEF=['CB','DE','S','LB'];
+  const filtered=SORTED.filter(a=>{
+    const mp=currentFilter==='ALL'||a.pos===currentFilter||(currentFilter==='DEF'&&DEF.includes(a.pos))||(currentFilter==='OL'&&a.pos==='OL');
+    const mq=!q||a.name.toLowerCase().includes(q)||a.school.toLowerCase().includes(q)||a.pos.toLowerCase().includes(q);
+    return mp&&mq;
+  });
+  document.getElementById('athletes-grid').innerHTML=filtered.map(a=>{
+    const idx=SORTED.indexOf(a);
+    const c=sc2(a.school);
+    return`<div class="ac" style="background:${c.bg};border-color:${c.border}" onclick="openProfile(${idx})">
+      <div class="ac-rank" style="color:${c.text}">#${idx+1}</div>
+      <div class="ac-top">
+        <div class="avatar" style="background:${c.ab};color:${c.text};border-color:${c.accent}44">${a.initials}</div>
+        <div class="ac-nameblock">
+          <div class="ac-name">${a.name}</div>
+          <div class="ac-school" style="color:${c.text}">${a.school}</div>
+        </div>
+        <div class="ptag" style="${ps(a.pos)}">${a.pos}</div>
+      </div>
+      <div class="sep"></div>
+      <div class="val-lbl" style="color:${c.text}">NIL VALUATION</div>
+      <div class="ac-bot">
+        <div class="val-num" style="color:${c.accent}">$${a.val}M</div>
+        <div class="arr ${a.trend}" style="color:${a.trend==='up'?c.accent:'#333'}">${a.trend==='up'?'↗':'↘'}</div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function openProfile(idx){
+  const a=SORTED[idx];
+  const c=sc2(a.school);
+  const rank=idx+1;
+  const newsItems=NEWS[a.name]||NEWS.default(a.name,a.school,a.pos);
+  const times=['1h ago','4h ago','1d ago'];
+  const srcs=['ESPN','ON3','247SPORTS'];
+  const comps=SORTED.filter(x=>x.pos===a.pos&&x.name!==a.name).slice(0,4);
+  const maxV=Math.max(...comps.map(x=>x.val),a.val);
+
+  // valuation trend data (simulated monthly)
+  const baseVal=a.val;
+  const months=['Aug','Sep','Oct','Nov','Dec','Jan','Feb','Mar','Apr'];
+  const trend=months.map((_,i)=>{
+    const noise=(Math.random()-0.4)*0.15*baseVal;
+    return Math.max(0.1,+(baseVal*(0.7+i*0.04)+noise).toFixed(2));
+  });
+  trend[trend.length-1]=baseVal;
+
+  document.getElementById('profile-content').innerHTML=`
+    <div class="profile-hero" style="border-color:${c.border}">
+      <div class="p-avatar" style="background:${c.ab};color:${c.text};border-color:${c.accent}55">${a.initials}</div>
+      <div>
+        <div class="profile-name">${a.name}</div>
+        <div class="profile-meta">
+          <span>🏈 ${a.school}</span>
+          <span>📍 ${a.pos}</span>
+          <span>👥 ${a.followers>=1e6?(a.followers/1e6).toFixed(1)+'M':(a.followers/1000).toFixed(0)+'K'} followers</span>
+          <span>📊 ${a.engage}% engagement</span>
+        </div>
+        <div class="profile-tags">
+          <span class="ptag2" style="${ps(a.pos)}">${a.pos}</span>
+          <span class="ptag2" style="background:${c.ab};color:${c.text}">${a.school.toUpperCase()}</span>
+          <span class="ptag2" style="background:#181818;color:#555">#${rank} OVERALL</span>
+          <span class="ptag2" style="background:${a.trend==='up'?'#1a0909':'#111'};color:${a.trend==='up'?'#e84343':'#444'}">${a.trend==='up'?'↗ TRENDING UP':'↘ TRENDING DOWN'}</span>
+        </div>
+      </div>
+      <div class="pval-block">
+        <div class="pval-lbl">NIL VALUATION</div>
+        <div class="pval-big" style="color:${c.accent}">$${a.val}M</div>
+        <div class="pval-trend" style="color:${a.trend==='up'?'#e84343':'#444'}">${a.trend==='up'?'↗ +12.4% (30d)':'↘ -4.1% (30d)'}</div>
+        <div class="pval-rank">#${rank} of ${SORTED.length} athletes</div>
+      </div>
+    </div>
+
+    <div class="p3">
+      <div class="pstat" style="border-color:${c.border}">
+        <div class="pstat-lbl">PERFORMANCE RATING</div>
+        <div class="pstat-val" style="color:${c.accent}">${a.perf}<span style="font-size:13px;color:#444">/10</span></div>
+        <div class="pstat-sub">On-field grade</div>
+      </div>
+      <div class="pstat" style="border-color:${c.border}">
+        <div class="pstat-lbl">SOCIAL FOLLOWING</div>
+        <div class="pstat-val" style="color:${c.accent}">${a.followers>=1e6?(a.followers/1e6).toFixed(1)+'M':(a.followers/1000).toFixed(0)+'K'}</div>
+        <div class="pstat-sub">${a.engage}% engagement rate</div>
+      </div>
+      <div class="pstat" style="border-color:${c.border}">
+        <div class="pstat-lbl">MARKET RANK</div>
+        <div class="pstat-val" style="color:${c.accent}">#${rank}</div>
+        <div class="pstat-sub">Top ${Math.ceil(rank/SORTED.length*100)}% of market</div>
+      </div>
+    </div>
+
+    <div class="p2">
+      <div>
+        <div class="pstat" style="border-color:${c.border};margin-bottom:14px">
+          <div class="box-title" style="margin-bottom:14px">VALUATION TREND (YTD)</div>
+          <div style="position:relative;height:140px"><canvas id="profileChart" role="img" aria-label="Valuation trend for ${a.name}">NIL valuation over time.</canvas></div>
+        </div>
+        <div class="pstat" style="border-color:${c.border}">
+          <div class="box-title" style="margin-bottom:12px">VALUE BREAKDOWN</div>
+          <div class="bbar-row"><div class="bbar-lbl">Social Reach</div><div class="bbar-track"><div class="bbar-fill" style="width:${Math.min(100,Math.round(a.followers/9800))}%;background:${c.accent}"></div></div><div class="bbar-pct">45%</div></div>
+          <div class="bbar-row"><div class="bbar-lbl">School Premium</div><div class="bbar-track"><div class="bbar-fill" style="width:75%;background:${c.accent}"></div></div><div class="bbar-pct">30%</div></div>
+          <div class="bbar-row"><div class="bbar-lbl">On-Field Perf.</div><div class="bbar-track"><div class="bbar-fill" style="width:${Math.round(a.perf*6)}%;background:${c.accent}"></div></div><div class="bbar-pct">${Math.round(a.perf*2.5)}%</div></div>
+          <div class="bbar-row"><div class="bbar-lbl">Position Premium</div><div class="bbar-track"><div class="bbar-fill" style="width:${['QB','WR'].includes(a.pos)?60:35}%;background:${c.accent}"></div></div><div class="bbar-pct">${['QB','WR'].includes(a.pos)?'15':'10'}%</div></div>
+        </div>
+      </div>
+      <div>
+        <div class="pstat" style="border-color:${c.border};margin-bottom:14px">
+          <div class="box-title" style="margin-bottom:4px">LATEST NEWS</div>
+          ${newsItems.map((hl,i)=>`<div class="news-item">
+            <div class="news-dot" style="background:${c.accent}"></div>
+            <div><div class="news-src" style="color:${c.accent}">${srcs[i%3]}</div><div class="news-hl">${hl}</div><div class="news-time">${times[i%3]}</div></div>
+          </div>`).join('')}
+        </div>
+        <div class="pstat" style="border-color:${c.border}">
+          <div class="box-title" style="margin-bottom:10px">${a.pos} COMPARABLES</div>
+          ${comps.map(x=>{const xc=sc2(x.school);return`<div class="comp-row">
+            <div class="comp-name">${x.name} <span style="color:#333;font-size:10px">${x.school}</span></div>
+            <div class="comp-bar-w"><div class="comp-bar-f" style="width:${Math.round(x.val/maxV*100)}%;background:${xc.accent}"></div></div>
+            <div class="comp-val" style="color:${xc.accent}">$${x.val}M</div>
+          </div>`}).join('')}
+        </div>
+      </div>
+    </div>`;
+
+  showPage('profile');
+
+  setTimeout(()=>{
+    const canvas=document.getElementById('profileChart');
+    if(!canvas)return;
+    if(profileChartInst){profileChartInst.destroy();profileChartInst=null;}
+    profileChartInst=new Chart(canvas,{
+      type:'line',
+      data:{
+        labels:months,
+        datasets:[{
+          label:'NIL Value ($M)',
+          data:trend,
+          borderColor:c.accent,
+          backgroundColor:c.accent+'22',
+          fill:true,tension:0.4,borderWidth:2,pointRadius:3,
+          pointBackgroundColor:c.accent,
+          pointBorderColor:c.accent
+        }]
+      },
+      options:{
+        responsive:true,maintainAspectRatio:false,
+        plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>'$'+ctx.parsed.y.toFixed(2)+'M'}}},
+        scales:{
+          x:{grid:{color:'rgba(255,255,255,0.04)'},ticks:{color:'#444',font:{size:10}}},
+          y:{grid:{color:'rgba(255,255,255,0.04)'},ticks:{color:'#444',font:{size:10},callback:v=>'$'+v+'M'},min:0}
+        }
+      }
+    });
+  },50);
+}
+
+function renderDepth(){
+  document.getElementById('depth-list').innerHTML=SORTED.slice(0,5).map((a,i)=>{
+    const c=sc2(a.school);
+    return`<div class="depth-row">
+      <div class="d-rank">${i+1}</div>
+      <div class="pos-badge" style="${ps(a.pos)}">${a.pos}</div>
+      <div class="d-info"><div class="d-name">${a.name}</div><div class="d-school">${a.school}</div></div>
+      <div class="d-val" style="color:${c.accent}">$${a.val}M</div>
+      <div class="arr ${a.trend}">${a.trend==='up'?'↗':'↘'}</div>
+    </div>`;
+  }).join('');
+}
+
+function renderOverviewChart(){
+  new Chart(document.getElementById('overviewChart'),{
+    type:'line',
+    data:{
+      labels:['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+      datasets:[
+        {label:'Top Tier',data:[1.2,1.4,1.6,2.0,2.4,2.9,3.5,4.1,4.8,4.2,3.8,3.5],borderColor:'#e84343',backgroundColor:'rgba(232,67,67,0.12)',fill:true,tension:0.4,borderWidth:2,pointRadius:0},
+        {label:'Avg Tier',data:[0.3,0.35,0.4,0.5,0.6,0.75,0.9,1.1,1.3,1.1,1.0,0.9],borderColor:'#555',backgroundColor:'rgba(80,80,80,0.07)',fill:true,tension:0.4,borderWidth:1.5,pointRadius:0}
+      ]
+    },
+    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},
+      scales:{x:{grid:{color:'rgba(255,255,255,0.04)'},ticks:{color:'#444',font:{size:10}}},
+              y:{grid:{color:'rgba(255,255,255,0.04)'},ticks:{color:'#444',font:{size:10},callback:v=>'$'+v+'M'},min:0}}}
+  });
+}
+
+// PREDICTOR — connected to Flask backend at localhost:8000
+const BACKEND='';
+
+const TEAM_DATA={
+  'Alabama':    {full:'Alabama Crimson Tide',      fpi:19.0,  tier:2},
+  'Georgia':    {full:'Georgia Bulldogs',           fpi:21.4,  tier:1},
+  'Texas':      {full:'Texas Longhorns',            fpi:18.6,  tier:1},
+  'LSU':        {full:'LSU Tigers',                 fpi:10.7,  tier:2},
+  'Oklahoma':   {full:'Oklahoma Sooners',           fpi:15.9,  tier:3},
+  'Florida':    {full:'Florida Gators',             fpi:8.2,   tier:3},
+  'Tennessee':  {full:'Tennessee Volunteers',       fpi:19.0,  tier:2},
+  'Auburn':     {full:'Auburn Tigers',              fpi:11.1,  tier:9},
+  'Ole Miss':   {full:'Ole Miss Rebels',            fpi:19.3,  tier:3},
+  'South Carolina':{full:'South Carolina Gamecocks',fpi:9.0,  tier:3},
+  'Texas A&M':  {full:'Texas A&M Aggies',           fpi:18.4,  tier:3},
+  'Arkansas':   {full:'Arkansas Razorbacks',        fpi:6.6,   tier:12},
+  'Mississippi State':{full:'Mississippi State Bulldogs',fpi:3.4,tier:16},
+  'Kentucky':   {full:'Kentucky Wildcats',          fpi:5.1,   tier:12},
+  'Missouri':   {full:'Missouri Tigers',            fpi:13.1,  tier:8},
+  'Vanderbilt': {full:'Vanderbilt Commodores',      fpi:17.0,  tier:8},
+};
+
+const POS_STATS={
+  QB:['stats-passing'],
+  WR:['stats-receiving'],
+  RB:['stats-rushing'],
+  TE:['stats-receiving'],
+  DE:['stats-defense'],
+  CB:['stats-defense'],
+  LB:['stats-defense'],
+  S:['stats-defense'],
+  OL:[]
+};
+
+function onSchoolChange(){}  // team data is read at submit time
+
+function onPositionChange(){
+  const pos=document.getElementById('p-pos').value;
+  const show=POS_STATS[pos]||[];
+  ['stats-passing','stats-receiving','stats-rushing','stats-defense'].forEach(id=>{
+    document.getElementById(id).style.display=show.includes(id)?'block':'none';
+  });
+}
+
+async function checkBackendHealth(){
+  const el=document.getElementById('api-status');
+  try{
+    const r=await fetch(BACKEND+'/health',{signal:AbortSignal.timeout(3000)});
+    const d=await r.json();
+    if(d.status==='ok'){
+      el.textContent='API CONNECTED';
+      el.className='api-status ok';
+    }else throw new Error();
+  }catch{
+    el.textContent='API OFFLINE';
+    el.className='api-status err';
+  }
+}
+
+async function generateValuation(){
+  const btn=document.getElementById('gen-btn');
+  btn.disabled=true;
+  document.getElementById('res-placeholder').style.display='none';
+  document.getElementById('res-loading').style.display='flex';
+  document.getElementById('res-content').style.display='none';
+  document.getElementById('res-error').style.display='none';
+
+  const school=document.getElementById('p-school').value;
+  const pos=document.getElementById('p-pos').value;
+  const td=TEAM_DATA[school]||{full:school,fpi:10,tier:5};
+  const followers=parseInt(document.getElementById('p-followers').value)||150000;
+
+  const payload={
+    position:pos,
+    class:document.getElementById('p-class').value,
+    height_in:parseFloat(document.getElementById('p-height').value)||74,
+    weight_lb:parseFloat(document.getElementById('p-weight').value)||215,
+    follower_count:followers,
+    games_played:parseInt(document.getElementById('p-games').value)||12,
+    program_tier:td.tier,
+    team_FPI:td.fpi,
+    team:td.full,
+    pass_yards:parseFloat(document.getElementById('p-pass-yards')?.value)||0,
+    rec_yards:parseFloat(document.getElementById('p-rec-yards')?.value)||0,
+    rush_yards:parseFloat(document.getElementById('p-rush-yards')?.value)||0,
+    scoring_td:parseFloat(document.getElementById('p-pass-td')?.value||document.getElementById('p-rec-td')?.value||document.getElementById('p-rush-td')?.value)||0,
+    def_tackles:parseFloat(document.getElementById('p-tackles')?.value)||0,
+    def_sacks:parseFloat(document.getElementById('p-sacks')?.value)||0,
+  };
+
+  try{
+    const resp=await fetch(BACKEND+'/predict',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify(payload),
+      signal:AbortSignal.timeout(10000)
+    });
+    if(!resp.ok){
+      const err=await resp.json().catch(()=>({}));
+      throw new Error(err.error||`HTTP ${resp.status}`);
+    }
+    const r=await resp.json();
+    const fmt=v=>'$'+Math.round(v).toLocaleString('en-US');
+    const name=document.getElementById('p-name').value||'This athlete';
+    const tier=r.predicted_nil>2000000?'top tier':r.predicted_nil>800000?'mid tier':'developing';
+
+    document.getElementById('res-big').textContent=fmt(r.predicted_nil);
+    document.getElementById('res-ci').textContent=`CONFIDENCE INTERVAL: ${fmt(r.ci_low)} — ${fmt(r.ci_high)}`;
+    document.getElementById('res-posgroup').textContent=`POS GROUP: ${r.pos_group||pos}`;
+
+    const r2=Math.round((r.cv_r2||0)*100);
+    document.getElementById('bar-r2').style.width=r2+'%';
+    document.getElementById('pct-r2').textContent=r2+'%';
+
+    document.getElementById('res-text').textContent=
+      `${name} is a ${pos} at ${td.full} (Program Tier ${td.tier}, FPI ${td.fpi}). `+
+      `With ${(followers/1000).toFixed(0)}K followers and ${payload.games_played} games played, `+
+      `the ML model places this athlete in the ${tier} bracket of SEC NIL earners.`;
+
+    document.getElementById('res-loading').style.display='none';
+    document.getElementById('res-content').style.display='flex';
+  }catch(e){
+    document.getElementById('res-loading').style.display='none';
+    document.getElementById('res-error').style.display='block';
+    document.getElementById('res-error').textContent=
+      e.message.includes('fetch')||e.message.includes('Failed')||e.name==='TimeoutError'
+        ?'Cannot reach backend. Make sure the Flask server is running on localhost:8000.'
+        :'Error: '+e.message;
+  }
+  btn.disabled=false;
+}
+
+renderDepth();
+filterAthletes();
+setTimeout(renderOverviewChart,100);
+onPositionChange();
+checkBackendHealth();
+setInterval(checkBackendHealth,30000);
+</script>
