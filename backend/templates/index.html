@@ -153,20 +153,7 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:13px 2
 </style>
 
 <div id="app">
-<div class="ticker"><div class="ticker-track">
-  <span class="t-badge">BREAKING</span>
-  <span>↑ Arch Manning trending <span class="up">+18%</span> after SEC title run</span>
-  <span>↑ Ryan Williams signs Nike apparel deal</span>
-  <span>SEC announces new collective guidelines for 2026</span>
-  <span>↑ Jackson Arnold QB market surges after bowl win</span>
-  <span>NIL market volume up <span class="up">23%</span> YTD across SEC</span>
-  <span class="t-badge">BREAKING</span>
-  <span>↑ Arch Manning trending <span class="up">+18%</span> after SEC title run</span>
-  <span>↑ Ryan Williams signs Nike apparel deal</span>
-  <span>SEC announces new collective guidelines for 2026</span>
-  <span>↑ Jackson Arnold QB market surges after bowl win</span>
-  <span>NIL market volume up <span class="up">23%</span> YTD across SEC</span>
-</div></div>
+<div class="ticker"><div class="ticker-track" id="ticker-track"><span class="t-badge">LIVE</span><span>Loading news...</span></div></div>
 
 <nav>
   <div class="logo">NIL<span>X</span> MARKET</div>
@@ -814,10 +801,29 @@ async function generateValuation(){
   btn.disabled=false;
 }
 
+async function loadTicker(){
+  const track=document.getElementById('ticker-track');
+  try{
+    const r=await fetch(BACKEND+'/news?limit=12',{signal:AbortSignal.timeout(8000)});
+    const d=await r.json();
+    const articles=d.articles||[];
+    if(!articles.length) throw new Error('empty');
+    const items=articles.map(a=>
+      `<span><a href="${a.url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">${a.title}</a> <span style="color:#444;font-size:9px">[${a.source}]</span></span>`
+    ).join('');
+    // duplicate for seamless loop
+    track.innerHTML=`<span class="t-badge">LIVE</span>${items}<span class="t-badge">LIVE</span>${items}`;
+  }catch{
+    // keep placeholder on failure
+    track.innerHTML='<span class="t-badge">BREAKING</span><span>NIL market volume up 23% YTD across SEC</span><span>Arch Manning trending +18% after SEC title run</span><span>Ryan Williams signs Nike apparel deal</span><span class="t-badge">BREAKING</span><span>NIL market volume up 23% YTD across SEC</span><span>Arch Manning trending +18% after SEC title run</span><span>Ryan Williams signs Nike apparel deal</span>';
+  }
+}
+
 renderDepth();
 filterAthletes();
 setTimeout(renderOverviewChart,100);
 onPositionChange();
 checkBackendHealth();
 setInterval(checkBackendHealth,30000);
+loadTicker();
 </script>
