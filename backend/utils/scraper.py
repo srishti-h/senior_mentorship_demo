@@ -12,6 +12,8 @@ import re
 import time
 import logging
 import requests
+import xml.etree.ElementTree as ET
+from urllib.parse import quote_plus
 
 from config import (
     SCRAPE_HEADERS,
@@ -208,3 +210,61 @@ def scrape_sec_news(limit: int = 10) -> list[dict]:
     _news_cache = (live, now)
     logger.info(f"News: {len(live[:limit])} articles")
     return live[:limit]
+
+
+# ─── Player-specific news via Google News RSS ─────────────────────────────────
+
+_player_news_cache: dict[str, tuple[list, float]] = {}
+PLAYER_NEWS_TTL = 1800  # 30 minutes
+
+
+def search_player_news(query: str, limit: int = 5) -> list[dict]:
+    """
+    Fetch real news articles for a specific player/query via Google News RSS.
+    Falls back to general SEC news on failure. Caches per query for 30 min.
+    """
+    cache_key = query.lower().strip()
+    now = time.time()
+
+    if cache_key in _player_news_cache:
+        cached_articles, cached_at = _player_news_cache[cache_key]
+        if now - cached_at < PLAYER_NEWS_TTL:
+            logger.debug(f"Player news cache hit: {query}")
+            return cached_articles[:limit]
+
+    articles = []
+    try:
+        search_q = quote_plus(f"{query} NIL college football")
+        url = f"https://news.google.com/rss/search?q={search_q}&hl=en-US&gl=US&ceid=US:en"
+        resp = requests.get(url, headers=SCRAPE_HEADERS, timeout=REQUEST_TIMEOUT)
+
+        if resp.status_code == 200:
+            root = ET.fromstring(resp.content)
+            ns = {"media": "http://search.yahoo.com/mrss/"}
+            for item in root.findall(".//item"):
+                title_el  = item.find("title")
+                link_el   = item.find("link")
+                source_el = item.find("source")
+
+                title  = title_el.text.strip()  if title_el  is not None else ""
+                link   = link_el.text.strip()   if link_el   is not None else ""
+                source = source_el.text.strip() if source_el is not None else "Google News"
+
+                # Strip the " - Source Name" suffix Google appends to titles
+                title = re.sub(r'\s+-\s+[\w\s]+$', '', title).strip()
+
+                if title and link and len(title) > 15:
+                    articles.append({"title": title, "url": link, "source": source})
+                if len(articles) >= limit:
+                    break
+
+    except Exception as e:
+        logger.warning(f"Google News RSS for '{query}': {e}")
+
+    # Fall back to general SEC news if nothing found
+    if not articles:
+        articles = scrape_sec_news(limit=limit)
+
+    _player_news_cache[cache_key] = (articles, now)
+    logger.info(f"Player news '{query}': {len(articles)} articles")
+    return articles[:limit]
