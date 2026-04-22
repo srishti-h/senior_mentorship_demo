@@ -1,56 +1,175 @@
-import { useState, useEffect } from 'react'
+/**
+ * hooks/usePredict.js
+ *
+ * Custom hooks that talk to the Flask backend.
+ *
+ * usePlayerList  — paginated player list with search + position filter
+ * usePlayerDetail — single player detail with optional live IG refresh
+ * usePredict     — POST /predict NIL valuation
+ * useNews        — GET /news breaking ticker headlines
+ */
 
-const API = '/api'
+import { useState, useEffect, useCallback, useRef } from "react";
 
-export function useModelStatus() {
-  const [status, setStatus] = useState({ online: false, cvR2: null, message: 'Checking model…' })
+// Vite proxies /api → http://localhost:8000  (see vite.config.js)
+const BASE = "/api";
+
+// ─── Generic fetcher ─────────────────────────────────────────────────────────
+async function apiFetch(path, options = {}) {
+  const res = await fetch(`${BASE}${path}`, options);
+  if (!res.ok) {
+    const body = await res.json().catch(() => ({}));
+    throw new Error(body.error || `HTTP ${res.status}`);
+  }
+  return res.json();
+}
+
+// ─── usePlayerList ────────────────────────────────────────────────────────────
+/**
+ * Fetches the paginated player list.
+ * Returns { players, total, loading, error, page, setPage }
+ */
+export function usePlayerList({ query = "", position = "ALL", pageSize = 24 } = {}) {
+  const [players, setPlayers] = useState([]);
+  const [total,   setTotal]   = useState(0);
+  const [page,    setPage]    = useState(0);
+  const [loading, setLoading] = useState(true);
+  const [error,   setError]   = useState(null);
+
+  // Reset to page 0 whenever filters change
+  const prevFilters = useRef({ query, position });
+  useEffect(() => {
+    if (
+      prevFilters.current.query    !== query ||
+      prevFilters.current.position !== position
+    ) {
+      prevFilters.current = { query, position };
+      setPage(0);
+    }
+  }, [query, position]);
 
   useEffect(() => {
-    fetch(`${API}/health`)
-      .then(r => r.json())
-      .then(d => {
-        if (d.model_loaded) {
-          setStatus({ online: true, cvR2: d.cv_r2, message: 'Model ready' })
-        } else {
-          setStatus({ online: false, cvR2: null, message: 'Model not loaded' })
-        }
-      })
-      .catch(err => {
-        console.error('Health check failed:', err)
-        setStatus({ online: false, cvR2: null, message: 'Backend offline' })
-      })
-  }, [])
+    let cancelled = false;
+    setLoading(true);
+    setError(null);
 
-  return status
+    const params = new URLSearchParams({
+      limit:  pageSize,
+      offset: page * pageSize,
+    });
+    if (query)              params.set("q", query);
+    if (position !== "ALL") params.set("position", position);
+
+    apiFetch(`/players?${params}`)
+      .then((data) => {
+        if (cancelled) return;
+        setPlayers(data.players);
+        setTotal(data.total);
+      })
+      .catch((err) => {
+        if (cancelled) return;
+        setError(err.message);
+      })
+      .finally(() => {
+        if (!cancelled) setLoading(false);
+      });
+
+    return () => { cancelled = true; };
+  }, [query, position, page, pageSize]);
+
+  return { players, total, loading, error, page, setPage };
 }
 
-export async function runPredict(payload) {
-  const r = await fetch(`${API}/predict`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(payload),
-  })
-  const d = await r.json()
-  if (!r.ok || d.error) throw new Error(d.error || `HTTP ${r.status}`)
-  return d
+// ─── usePlayerDetail ──────────────────────────────────────────────────────────
+/**
+ * Fetches a single player by name.
+ * Optionally refreshes the live Instagram follower count.
+ * Returns { player, loading, error, refreshIG, igLoading }
+ */
+export function usePlayerDetail(name) {
+  const [player,    setPlayer]    = useState(null);
+  const [loading,   setLoading]   = useState(false);
+  const [error,     setError]     = useState(null);
+  const [igLoading, setIgLoading] = useState(false);
+
+  useEffect(() => {
+    if (!name) { setPlayer(null); return; }
+
+    let cancelled = false;
+    setLoading(true);
+    setError(null);
+
+    apiFetch(`/players/${encodeURIComponent(name)}?refresh_ig=true`)
+      .then((data) => { if (!cancelled) setPlayer(data); })
+      .catch((err)  => { if (!cancelled) setError(err.message); })
+      .finally(()   => { if (!cancelled) setLoading(false); });
+
+    return () => { cancelled = true; };
+  }, [name]);
+
+  const refreshIG = useCallback(async () => {
+    if (!player?.instagram_user) return;
+    setIgLoading(true);
+    try {
+      const data = await apiFetch(`/instagram/${player.instagram_user}`);
+      setPlayer((prev) => ({ ...prev, follower_count: data.followers, follower_count_live: true }));
+    } catch {
+      // silently fail — stale count stays displayed
+    } finally {
+      setIgLoading(false);
+    }
+  }, [player]);
+
+  return { player, loading, error, refreshIG, igLoading };
 }
 
-export function computeBreakdown(payload) {
-  const social = Math.log1p(payload.follower_count)
-  const prog   = (payload.team_FPI / 30) * (6 - payload.program_tier) / 5
-  const perf   = (
-    payload.season_rec_yards   / 1000 + payload.career_rec_yards   / 2000 +
-    payload.season_pass_yards  / 3000 + payload.career_pass_yards  / 6000 +
-    payload.season_scoring_td  / 15   + payload.career_scoring_td  / 30   +
-    payload.season_def_tackles / 50   + payload.career_def_tackles / 100  +
-    payload.season_def_sacks   / 10   + payload.career_def_sacks   / 20
-  )
-  const phys  = Math.abs((payload.height_in - 72) / 6 + (payload.weight_lb - 220) / 80)
-  const total = social + prog + perf + phys + 0.0001
-  return {
-    social: Math.round(social / total * 100),
-    prog:   Math.round(prog   / total * 100),
-    perf:   Math.round(perf   / total * 100),
-    phys:   Math.round(phys   / total * 100),
-  }
+// ─── usePredict ───────────────────────────────────────────────────────────────
+/**
+ * Sends a player dict to POST /predict.
+ * Returns { predict, result, loading, error }
+ * Call predict(playerData) to trigger a prediction.
+ */
+export function usePredict() {
+  const [result,  setResult]  = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error,   setError]   = useState(null);
+
+  const predict = useCallback(async (playerData) => {
+    setLoading(true);
+    setError(null);
+    setResult(null);
+    try {
+      const data = await apiFetch("/predict", {
+        method:  "POST",
+        headers: { "Content-Type": "application/json" },
+        body:    JSON.stringify(playerData),
+      });
+      setResult(data);
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setLoading(false);
+    }
+  }, []);
+
+  return { predict, result, loading, error };
+}
+
+// ─── useNews ──────────────────────────────────────────────────────────────────
+/**
+ * Fetches SEC/NIL news for the breaking ticker.
+ * Returns { articles, loading }
+ */
+export function useNews(limit = 10) {
+  const [articles, setArticles] = useState([]);
+  const [loading,  setLoading]  = useState(true);
+
+  useEffect(() => {
+    apiFetch(`/news?limit=${limit}`)
+      .then((data) => setArticles(data.articles || []))
+      .catch(() => setArticles([]))
+      .finally(() => setLoading(false));
+  }, [limit]);
+
+  return { articles, loading };
 }
