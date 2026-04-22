@@ -150,7 +150,105 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:13px 2
 .ldots span:nth-child(2){animation-delay:.2s}
 .ldots span:nth-child(3){animation-delay:.4s}
 @keyframes dp{0%,80%,100%{opacity:.15}40%{opacity:1}}
+
+/* ── AUTH OVERLAY ─────────────────────────── */
+.auth-overlay{position:fixed;inset:0;background:#080808;z-index:9999;display:flex;align-items:center;justify-content:center}
+.auth-card{background:#111;border:1px solid #222;border-radius:12px;padding:36px;width:360px;max-width:92vw}
+.auth-logo{font-size:20px;font-weight:800;letter-spacing:.15em;text-align:center;margin-bottom:4px}
+.auth-logo span{color:#e84343}
+.auth-sub{font-size:10px;color:#333;text-align:center;margin-bottom:24px;letter-spacing:.1em}
+.auth-lbl{font-size:10px;color:#555;letter-spacing:.1em;display:block;margin-bottom:5px}
+.auth-inp{width:100%;background:#181818;border:1px solid #252525;border-radius:6px;padding:10px 12px;color:#fff;font-size:13px;outline:none;margin-bottom:12px;box-sizing:border-box}
+.auth-inp:focus{border-color:#e84343}
+.auth-btn{width:100%;background:#e84343;color:#fff;border:none;border-radius:7px;padding:11px;font-size:12px;font-weight:800;letter-spacing:.1em;cursor:pointer;margin-bottom:10px;transition:background .15s}
+.auth-btn:hover{background:#c93636}
+.auth-btn:disabled{background:#3a1a1a;color:#555;cursor:not-allowed}
+.auth-google{width:100%;background:#181818;color:#ccc;border:1px solid #2a2a2a;border-radius:7px;padding:10px;font-size:12px;font-weight:600;letter-spacing:.04em;cursor:pointer;margin-bottom:14px;display:flex;align-items:center;justify-content:center;gap:9px;transition:all .15s}
+.auth-google:hover{background:#222;border-color:#444}
+.auth-divider{text-align:center;font-size:10px;color:#2a2a2a;margin:2px 0 12px;letter-spacing:.06em}
+.auth-toggle{text-align:center;font-size:11px;color:#444;margin-top:4px}
+.auth-toggle a{color:#e84343;cursor:pointer}
+.auth-guest{width:100%;background:none;border:none;color:#333;font-size:10px;cursor:pointer;margin-top:12px;letter-spacing:.06em;padding:6px}
+.auth-guest:hover{color:#555}
+.auth-error{font-size:11px;color:#e84343;margin-bottom:10px;text-align:center;min-height:16px;letter-spacing:.04em}
+
+/* ── USER MENU ────────────────────────────── */
+.user-btn{background:#181818;border:1px solid #252525;border-radius:50%;width:30px;height:30px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:11px;font-weight:800;color:#ccc;flex-shrink:0}
+.user-btn:hover{border-color:#e84343;color:#e84343}
+.ud-wrap{position:relative}
+.ud-drop{position:absolute;top:38px;right:0;background:#111;border:1px solid #222;border-radius:10px;padding:16px;min-width:260px;z-index:500;display:none;box-shadow:0 8px 32px rgba(0,0,0,.6)}
+.ud-drop.open{display:block}
+.ud-name{font-size:12px;font-weight:700;color:#ccc;margin-bottom:2px}
+.ud-email{font-size:10px;color:#333;margin-bottom:14px;word-break:break-all}
+.ud-sec{font-size:9px;color:#555;letter-spacing:.1em;font-weight:700;margin-bottom:7px;border-left:2px solid #e84343;padding-left:6px;margin-top:2px}
+.ud-item{display:flex;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid #181818;cursor:pointer}
+.ud-item:last-child{border-bottom:none}
+.ud-item:hover .ud-iname{color:#fff}
+.ud-ipos{font-size:9px;font-weight:700;padding:2px 5px;border-radius:3px;flex-shrink:0}
+.ud-iname{font-size:11px;color:#888;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ud-ival{font-size:10px;color:#444;flex-shrink:0}
+.ud-empty{font-size:11px;color:#2a2a2a;padding:4px 0;font-style:italic}
+.ud-sep{height:1px;background:#1a1a1a;margin:12px 0}
+.ud-out{width:100%;background:none;border:1px solid #1e1e1e;color:#444;font-size:10px;padding:7px;border-radius:6px;cursor:pointer;letter-spacing:.07em;margin-top:4px}
+.ud-out:hover{color:#e84343;border-color:#3a1a1a}
+
+/* ── STAR BUTTON ──────────────────────────── */
+.star-btn{background:none;border:none;cursor:pointer;font-size:15px;color:#2a2a2a;padding:0;line-height:1;transition:color .15s;flex-shrink:0}
+.star-btn.starred{color:#f59e0b}
+.star-btn:hover{color:#f59e0b}
+
+/* ── LOCKED CONTENT ───────────────────────── */
+.locked-banner{grid-column:1/-1;display:flex;flex-direction:column;align-items:center;gap:10px;padding:28px 20px;background:#0d0d0d;border:1px dashed #1e1e1e;border-radius:9px;text-align:center}
+.locked-banner-icon{font-size:28px;opacity:.25}
+.locked-banner-title{font-size:12px;font-weight:700;color:#444;letter-spacing:.08em}
+.locked-banner-sub{font-size:10px;color:#2a2a2a;letter-spacing:.04em}
+.locked-banner-btn{background:#e84343;color:#fff;border:none;border-radius:5px;padding:8px 18px;font-size:11px;font-weight:800;letter-spacing:.09em;cursor:pointer;margin-top:4px}
+.pred-gate{position:absolute;inset:0;background:rgba(8,8,8,.88);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;border-radius:9px;backdrop-filter:blur(6px);z-index:10}
+.pred-gate-title{font-size:14px;font-weight:800;color:#fff;letter-spacing:.1em}
+.pred-gate-sub{font-size:11px;color:#555;letter-spacing:.05em;text-align:center;max-width:280px;line-height:1.6}
+.pred-gate-btn{background:#e84343;color:#fff;border:none;border-radius:6px;padding:10px 22px;font-size:12px;font-weight:800;letter-spacing:.1em;cursor:pointer;margin-top:4px}
+
 </style>
+
+
+<div id="auth-overlay" class="auth-overlay">
+  <div class="auth-card">
+    <div class="auth-logo">NIL<span>X</span> MARKET</div>
+    <div class="auth-sub">SEC ATHLETE INTELLIGENCE PLATFORM</div>
+    <div id="auth-error" class="auth-error"></div>
+
+    <!-- SIGN IN -->
+    <div id="auth-panel-signin">
+      <label class="auth-lbl">EMAIL</label>
+      <input class="auth-inp" id="auth-email" type="email" placeholder="you@example.com" autocomplete="email">
+      <label class="auth-lbl">PASSWORD</label>
+      <input class="auth-inp" id="auth-password" type="password" placeholder="••••••••" autocomplete="current-password">
+      <button class="auth-btn" id="signin-btn" onclick="window.doSignIn()">SIGN IN</button>
+      <div class="auth-divider">— OR —</div>
+      <button class="auth-google" onclick="window.doGoogleSignIn()">
+        <svg width="16" height="16" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.08 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-3.58-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+        CONTINUE WITH GOOGLE
+      </button>
+      <div class="auth-toggle">No account? <a onclick="window.toggleAuthPanel('signup')">Sign up free</a></div>
+      <button class="auth-guest" onclick="window.browseAsGuest()">Browse as guest (limited access)</button>
+    </div>
+
+    <!-- SIGN UP -->
+    <div id="auth-panel-signup" style="display:none">
+      <label class="auth-lbl">EMAIL</label>
+      <input class="auth-inp" id="signup-email" type="email" placeholder="you@example.com" autocomplete="email">
+      <label class="auth-lbl">PASSWORD</label>
+      <input class="auth-inp" id="signup-password" type="password" placeholder="Min 6 characters" autocomplete="new-password">
+      <button class="auth-btn" id="signup-btn" onclick="window.doSignUp()">CREATE ACCOUNT</button>
+      <div class="auth-divider">— OR —</div>
+      <button class="auth-google" onclick="window.doGoogleSignIn()">
+        <svg width="16" height="16" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.08 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-3.58-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+        CONTINUE WITH GOOGLE
+      </button>
+      <div class="auth-toggle">Have an account? <a onclick="window.toggleAuthPanel('signin')">Sign in</a></div>
+    </div>
+  </div>
+</div>
 
 <div id="app">
 <div class="ticker"><div class="ticker-track" id="ticker-track"><span class="t-badge">LIVE</span><span>Loading news...</span></div></div>
@@ -165,6 +263,20 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:13px 2
   <div style="display:flex;align-items:center;gap:10px">
     <div class="api-status" id="api-status">API —</div>
     <div class="live">LIVE</div>
+    <div class="ud-wrap" id="user-menu-wrap" style="display:none">
+      <button class="user-btn" id="user-btn" onclick="window.toggleUserMenu()"></button>
+      <div class="ud-drop" id="ud-drop">
+        <div class="ud-name" id="ud-name"></div>
+        <div class="ud-email" id="ud-email"></div>
+        <div class="ud-sec">⭐ STARRED ATHLETES</div>
+        <div id="ud-starred"><div class="ud-empty">None yet</div></div>
+        <div class="ud-sep"></div>
+        <div class="ud-sec">🕐 RECENTLY VIEWED</div>
+        <div id="ud-history"><div class="ud-empty">No history yet</div></div>
+        <div class="ud-sep"></div>
+        <button class="ud-out" onclick="window.doSignOut()">SIGN OUT</button>
+      </div>
+    </div>
   </div>
 </nav>
 
@@ -222,7 +334,12 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:13px 2
 
 <!-- PREDICTOR -->
 <div class="page" id="page-predictor">
-  <div class="pred-wrap">
+  <div class="pred-wrap" style="position:relative">
+    <div class="pred-gate" id="pred-gate" style="display:none">
+      <div class="pred-gate-title">🔒 MEMBERS ONLY</div>
+      <div class="pred-gate-sub">Sign in to access the NIL Value Predictor and generate market valuations.</div>
+      <button class="pred-gate-btn" onclick="window.showAuthOverlay()">SIGN IN / SIGN UP</button>
+    </div>
     <div class="pred-title">NIL VALUE PREDICTOR</div>
     <div class="pred-sub">Input athlete metrics to generate a fair market valuation based on current SEC comparables.</div>
     <div class="pred-grid">
@@ -508,7 +625,9 @@ function filterAthletes(){
 }
 
 async function openProfile(idx){
+  if(!window.currentUser&&idx>=10){window.showAuthOverlay();return;}
   const a=SORTED[idx];
+  if(window.addToHistory) window.addToHistory(a);
   const c=sc2(a.school);
   const rank=idx+1;
   const comps=SORTED.filter(x=>x.pos===a.pos&&x.name!==a.name).slice(0,4);
@@ -848,4 +967,300 @@ checkBackendHealth();
 setInterval(checkBackendHealth,30000);
 loadTicker();
 loadPlayers();
+
+// ── Auth UI helpers (called from Firebase module below) ───────────────────
+window.currentUser = null;
+window.userStarred = [];
+
+window.showAuthOverlay = function(){
+  document.getElementById('auth-overlay').style.display='flex';
+};
+window.hideAuthOverlay = function(){
+  document.getElementById('auth-overlay').style.display='none';
+};
+window.toggleAuthPanel = function(panel){
+  document.getElementById('auth-error').textContent='';
+  document.getElementById('auth-panel-signin').style.display=panel==='signin'?'block':'none';
+  document.getElementById('auth-panel-signup').style.display=panel==='signup'?'block':'none';
+};
+window.browseAsGuest = function(){
+  window.hideAuthOverlay();
+  filterAthletes();
+  applyPredictorGate();
+};
+window.toggleUserMenu = function(){
+  document.getElementById('ud-drop').classList.toggle('open');
+};
+document.addEventListener('click',function(e){
+  const wrap=document.getElementById('user-menu-wrap');
+  if(wrap && !wrap.contains(e.target)) document.getElementById('ud-drop').classList.remove('open');
+});
+
+// Gate predictor for guests
+function applyPredictorGate(){
+  const gate=document.getElementById('pred-gate');
+  if(!gate) return;
+  gate.style.display=window.currentUser?'none':'flex';
+}
+
+// Re-render explorer with auth-aware gating
+const _origFilterAthletes=filterAthletes;
+filterAthletes=function(){
+  const q=(document.getElementById('searchInput').value||'').toLowerCase();
+  const DEF=['CB','DE','S','LB'];
+  let filtered=SORTED.filter(a=>{
+    const mp=currentFilter==='ALL'||a.pos===currentFilter||(currentFilter==='DEF'&&DEF.includes(a.pos))||(currentFilter==='OL'&&a.pos==='OL');
+    const mq=!q||a.name.toLowerCase().includes(q)||a.school.toLowerCase().includes(q)||a.pos.toLowerCase().includes(q);
+    return mp&&mq;
+  });
+  const isGuest=!window.currentUser;
+  const visible=isGuest?filtered.slice(0,10):filtered;
+  const grid=document.getElementById('athletes-grid');
+  grid.innerHTML=visible.map(a=>{
+    const idx=SORTED.indexOf(a);
+    const c=sc2(a.school);
+    const isStarred=(window.userStarred||[]).includes(a.name);
+    return`<div class="ac" style="background:${c.bg};border-color:${c.border}" onclick="openProfile(${idx})">
+      <div class="ac-rank" style="color:${c.text}">#${idx+1}</div>
+      <div class="ac-top">
+        <div class="avatar" style="background:${c.ab};color:${c.text};border-color:${c.accent}44">${a.initials}</div>
+        <div class="ac-nameblock">
+          <div class="ac-name">${a.name}</div>
+          <div class="ac-school" style="color:${c.text}">${a.school}</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:6px">
+          <button class="star-btn${isStarred?' starred':''}" onclick="event.stopPropagation();window.toggleStar('${a.name.replace(/'/g,"\\'")}',${idx})" title="${isStarred?'Unstar':'Star'} athlete">★</button>
+          <div class="ptag" style="${ps(a.pos)}">${a.pos}</div>
+        </div>
+      </div>
+      <div class="sep"></div>
+      <div class="val-lbl" style="color:${c.text}">NIL VALUATION</div>
+      <div class="ac-bot">
+        <div class="val-num" style="color:${c.accent}">$${a.val}M</div>
+        <div class="arr ${a.trend}" style="color:${a.trend==='up'?c.accent:'#333'}">${a.trend==='up'?'↗':'↘'}</div>
+      </div>
+    </div>`;
+  }).join('');
+  if(isGuest&&filtered.length>10){
+    grid.innerHTML+=`<div class="locked-banner">
+      <div class="locked-banner-icon">🔒</div>
+      <div class="locked-banner-title">${filtered.length-10} MORE ATHLETES LOCKED</div>
+      <div class="locked-banner-sub">Sign in to view all ${filtered.length} athletes</div>
+      <button class="locked-banner-btn" onclick="window.showAuthOverlay()">SIGN IN / SIGN UP</button>
+    </div>`;
+  }
+};
+
+// Update user menu dropdown
+window.refreshUserMenu = function(){
+  const u=window.currentUser;
+  if(!u) return;
+  const wrap=document.getElementById('user-menu-wrap');
+  const btn=document.getElementById('user-btn');
+  const name=u.displayName||u.email||'User';
+  wrap.style.display='flex';
+  btn.textContent=name.charAt(0).toUpperCase();
+  document.getElementById('ud-name').textContent=name;
+  document.getElementById('ud-email').textContent=u.email||'';
+};
+
+window.renderStarredInMenu = function(starred){
+  const el=document.getElementById('ud-starred');
+  if(!starred||!starred.length){el.innerHTML='<div class="ud-empty">None yet</div>';return;}
+  el.innerHTML=starred.slice(0,5).map(s=>{
+    const c=sc2(s.school||'');
+    return`<div class="ud-item" onclick="openProfileByName('${s.name.replace(/'/g,"\\'")}')">
+      <div class="ud-ipos" style="${ps(s.pos||'OL')}">${s.pos||'?'}</div>
+      <div class="ud-iname">${s.name}</div>
+      <div class="ud-ival" style="color:${c.accent}">$${s.val}M</div>
+    </div>`;
+  }).join('');
+};
+
+window.renderHistoryInMenu = function(history){
+  const el=document.getElementById('ud-history');
+  if(!history||!history.length){el.innerHTML='<div class="ud-empty">No history yet</div>';return;}
+  el.innerHTML=history.slice(0,5).map(h=>{
+    const c=sc2(h.school||'');
+    return`<div class="ud-item" onclick="openProfileByName('${h.name.replace(/'/g,"\\'")}')">
+      <div class="ud-ipos" style="${ps(h.pos||'OL')}">${h.pos||'?'}</div>
+      <div class="ud-iname">${h.name}</div>
+      <div class="ud-ival" style="color:${c.accent}">$${h.val}M</div>
+    </div>`;
+  }).join('');
+};
+
+function openProfileByName(name){
+  document.getElementById('ud-drop').classList.remove('open');
+  const idx=SORTED.findIndex(a=>a.name===name);
+  if(idx>=0) openProfile(idx);
+}
+</script>
+
+<!-- ── FIREBASE ─────────────────────────────────────────────────────────── -->
+<script type="module">
+import { initializeApp }                          from "https://www.gstatic.com/firebasejs/12.12.1/firebase-app.js";
+import { getAuth, onAuthStateChanged, signInWithEmailAndPassword,
+         createUserWithEmailAndPassword, signOut,
+         GoogleAuthProvider, signInWithPopup }    from "https://www.gstatic.com/firebasejs/12.12.1/firebase-auth.js";
+import { getFirestore, doc, getDoc, setDoc,
+         updateDoc, arrayUnion, arrayRemove }     from "https://www.gstatic.com/firebasejs/12.12.1/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey:            "AIzaSyDmu80unjIe6gQGYQjnsI63yHbOKrFh6-k",
+  authDomain:        "nil-valuation-7c161.firebaseapp.com",
+  projectId:         "nil-valuation-7c161",
+  storageBucket:     "nil-valuation-7c161.firebasestorage.app",
+  messagingSenderId: "747085776706",
+  appId:             "1:747085776706:web:c129279490c02b9676eadb",
+  measurementId:     "G-6WNQXJNK4W"
+};
+
+const app  = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db   = getFirestore(app);
+const gProvider = new GoogleAuthProvider();
+
+function setError(msg){ document.getElementById('auth-error').textContent=msg||''; }
+
+// ── Auth state ────────────────────────────────────────────────────────────
+onAuthStateChanged(auth, async (user) => {
+  window.currentUser = user;
+  if(user){
+    window.hideAuthOverlay();
+    window.refreshUserMenu();
+    applyPredictorGate();
+    filterAthletes();
+    await ensureUserDoc(user);
+    await loadUserData(user.uid);
+  } else {
+    document.getElementById('user-menu-wrap').style.display='none';
+    window.showAuthOverlay();
+    applyPredictorGate();
+    filterAthletes();
+  }
+});
+
+async function ensureUserDoc(user){
+  const ref=doc(db,'users',user.uid);
+  const snap=await getDoc(ref);
+  if(!snap.exists()){
+    await setDoc(ref,{
+      email: user.email||'',
+      displayName: user.displayName||'',
+      createdAt: new Date().toISOString(),
+      starred: [],
+      history: []
+    });
+  }
+}
+
+async function loadUserData(uid){
+  const snap=await getDoc(doc(db,'users',uid));
+  if(!snap.exists()) return;
+  const data=snap.data();
+  window.userStarred=(data.starred||[]).map(s=>s.name||s);
+  window.renderStarredInMenu(data.starred||[]);
+  window.renderHistoryInMenu((data.history||[]).slice().reverse());
+  filterAthletes();
+}
+
+// ── Star / unstar ─────────────────────────────────────────────────────────
+window.toggleStar = async function(name, idx){
+  if(!window.currentUser){ window.showAuthOverlay(); return; }
+  const uid=window.currentUser.uid;
+  const a=SORTED[idx];
+  if(!a) return;
+  const entry={name:a.name,school:a.school,pos:a.pos,val:a.val};
+  const ref=doc(db,'users',uid);
+  const isStarred=(window.userStarred||[]).includes(name);
+  if(isStarred){
+    window.userStarred=(window.userStarred||[]).filter(n=>n!==name);
+    const snap=await getDoc(ref);
+    const existing=(snap.data().starred||[]).filter(s=>(s.name||s)!==name);
+    await updateDoc(ref,{starred:existing});
+  } else {
+    window.userStarred=[...(window.userStarred||[]),name];
+    await updateDoc(ref,{starred:arrayUnion(entry)});
+  }
+  const snap2=await getDoc(ref);
+  window.renderStarredInMenu(snap2.data().starred||[]);
+  filterAthletes();
+};
+
+// ── History ───────────────────────────────────────────────────────────────
+window.addToHistory = async function(a){
+  if(!window.currentUser) return;
+  const uid=window.currentUser.uid;
+  const entry={name:a.name,school:a.school,pos:a.pos,val:a.val,viewedAt:new Date().toISOString()};
+  const ref=doc(db,'users',uid);
+  const snap=await getDoc(ref);
+  let history=snap.data().history||[];
+  history=history.filter(h=>h.name!==a.name);
+  history.push(entry);
+  if(history.length>20) history=history.slice(-20);
+  await updateDoc(ref,{history});
+  window.renderHistoryInMenu(history.slice().reverse());
+};
+
+// ── Sign in/up/out ────────────────────────────────────────────────────────
+window.doSignIn = async function(){
+  setError('');
+  const email=document.getElementById('auth-email').value.trim();
+  const pass=document.getElementById('auth-password').value;
+  const btn=document.getElementById('signin-btn');
+  if(!email||!pass){ setError('Please enter email and password.'); return; }
+  btn.disabled=true; btn.textContent='SIGNING IN...';
+  try{
+    await signInWithEmailAndPassword(auth,email,pass);
+  } catch(e){
+    setError(friendlyError(e.code));
+    btn.disabled=false; btn.textContent='SIGN IN';
+  }
+};
+
+window.doSignUp = async function(){
+  setError('');
+  const email=document.getElementById('signup-email').value.trim();
+  const pass=document.getElementById('signup-password').value;
+  const btn=document.getElementById('signup-btn');
+  if(!email||!pass){ setError('Please fill in all fields.'); return; }
+  if(pass.length<6){ setError('Password must be at least 6 characters.'); return; }
+  btn.disabled=true; btn.textContent='CREATING...';
+  try{
+    await createUserWithEmailAndPassword(auth,email,pass);
+  } catch(e){
+    setError(friendlyError(e.code));
+    btn.disabled=false; btn.textContent='CREATE ACCOUNT';
+  }
+};
+
+window.doGoogleSignIn = async function(){
+  setError('');
+  try{
+    await signInWithPopup(auth,gProvider);
+  } catch(e){
+    if(e.code!=='auth/popup-closed-by-user') setError(friendlyError(e.code));
+  }
+};
+
+window.doSignOut = async function(){
+  document.getElementById('ud-drop').classList.remove('open');
+  window.userStarred=[];
+  await signOut(auth);
+};
+
+function friendlyError(code){
+  const map={
+    'auth/user-not-found':'No account found with that email.',
+    'auth/wrong-password':'Incorrect password.',
+    'auth/invalid-credential':'Invalid email or password.',
+    'auth/email-already-in-use':'An account with this email already exists.',
+    'auth/invalid-email':'Please enter a valid email address.',
+    'auth/weak-password':'Password should be at least 6 characters.',
+    'auth/too-many-requests':'Too many attempts. Please try again later.',
+    'auth/network-request-failed':'Network error. Check your connection.',
+  };
+  return map[code]||'Something went wrong. Please try again.';
+}
 </script>
