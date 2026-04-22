@@ -232,7 +232,7 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:13px 2
         <div class="stats-section">
           <div class="stats-section-title">IDENTITY</div>
           <div class="fg frow">
-            <div><label class="fl2">ATHLETE NAME</label>
+            <div><label class="fl2">ATHLETE NAME <span style="color:#444;font-weight:400">(display only)</span></label>
               <input class="fi" id="p-name" placeholder="e.g. Arch Manning">
             </div>
             <div><label class="fl2">CLASS</label>
@@ -779,7 +779,6 @@ async function generateValuation(){
     const r=await resp.json();
     const fmt=v=>'$'+Math.round(v).toLocaleString('en-US');
     const name=document.getElementById('p-name').value||'This athlete';
-    const tier=r.predicted_nil>2000000?'top tier':r.predicted_nil>800000?'mid tier':'developing';
 
     document.getElementById('res-big').textContent=fmt(r.predicted_nil);
     document.getElementById('res-ci').textContent=`CONFIDENCE INTERVAL: ${fmt(r.ci_low)} — ${fmt(r.ci_high)}`;
@@ -789,10 +788,28 @@ async function generateValuation(){
     document.getElementById('bar-r2').style.width=r2+'%';
     document.getElementById('pct-r2').textContent=r2+'%';
 
+    // Build personalized analysis based on actual input values vs SEC benchmarks
+    const SEC_BENCHMARKS={
+      QB:{avgNIL:2200000,avgFollowers:310000},WR:{avgNIL:1300000,avgFollowers:145000},
+      RB:{avgNIL:1100000,avgFollowers:130000},TE:{avgNIL:900000,avgFollowers:95000},
+      DE:{avgNIL:1000000,avgFollowers:100000},CB:{avgNIL:1000000,avgFollowers:100000},
+      LB:{avgNIL:900000,avgFollowers:85000},S:{avgNIL:850000,avgFollowers:80000},
+      OL:{avgNIL:700000,avgFollowers:60000},
+    };
+    const bench=SEC_BENCHMARKS[pos]||{avgNIL:1000000,avgFollowers:100000};
+    const valVsAvg=r.predicted_nil/bench.avgNIL;
+    const valLabel=valVsAvg>1.5?'well above average':valVsAvg>1.1?'above average':valVsAvg>0.9?'near average':valVsAvg>0.6?'below average':'significantly below average';
+    const followLabel=followers>bench.avgFollowers*2?'elite social reach':followers>bench.avgFollowers?'above-average social following':followers>bench.avgFollowers*0.5?'developing social presence':'limited social footprint';
+    const tierLabel=td.tier<=2?'elite program (Tier '+td.tier+')':td.tier<=5?'strong program (Tier '+td.tier+')':'mid-major program (Tier '+td.tier+')';
+    const fpiLabel=td.fpi>=18?'top-5 FPI':td.fpi>=12?'top-10 FPI':td.fpi>=7?'mid-tier FPI':'lower-tier FPI';
+    const posStats=pos==='QB'?`${payload.pass_yards} pass yards`:pos==='WR'||pos==='TE'?`${payload.rec_yards} rec yards`:pos==='RB'?`${payload.rush_yards} rush yards`:pos==='OL'?'no counting stats':`${payload.def_tackles} tackles, ${payload.def_sacks} sacks`;
+
     document.getElementById('res-text').textContent=
-      `${name} is a ${pos} at ${td.full} (Program Tier ${td.tier}, FPI ${td.fpi}). `+
-      `With ${(followers/1000).toFixed(0)}K followers and ${payload.games_played} games played, `+
-      `the ML model places this athlete in the ${tier} bracket of SEC NIL earners.`;
+      `${name}'s predicted valuation of ${fmt(r.predicted_nil)} is ${valLabel} for a ${pos} in the SEC. `+
+      `Key drivers: ${followLabel} (${(followers/1000).toFixed(0)}K followers vs. ~${(bench.avgFollowers/1000).toFixed(0)}K avg for ${pos}s), `+
+      `playing at an ${tierLabel} with a ${fpiLabel} of ${td.fpi}, `+
+      `and season production of ${posStats} across ${payload.games_played} games. `+
+      `The model's confidence interval spans ${fmt(r.ci_low)}–${fmt(r.ci_high)}, reflecting the inherent variability in NIL deal-making at the ${r.pos_group||pos} position.`;
 
     document.getElementById('res-loading').style.display='none';
     document.getElementById('res-content').style.display='flex';
