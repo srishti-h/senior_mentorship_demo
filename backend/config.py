@@ -24,8 +24,8 @@ CSV_PATH      = os.path.join(ROOT_DIR,    "sec_final_training_data.csv")
 
 # ─── Server ───────────────────────────────────────────────────────────────────
 HOST  = "0.0.0.0"
-PORT  = 8000
-DEBUG = True
+PORT  = int(os.environ.get("PORT", 8000))
+DEBUG = False
 
 # ─── Scraping ─────────────────────────────────────────────────────────────────
 INSTAGRAM_CACHE_TTL = 3600   # seconds — 1 hour

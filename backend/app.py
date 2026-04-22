@@ -64,9 +64,11 @@ def health():
         "players_loaded": len(load_players()),
     })
 
+# ─── Startup (runs for both gunicorn and direct python app.py) ───────────────
+load_players()
+_load_model()
+
 # ─── Entry ────────────────────────────────────────────────────────────────────
 if __name__ == "__main__":
-    load_players()
-    _load_model()
     logger.info(f"Server → http://localhost:{PORT}")
     app.run(host=HOST, port=PORT, debug=DEBUG)
