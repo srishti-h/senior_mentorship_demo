@@ -1,0 +1,512 @@
+name,team,position,season_year,class,nil_value,nil_estimated,follower_count,games_played,season_pass_yards,season_rec_yards,season_rush_yards,season_scoring_td,season_def_tackles,season_def_sacks,team_FPI,program_tier
+Aaron Gregory,Texas A&M Aggies,WR,2025,FR,179000,0,123123,0,0,0,0,0,0,0.0,18.4,3
+Adonyss Currie,Texas A&M Aggies,CB,2025,FR,149000,0,13857,3,0,0,0,0,0,1.0,18.4,3
+Ahmad Hardy,Missouri Tigers,RB,2024,FR,91894,1,13436,11,0,0,0,0,0,0.0,13.1,8
+Ahmad Hardy,Missouri Tigers,RB,2025,SO,1100000,0,17198,25,0,22,1649,16,0,0.0,13.1,8
+Aidan Anding,LSU Tigers,CB,2025,FR,129000,0,8291,8,0,0,0,0,2,0.0,10.7,2
+Alvin Henderson,Auburn Tigers,RB,2025,FR,181000,0,33406,1,0,0,0,0,0,0.0,11.1,9
+Amare Campbell,Tennessee Volunteers,LB,2023,FR,106732,1,3651,11,0,0,0,0,0,0.0,19.0,0
+Amare Campbell,Tennessee Volunteers,LB,2024,SO,143758,1,4673,11,0,0,0,0,0,0.0,19.0,0
+Amare Campbell,Tennessee Volunteers,LB,2025,JR,257000,0,5982,37,0,0,0,1,103,3.0,19.0,0
+AnQuon Fegans,Auburn Tigers,S,2025,FR,154000,0,14856,12,0,0,0,0,24,0.0,11.1,9
+Andrej Karic,Tennessee Volunteers,IOL,2022,FR,114553,1,1309,11,0,0,0,0,0,0.0,19.0,0
+Andrej Karic,Tennessee Volunteers,IOL,2023,SO,173716,1,1676,11,0,0,0,0,0,0.0,19.0,0
+Andrej Karic,Tennessee Volunteers,IOL,2024,JR,246748,1,2145,11,0,0,0,0,1,0.0,19.0,0
+Andrej Karic,Tennessee Volunteers,IOL,2025,SR,245000,0,2746,44,0,0,0,0,0,0.0,19.0,0
+Anthony Evans III,Mississippi State Bulldogs,WR,2023,FR,95355,1,26987,11,0,21,2,0,0,0.0,3.4,16
+Anthony Evans III,Mississippi State Bulldogs,WR,2024,SO,150696,1,34543,11,0,88,50,0,0,0.0,3.4,16
+Anthony Evans III,Mississippi State Bulldogs,WR,2025,JR,439000,0,44215,32,0,831,47,4,0,0.0,3.4,16
+Antonio Coleman,Auburn Tigers,DL,2025,FR,148000,0,16347,50,0,0,0,0,0,0.0,11.1,9
+Arch Manning,Texas Longhorns,QB,2024,FR,2515122,1,487245,11,938,0,100,13,0,0.0,18.6,1
+Arch Manning,Texas Longhorns,QB,2025,SO,5400000,0,623674,25,3163,4,399,11,0,0.0,18.6,1
+Austin Mack,Alabama Crimson Tide,QB,2024,FR,346690,1,23670,11,39,0,0,1,0,0.0,19.0,2
+Austin Mack,Alabama Crimson Tide,QB,2025,SO,678000,0,30298,5,228,0,22,1,0,0.0,19.0,2
+Austin Simmons,Missouri Tigers,QB,2023,FR,173586,1,31395,11,0,0,0,0,0,0.0,13.1,8
+Austin Simmons,Missouri Tigers,QB,2024,SO,262298,1,40186,11,248,0,14,2,0,0.0,13.1,8
+Austin Simmons,Missouri Tigers,QB,2025,JR,118000,0,51438,17,744,0,71,1,1,0.0,13.1,8
+Austin Stogner,Oklahoma Sooners,TE,2022,FR,144705,1,7185,11,0,235,0,1,0,0.0,15.9,3
+Austin Stogner,Oklahoma Sooners,TE,2023,SO,147754,1,9196,11,0,0,0,0,0,0.0,15.9,3
+Austin Stogner,Oklahoma Sooners,TE,2024,JR,199695,1,11771,11,0,0,0,0,0,0.0,15.9,3
+Austin Stogner,Oklahoma Sooners,TE,2025,SR,114000,0,15067,59,0,0,0,0,0,0.0,15.9,3
+Beau Pribula,Missouri Tigers,QB,2023,FR,170728,1,31772,11,0,0,0,0,0,0.0,13.1,8
+Beau Pribula,Missouri Tigers,QB,2024,SO,261744,1,40668,11,0,0,0,0,0,0.0,13.1,8
+Beau Pribula,Missouri Tigers,QB,2025,JR,1000000,0,52055,34,1941,0,297,6,0,0.0,13.1,8
+Ben Hanks III,Florida Gators,DB,2025,FR,221000,0,24139,36,0,0,0,0,8,0.0,8.2,3
+Blake Woodby,Auburn Tigers,CB,2025,FR,151000,0,14184,11,0,0,0,0,2,0.0,11.1,9
+Boo Carter,Tennessee Volunteers,S,2024,FR,264831,1,42851,11,0,0,0,0,35,1.0,19.0,0
+Boo Carter,Tennessee Volunteers,S,2025,SO,562000,0,54849,22,0,0,0,0,25,1.0,19.0,0
+Brady Hart,Texas A&M Aggies,QB,2025,FR,165000,0,15980,2,62,0,9,0,0,0.0,18.4,3
+Braelin Moore,LSU Tigers,OL,2023,FR,231604,1,2704,11,0,0,0,0,0,0.0,10.7,2
+Braelin Moore,LSU Tigers,OL,2024,SO,333384,1,3462,11,0,0,0,0,0,0.0,10.7,2
+Braelin Moore,LSU Tigers,OL,2025,JR,788000,0,4431,40,0,0,0,0,0,0.0,10.7,2
+Brandon Arrington,Texas A&M Aggies,CB,2025,FR,406000,0,75320,0,0,0,0,0,0,0.0,18.4,3
+Brandon Baker,Texas Longhorns,OT,2023,FR,328626,1,4819,11,0,0,0,0,0,0.0,18.6,1
+Brandon Baker,Texas Longhorns,OT,2024,SO,481139,1,6169,11,0,0,0,0,0,0.0,18.6,1
+Brandon Baker,Texas Longhorns,OT,2025,JR,440000,0,7896,21,0,0,0,0,0,0.0,18.6,1
+Bray Hubbard,Alabama Crimson Tide,DB,2023,FR,148742,1,23657,11,0,0,0,0,1,0.0,19.0,2
+Bray Hubbard,Alabama Crimson Tide,DB,2024,SO,366591,1,30280,11,0,0,0,0,48,0.0,19.0,2
+Bray Hubbard,Alabama Crimson Tide,DB,2025,JR,598000,0,38759,37,0,0,0,0,74,2.0,19.0,2
+Braylon Staley,Tennessee Volunteers,WR,2024,FR,124065,1,15016,11,0,10,0,0,0,0.0,19.0,0
+Braylon Staley,Tennessee Volunteers,WR,2025,SO,755000,0,19221,17,0,837,0,6,0,0.0,19.0,0
+Brennen Ward,Kentucky Wildcats,QB,2025,FR,227000,0,2481,1,25,0,0,0,0,0.0,5.1,12
+Bryan Longwell,Vanderbilt Commodores,LB,2023,FR,119830,1,1003,11,0,0,0,0,36,0.0,17.0,8
+Bryan Longwell,Vanderbilt Commodores,LB,2024,SO,256645,1,1284,11,0,0,0,0,79,1.5,17.0,8
+Bryan Longwell,Vanderbilt Commodores,LB,2025,JR,236000,0,1643,38,0,0,0,0,70,1.0,17.0,8
+Bryce Perry-Wright,Texas A&M Aggies,EDGE,2025,FR,182000,0,10040,0,0,0,0,0,0,0.0,18.4,3
+Bryce Thornton,Florida Gators,DB,2023,FR,136404,1,4955,11,0,0,0,0,34,0.5,8.2,3
+Bryce Thornton,Florida Gators,DB,2024,SO,197918,1,6343,11,0,0,0,0,41,0.0,8.2,3
+Bryce Thornton,Florida Gators,DB,2025,JR,288000,0,8119,33,0,0,0,1,56,1.0,8.2,3
+Byron Louis,Florida Gators,RB,2025,FR,120000,0,9355,1,0,0,-2,0,0,0.0,8.2,3
+Byrum Brown,Auburn Tigers,QB,2022,FR,118079,1,18744,11,0,0,0,0,0,0.0,11.1,9
+Byrum Brown,Auburn Tigers,QB,2023,SO,191669,1,23992,11,0,0,0,0,0,0.0,11.1,9
+Byrum Brown,Auburn Tigers,QB,2024,JR,291433,1,30710,11,0,0,0,0,0,0.0,11.1,9
+Byrum Brown,Auburn Tigers,QB,2025,SR,1900000,0,39309,35,3158,12,1008,14,2,0.0,11.1,9
+CJ Baxter,Texas Longhorns,RB,2023,FR,174192,1,28426,11,0,0,0,0,0,0.0,18.6,1
+CJ Baxter,Texas Longhorns,RB,2024,SO,243370,1,36385,11,0,0,0,0,0,0.0,18.6,1
+CJ Baxter,Texas Longhorns,RB,2025,JR,275000,0,46573,22,0,41,196,1,0,0.0,18.6,1
+CJ Wiley,Georgia Bulldogs,WR,2025,FR,149000,0,8131,8,0,20,0,0,0,0.0,21.4,1
+Caden Prieskorn,Ole Miss Rebels,TE,2022,FR,92105,1,29160,11,0,0,0,0,0,0.0,19.3,3
+Caden Prieskorn,Ole Miss Rebels,TE,2023,SO,223746,1,37324,11,0,313,0,2,1,0.0,19.3,3
+Caden Prieskorn,Ole Miss Rebels,TE,2024,JR,352602,1,47775,11,0,375,0,3,0,0.0,19.3,3
+Caden Prieskorn,Ole Miss Rebels,TE,2025,SR,287000,0,61152,52,0,0,0,0,0,0.0,19.3,3
+Caleb Cunningham,Ole Miss Rebels,WR,2025,FR,228000,0,16052,3,0,19,0,0,0,0.0,19.3,3
+Caleb Odom,Ole Miss Rebels,TE,2023,FR,112962,1,12257,11,0,0,0,0,0,0.0,19.3,3
+Caleb Odom,Ole Miss Rebels,TE,2024,SO,168078,1,15689,11,0,65,0,0,0,0.0,19.3,3
+Caleb Odom,Ole Miss Rebels,TE,2025,JR,519000,0,20082,27,0,197,0,2,0,0.0,19.3,3
+Caleb Warren,Ole Miss Rebels,OT,2022,FR,126000,1,1433,11,0,0,0,0,0,0.0,19.3,3
+Caleb Warren,Ole Miss Rebels,OT,2023,SO,191431,1,1835,11,0,0,0,0,0,0.0,19.3,3
+Caleb Warren,Ole Miss Rebels,OT,2024,JR,272402,1,2348,11,0,0,0,0,0,0.0,19.3,3
+Caleb Warren,Ole Miss Rebels,OT,2025,SR,289000,0,3006,51,0,0,0,0,0,0.0,19.3,3
+Cam Coleman,Texas Longhorns,WR,2024,FR,707199,1,81551,11,0,598,0,8,0,0.0,18.6,1
+Cam Coleman,Texas Longhorns,WR,2025,SO,2900000,0,104385,23,0,708,0,5,0,0.0,18.6,1
+Carius Curne,LSU Tigers,OL,2025,FR,188000,0,3471,8,0,0,0,0,0,0.0,10.7,2
+Casey Thompson,Oklahoma Sooners,QB,2022,FR,265811,1,48492,11,0,0,0,0,0,0.0,15.9,3
+Casey Thompson,Oklahoma Sooners,QB,2023,SO,443340,1,62070,11,0,0,0,0,0,0.0,15.9,3
+Casey Thompson,Oklahoma Sooners,QB,2024,JR,692637,1,79450,11,0,0,0,0,0,0.0,15.9,3
+Casey Thompson,Oklahoma Sooners,QB,2025,SR,148000,0,101696,34,509,0,2,0,2,0.0,15.9,3
+Cayden Green,Missouri Tigers,OT,2022,FR,137177,1,2858,11,0,0,0,0,0,0.0,0.0,0
+Cayden Green,Missouri Tigers,OT,2023,SO,212844,1,3658,11,0,0,0,0,0,0.0,0.0,0
+Cayden Green,Missouri Tigers,OT,2024,JR,309365,1,4683,11,0,0,0,0,0,0.0,0.0,0
+Cayden Green,Missouri Tigers,OT,2025,SR,1200000,0,5994,35,0,0,0,0,0,0.0,0.0,0
+Chad Bailey,Missouri Tigers,LB,2022,FR,113455,1,975,11,0,0,0,0,47,1.0,13.1,8
+Chad Bailey,Missouri Tigers,LB,2023,SO,120482,1,1248,11,0,0,0,0,17,1.0,13.1,8
+Chad Bailey,Missouri Tigers,LB,2024,JR,125063,1,1598,11,0,0,0,0,0,0.0,13.1,8
+Chad Bailey,Missouri Tigers,LB,2025,SR,115000,0,2045,49,0,0,0,0,17,1.0,13.1,8
+Chance Luper,Missouri Tigers,WR,2023,FR,82234,1,2436,11,0,0,0,0,0,0.0,13.1,8
+Chance Luper,Missouri Tigers,WR,2024,SO,106975,1,3118,11,0,0,0,0,0,0.0,13.1,8
+Chance Luper,Missouri Tigers,WR,2025,JR,117000,0,3991,12,0,203,2,1,1,0.0,13.1,8
+Chase Linton,Georgia Bulldogs,OLB,2025,FR,146000,0,4327,4,0,0,0,0,1,0.0,21.4,1
+Chris Cole,Georgia Bulldogs,ILB,2024,FR,172207,1,14473,11,0,0,0,0,16,0.0,21.4,1
+Chris Cole,Georgia Bulldogs,ILB,2025,SO,478000,0,18525,28,0,0,0,1,60,4.5,21.4,1
+Chuck McDonald III,Alabama Crimson Tide,DB,2025,FR,177000,0,13283,6,0,0,0,0,1,0.0,19.0,2
+Colin Simmons,Texas Longhorns,EDGE,2023,FR,327568,1,56019,11,0,0,0,0,0,0.0,18.6,1
+Colin Simmons,Texas Longhorns,EDGE,2024,SO,1131867,1,71704,11,0,0,0,0,38,8.0,18.6,1
+Colin Simmons,Texas Longhorns,EDGE,2025,JR,1500000,0,91781,29,0,0,0,0,43,12.0,18.6,1
+Corey Robinson II,Arkansas Razorbacks,OL,2022,FR,161859,1,4875,11,0,0,0,0,0,0.0,6.6,12
+Corey Robinson II,Arkansas Razorbacks,OL,2023,SO,255121,1,6240,11,0,0,0,0,0,0.0,6.6,12
+Corey Robinson II,Arkansas Razorbacks,OL,2024,JR,376680,1,7988,11,0,0,0,0,0,0.0,6.6,12
+Corey Robinson II,Arkansas Razorbacks,OL,2025,SR,467000,0,10224,48,0,0,0,0,0,0.0,6.6,12
+Cormani McClain,Florida Gators,DB,2024,FR,222635,1,100348,11,0,0,0,0,5,0.0,8.2,3
+Cormani McClain,Florida Gators,DB,2025,SO,225000,0,128445,22,0,0,0,1,17,0.0,8.2,3
+Courtland Guillory,Oklahoma Sooners,CB,2024,FR,157208,1,16188,11,0,0,0,0,0,0.0,15.9,3
+Courtland Guillory,Oklahoma Sooners,CB,2025,SO,449000,0,20720,13,0,0,0,0,41,0.0,15.9,3
+DJ Lagway,Florida Gators,QB,2024,FR,505824,1,84427,11,1610,0,97,11,0,0.0,8.2,3
+DJ Lagway,Florida Gators,QB,2025,SO,1200000,0,108066,24,2264,0,136,1,3,0.0,8.2,3
+DJ Pickett,LSU Tigers,CB,2025,FR,687000,0,42070,13,0,0,0,0,35,2.0,10.7,2
+Dakereon Joyner,South Carolina Gamecocks,RB,2022,FR,135415,1,17449,11,97,85,48,4,1,0.0,9.0,3
+Dakereon Joyner,South Carolina Gamecocks,RB,2023,SO,226819,1,22335,11,0,117,120,5,0,0.0,9.0,3
+Dakereon Joyner,South Carolina Gamecocks,RB,2024,JR,214171,1,28589,11,0,0,0,0,0,0.0,9.0,3
+Dakereon Joyner,South Carolina Gamecocks,RB,2025,SR,109000,0,36594,55,101,117,120,5,1,0.0,9.0,3
+Dallas Wilson,Florida Gators,WR,2025,FR,205000,0,40460,4,0,174,0,3,0,0.0,8.2,3
+Damien Shanklin,LSU Tigers,DE,2025,FR,137000,0,14628,5,0,0,0,0,2,2.0,10.7,2
+Dashawn Womack,Ole Miss Rebels,EDGE,2023,FR,162501,1,7330,11,0,0,0,0,12,1.5,19.3,3
+Dashawn Womack,Ole Miss Rebels,EDGE,2024,SO,212181,1,9383,11,0,0,0,0,8,1.0,19.3,3
+Dashawn Womack,Ole Miss Rebels,EDGE,2025,JR,206000,0,12010,35,0,0,0,0,27,2.0,19.3,3
+David Sanders Jr.,Tennessee Volunteers,OT,2024,FR,443382,1,23827,11,0,0,0,0,0,0.0,19.0,0
+David Sanders Jr.,Tennessee Volunteers,OT,2025,SO,891000,0,30499,9,0,0,0,0,0,0.0,19.0,0
+David Stone,Oklahoma Sooners,DL,2023,FR,198256,1,23174,11,0,0,0,0,0,0.0,15.9,3
+David Stone,Oklahoma Sooners,DL,2024,SO,335724,1,29663,11,0,0,0,0,6,1.0,15.9,3
+David Stone,Oklahoma Sooners,DL,2025,JR,1900000,0,37969,26,0,0,0,0,43,1.5,15.9,3
+Daymion Sanford,Texas A&M Aggies,LB,2022,FR,71436,1,5406,11,0,0,0,0,0,0.0,18.4,3
+Daymion Sanford,Texas A&M Aggies,LB,2023,SO,108438,1,6920,11,0,0,0,0,4,0.0,18.4,3
+Daymion Sanford,Texas A&M Aggies,LB,2024,JR,202824,1,8858,11,0,0,0,0,30,1.0,18.4,3
+Daymion Sanford,Texas A&M Aggies,LB,2025,SR,365000,0,11338,39,0,0,0,0,57,3.5,18.4,3
+Dayton Wade,Ole Miss Rebels,WR,2022,FR,220914,1,565,11,0,236,75,3,1,0.0,19.3,3
+Dayton Wade,Ole Miss Rebels,WR,2023,SO,591744,1,723,11,0,769,25,4,1,0.0,19.3,3
+Dayton Wade,Ole Miss Rebels,WR,2024,JR,234905,1,926,11,0,0,0,0,0,0.0,19.3,3
+Dayton Wade,Ole Miss Rebels,WR,2025,SR,236000,0,1185,49,0,0,0,0,0,0.0,19.3,3
+DeShawn Gaddie Jr.,Ole Miss Rebels,CB,2022,FR,68906,1,2813,11,0,0,0,0,0,0.0,19.3,3
+DeShawn Gaddie Jr.,Ole Miss Rebels,CB,2023,SO,100869,1,3600,11,0,0,0,0,0,0.0,19.3,3
+DeShawn Gaddie Jr.,Ole Miss Rebels,CB,2024,JR,138311,1,4609,11,0,0,0,0,0,0.0,19.3,3
+DeShawn Gaddie Jr.,Ole Miss Rebels,CB,2025,SR,140000,0,5899,60,0,0,0,0,0,0.0,19.3,3
+Deontae Lawson,Alabama Crimson Tide,LB,2022,FR,150446,1,24447,11,0,0,0,0,45,0.0,19.0,2
+Deontae Lawson,Alabama Crimson Tide,LB,2023,SO,333283,1,31292,11,0,0,0,0,61,3.0,19.0,2
+Deontae Lawson,Alabama Crimson Tide,LB,2024,JR,507722,1,40054,11,0,0,0,0,76,2.0,19.0,2
+Deontae Lawson,Alabama Crimson Tide,LB,2025,SR,264000,0,51269,52,0,0,0,0,80,1.5,19.0,2
+Desean Bishop,Tennessee Volunteers,RB,2023,FR,100414,1,8376,11,0,0,0,0,0,0.0,19.0,0
+Desean Bishop,Tennessee Volunteers,RB,2024,SO,202576,1,10721,11,0,10,433,3,0,0.0,19.0,0
+Desean Bishop,Tennessee Volunteers,RB,2025,JR,627000,0,13723,23,0,135,1076,16,1,0.0,19.0,0
+Deuce Alexander,Ole Miss Rebels,WR,2023,FR,97541,1,16859,11,0,0,0,0,0,0.0,19.3,3
+Deuce Alexander,Ole Miss Rebels,WR,2024,SO,134201,1,21580,11,0,0,0,0,0,0.0,19.3,3
+Deuce Alexander,Ole Miss Rebels,WR,2025,JR,323000,0,27622,29,0,684,122,2,1,0.0,19.3,3
+Deuce Knight,Auburn Tigers,QB,2025,FR,776000,0,47245,2,259,0,178,4,0,0.0,11.1,9
+Devyn Butler,Missouri Tigers,CB,2023,FR,61618,1,3710,11,0,0,0,0,0,0.0,13.1,8
+Devyn Butler,Missouri Tigers,CB,2024,SO,84634,1,4749,11,0,0,0,0,0,0.0,13.1,8
+Devyn Butler,Missouri Tigers,CB,2025,JR,132000,0,6079,1,0,0,0,0,0,0.0,13.1,8
+Dezz Ricks,Texas A&M Aggies,CB,2023,FR,97869,1,13333,11,0,0,0,0,0,0.0,18.4,3
+Dezz Ricks,Texas A&M Aggies,CB,2024,SO,171952,1,17066,11,0,0,0,0,18,0.0,18.4,3
+Dezz Ricks,Texas A&M Aggies,CB,2025,JR,167000,0,21845,28,0,0,0,0,26,0.0,18.4,3
+Dijon Lee Jr.,Alabama Crimson Tide,DB,2025,FR,393000,0,31591,15,0,0,0,0,32,0.0,19.0,2
+Dominick Giudice,Missouri Tigers,IOL,2022,FR,76442,1,1050,11,0,0,0,0,0,0.0,13.1,8
+Dominick Giudice,Missouri Tigers,IOL,2023,SO,115178,1,1345,11,0,0,0,0,0,0.0,13.1,8
+Dominick Giudice,Missouri Tigers,IOL,2024,JR,162540,1,1721,11,0,0,0,0,0,0.0,13.1,8
+Dominick Giudice,Missouri Tigers,IOL,2025,SR,284000,0,2203,31,0,0,0,0,0,0.0,13.1,8
+Dominick Kelly,Georgia Bulldogs,DB,2025,FR,155000,0,17859,10,0,0,0,0,3,0.0,21.4,1
+Dominick McKinley,LSU Tigers,DT,2024,FR,232324,1,4834,11,0,0,0,0,7,3.0,10.7,2
+Dominick McKinley,LSU Tigers,DT,2025,SO,106000,0,6188,23,0,0,0,0,12,1.0,10.7,2
+Donovan Olugbode,Missouri Tigers,WR,2024,FR,90439,1,11195,11,0,0,0,0,0,0.0,13.1,8
+Donovan Olugbode,Missouri Tigers,WR,2025,SO,121000,0,14330,13,0,401,0,2,0,0.0,13.1,8
+Drew Bobo,Georgia Bulldogs,OL,2023,FR,239518,1,6998,11,0,0,0,0,0,0.0,21.4,1
+Drew Bobo,Georgia Bulldogs,OL,2024,SO,354528,1,8957,11,9,0,0,0,0,0.0,21.4,1
+Drew Bobo,Georgia Bulldogs,OL,2025,JR,701000,0,11465,32,0,0,0,0,0,0.0,21.4,1
+Dylan Stewart,South Carolina Gamecocks,EDGE,2023,FR,212133,1,26827,11,0,0,0,0,0,0.0,9.0,3
+Dylan Stewart,South Carolina Gamecocks,EDGE,2024,SO,488560,1,34339,11,0,0,0,0,20,6.5,9.0,3
+Dylan Stewart,South Carolina Gamecocks,EDGE,2025,JR,2500000,0,43954,24,0,0,0,0,33,4.5,9.0,3
+"Earnest Greene, III",Georgia Bulldogs,OL,2023,FR,218729,1,4745,11,0,0,0,0,0,0.0,21.4,1
+"Earnest Greene, III",Georgia Bulldogs,OL,2024,SO,320075,1,6073,11,0,0,0,0,0,0.0,21.4,1
+"Earnest Greene, III",Georgia Bulldogs,OL,2025,JR,779000,0,7774,34,0,0,0,0,0,0.0,21.4,1
+Edwin Spillman,Tennessee Volunteers,LB,2024,FR,135905,1,8608,11,0,0,0,0,5,0.0,19.0,0
+Edwin Spillman,Tennessee Volunteers,LB,2025,SO,231000,0,11018,17,0,0,0,0,81,2.5,19.0,0
+Eli Bowen,Oklahoma Sooners,CB,2023,FR,112622,1,8578,11,0,0,0,0,0,0.0,15.9,3
+Eli Bowen,Oklahoma Sooners,CB,2024,SO,211896,1,10980,11,0,0,0,0,25,0.0,15.9,3
+Eli Bowen,Oklahoma Sooners,CB,2025,JR,732000,0,14054,20,0,0,0,1,24,0.0,15.9,3
+Elijah Dotson,Missouri Tigers,S,2024,FR,85304,1,11231,11,0,0,0,0,0,0.0,13.1,8
+Elijah Dotson,Missouri Tigers,S,2025,SO,133000,0,14376,12,0,0,0,0,11,0.0,13.1,8
+Elijah Griffin,Georgia Bulldogs,DL,2025,FR,415000,0,871,14,0,0,0,0,22,1.0,21.4,1
+Elijah Melendez,Auburn Tigers,LB,2025,FR,163000,0,19410,12,0,0,0,1,29,1.0,11.1,9
+Elijah Thomas,Oklahoma Sooners,WR,2025,FR,122000,0,6474,13,0,5,0,0,7,0.0,15.9,3
+Ellis Robinson IV,Georgia Bulldogs,DB,2025,FR,263000,0,42371,18,0,0,0,0,20,0.0,21.4,1
+Eric Winters,Auburn Tigers,S,2025,FR,146000,0,6965,12,0,0,0,0,33,1.0,11.1,9
+Ethan Davis,Tennessee Volunteers,TE,2023,FR,112024,1,15383,11,0,33,0,0,0,0.0,19.0,0
+Ethan Davis,Tennessee Volunteers,TE,2024,SO,178362,1,19691,11,0,100,0,2,0,0.0,19.0,0
+Ethan Davis,Tennessee Volunteers,TE,2025,JR,537000,0,25204,24,0,257,0,2,0,0.0,19.0,0
+Faizon Brandon,Tennessee Volunteers,QB,2025,FR,864000,0,36333,0,0,0,0,0,0,0.0,19.0,0
+Fluff Bothwell,Mississippi State Bulldogs,RB,2024,FR,130846,1,7246,11,0,0,0,0,0,0.0,3.4,16
+Fluff Bothwell,Mississippi State Bulldogs,RB,2025,SO,349000,0,9275,23,0,105,677,6,1,0.0,3.4,16
+Gabriel Brownlow-Dindy,South Carolina Gamecocks,DL,2023,FR,146991,1,3688,11,0,0,0,0,1,0.5,9.0,3
+Gabriel Brownlow-Dindy,South Carolina Gamecocks,DL,2024,SO,206585,1,4721,11,0,0,0,0,1,0.0,9.0,3
+Gabriel Brownlow-Dindy,South Carolina Gamecocks,DL,2025,JR,767000,0,6043,20,0,0,0,0,18,0.0,9.0,3
+Gabriel Osenda,Tennessee Volunteers,OT,2025,FR,213000,0,3826,0,0,0,0,0,0,0.0,19.0,0
+Gavin Holmes,Texas Longhorns,CB,2022,FR,106583,1,2920,11,0,0,0,0,0,0.0,18.6,1
+Gavin Holmes,Texas Longhorns,CB,2023,SO,156193,1,3737,11,0,0,0,0,0,0.0,18.6,1
+Gavin Holmes,Texas Longhorns,CB,2024,JR,238074,1,4784,11,0,0,0,0,9,0.0,18.6,1
+Gavin Holmes,Texas Longhorns,CB,2025,SR,266000,0,6123,57,0,0,0,0,0,0.0,18.6,1
+George MacIntyre,Tennessee Volunteers,QB,2025,FR,376000,0,43848,2,69,0,0,0,0,0.0,19.0,0
+Gunner Stockton,Georgia Bulldogs,QB,2023,FR,397505,1,67740,11,52,0,17,0,0,0.0,21.4,1
+Gunner Stockton,Georgia Bulldogs,QB,2024,SO,607260,1,86708,11,206,0,10,0,0,0.0,21.4,1
+Gunner Stockton,Georgia Bulldogs,QB,2025,JR,1300000,0,110986,23,2898,0,462,10,0,0.0,21.4,1
+Harlem Berry,LSU Tigers,RB,2025,FR,330000,0,30393,13,0,32,491,2,0,0.0,10.7,2
+Helaman Casuga,Texas A&M Aggies,QB,2025,FR,187000,0,7134,0,0,0,0,0,0,0.0,18.4,3
+Hero Kanu,Texas Longhorns,DL,2022,FR,141678,1,5370,11,0,0,0,0,0,0.0,18.6,1
+Hero Kanu,Texas Longhorns,DL,2023,SO,215865,1,6873,11,0,0,0,0,0,0.0,18.6,1
+Hero Kanu,Texas Longhorns,DL,2024,JR,308089,1,8798,11,0,0,0,0,0,0.0,18.6,1
+Hero Kanu,Texas Longhorns,DL,2025,SR,655000,0,11261,42,0,0,0,0,31,2.0,18.6,1
+Hollywood Smothers,Texas Longhorns,RB,2022,FR,118671,1,21436,11,0,0,0,0,0,0.0,18.6,1
+Hollywood Smothers,Texas Longhorns,RB,2023,SO,176818,1,27438,11,0,0,0,0,0,0.0,18.6,1
+Hollywood Smothers,Texas Longhorns,RB,2024,JR,246781,1,35120,11,0,0,0,0,0,0.0,18.6,1
+Hollywood Smothers,Texas Longhorns,RB,2025,SR,550000,0,44954,26,-4,189,939,1,2,0.0,18.6,1
+Isaac Smith,Mississippi State Bulldogs,S,2023,FR,116604,1,7083,11,0,0,0,0,15,0.0,3.4,16
+Isaac Smith,Mississippi State Bulldogs,S,2024,SO,600752,1,9066,11,0,0,0,0,127,0.0,3.4,16
+Isaac Smith,Mississippi State Bulldogs,S,2025,JR,356000,0,11604,33,0,0,0,0,64,1.0,3.4,16
+Isaiah Campbell,Tennessee Volunteers,DL,2024,FR,132329,1,2359,11,0,0,0,0,0,0.0,19.0,0
+Isaiah Campbell,Tennessee Volunteers,DL,2025,SO,387000,0,3019,8,0,0,0,0,4,0.5,19.0,0
+Isaiah Gibson,Georgia Bulldogs,DE,2025,FR,391000,0,15336,3,0,0,0,0,1,0.0,21.4,1
+Isaiah Horton,Texas A&M Aggies,WR,2022,FR,76852,1,33131,11,0,0,0,0,0,0.0,18.4,3
+Isaiah Horton,Texas A&M Aggies,WR,2023,SO,115985,1,42408,11,0,0,0,0,0,0.0,18.4,3
+Isaiah Horton,Texas A&M Aggies,WR,2024,JR,163964,1,54282,11,0,0,0,0,0,0.0,18.4,3
+Isaiah Horton,Texas A&M Aggies,WR,2025,SR,188000,0,69481,44,0,511,0,8,0,0.0,18.4,3
+Isaiah Sategna,Oklahoma Sooners,WR,2022,FR,84587,1,13509,11,0,0,10,0,0,0.0,15.9,3
+Isaiah Sategna,Oklahoma Sooners,WR,2023,SO,158713,1,17292,11,0,129,28,2,0,0.0,15.9,3
+Isaiah Sategna,Oklahoma Sooners,WR,2024,JR,340180,1,22134,11,0,490,15,1,0,0.0,15.9,3
+Isaiah Sategna,Oklahoma Sooners,WR,2025,SR,878000,0,28331,41,0,965,24,8,0,0.0,15.9,3
+Ivan Taylor,Alabama Crimson Tide,DB,2025,FR,171000,0,7393,15,0,0,0,0,14,0.0,19.0,2
+J'Vari Flowers,Florida Gators,DB,2025,FR,125000,0,16944,12,0,0,0,0,17,0.0,8.2,3
+JaDon Blair,Missouri Tigers,S,2024,FR,86669,1,3396,11,0,0,0,0,0,0.0,13.1,8
+JaDon Blair,Missouri Tigers,S,2025,SO,118000,0,4347,1,0,0,0,0,1,0.0,13.1,8
+Jaccarius Peak,South Carolina Gamecocks,OT,2022,FR,233182,1,8251,11,0,0,0,0,0,0.0,9.0,3
+Jaccarius Peak,South Carolina Gamecocks,OT,2023,SO,373281,1,10562,11,0,0,0,0,0,0.0,9.0,3
+Jaccarius Peak,South Carolina Gamecocks,OT,2024,JR,559714,1,13519,11,0,0,0,0,0,0.0,9.0,3
+Jaccarius Peak,South Carolina Gamecocks,OT,2025,SR,1200000,0,17304,38,0,0,0,0,0,0.0,9.0,3
+Jackson Arnold,Auburn Tigers,QB,2023,FR,204488,1,28096,11,0,0,0,0,0,0.0,11.1,9
+Jackson Arnold,Auburn Tigers,QB,2024,SO,555248,1,35963,11,1421,16,444,16,0,0.0,11.1,9
+Jackson Arnold,Auburn Tigers,QB,2025,JR,752000,0,46033,27,1309,16,311,8,0,0.0,11.1,9
+Jackson Lloyd,Alabama Crimson Tide,OL,2025,FR,414000,0,4468,5,0,0,0,0,0,0.0,19.0,2
+Jake Maikkula,Oklahoma Sooners,IOL,2022,FR,145491,1,2136,11,0,0,0,0,0,0.0,15.9,3
+Jake Maikkula,Oklahoma Sooners,IOL,2023,SO,223638,1,2734,11,0,0,0,0,0,0.0,15.9,3
+Jake Maikkula,Oklahoma Sooners,IOL,2024,JR,322014,1,3500,11,0,0,0,0,0,0.0,15.9,3
+Jake Maikkula,Oklahoma Sooners,IOL,2025,SR,300000,0,4480,31,0,0,0,0,0,0.0,15.9,3
+Jalen Wiggins,Florida Gators,EDG,2025,FR,100000,0,4316,3,0,0,0,0,2,0.0,8.2,3
+Jamonta Waller,Auburn Tigers,BCK,2025,FR,103000,0,12942,1,0,0,0,0,2,0.0,11.1,9
+Jared Smith,Auburn Tigers,DE,2025,FR,172000,0,10789,11,0,0,0,0,5,2.0,11.1,9
+Javion Hilson,Missouri Tigers,EDGE,2025,FR,169000,0,4832,3,0,0,0,0,1,0.0,13.1,8
+Javontez Spraggins,Tennessee Volunteers,IOL,2022,FR,149851,1,4603,11,0,0,0,0,0,0.0,19.0,0
+Javontez Spraggins,Tennessee Volunteers,IOL,2023,SO,235798,1,5892,11,0,0,0,0,1,0.0,19.0,0
+Javontez Spraggins,Tennessee Volunteers,IOL,2024,JR,347540,1,7541,11,0,0,0,0,0,0.0,19.0,0
+Javontez Spraggins,Tennessee Volunteers,IOL,2025,SR,246000,0,9653,56,0,0,0,0,0,0.0,19.0,0
+Jay Crawford,Auburn Tigers,CB,2024,FR,119027,1,7341,11,0,0,0,0,15,0.0,11.1,9
+Jay Crawford,Auburn Tigers,CB,2025,SO,344000,0,9396,22,0,0,0,0,15,0.0,11.1,9
+Jaydan Hardy,Oklahoma Sooners,S,2024,FR,152809,1,9606,11,0,0,0,0,5,0.0,15.9,3
+Jaydan Hardy,Oklahoma Sooners,S,2025,SO,103000,0,12296,26,0,0,0,0,11,0.0,15.9,3
+Jayden Woods,Florida Gators,EDG,2025,FR,800000,0,7646,12,0,0,0,0,27,3.5,8.2,3
+Jaylan Morgan,Georgia Bulldogs,DB,2025,FR,150000,0,11091,1,0,0,0,0,0,0.0,21.4,1
+Jaylon Braxton,Ole Miss Rebels,CB,2023,FR,122828,1,8897,11,0,0,0,0,21,0.0,19.3,3
+Jaylon Braxton,Ole Miss Rebels,CB,2024,SO,135470,1,11388,11,0,0,0,0,0,0.0,19.3,3
+Jaylon Braxton,Ole Miss Rebels,CB,2025,JR,134000,0,14577,22,0,0,0,1,24,0.0,19.3,3
+Jelani McDonald,Texas Longhorns,S,2022,FR,109370,1,3779,11,0,0,0,0,0,0.0,18.6,1
+Jelani McDonald,Texas Longhorns,S,2023,SO,161499,1,4838,11,0,0,0,0,0,0.0,18.6,1
+Jelani McDonald,Texas Longhorns,S,2024,JR,295326,1,6192,11,0,0,0,0,24,0.0,18.6,1
+Jelani McDonald,Texas Longhorns,S,2025,SR,304000,0,7926,39,0,0,0,0,80,0.0,18.6,1
+Jeremiah Cobb,Auburn Tigers,RB,2023,FR,112326,1,7650,11,0,30,168,3,1,0.0,11.1,9
+Jeremiah Cobb,Auburn Tigers,RB,2024,SO,138912,1,9791,11,0,45,142,0,0,0.0,11.1,9
+Jeremiah Cobb,Auburn Tigers,RB,2025,JR,656000,0,12533,37,0,83,969,5,1,0.0,11.1,9
+Jeremy James,Ole Miss Rebels,OT,2022,FR,128641,1,1463,11,0,0,0,0,0,0.0,19.3,3
+Jeremy James,Ole Miss Rebels,OT,2023,SO,195556,1,1873,11,0,0,0,0,1,0.0,19.3,3
+Jeremy James,Ole Miss Rebels,OT,2024,JR,278468,1,2398,11,0,0,0,0,0,0.0,19.3,3
+Jeremy James,Ole Miss Rebels,OT,2025,SR,290000,0,3069,57,0,0,0,0,0,0.0,19.3,3
+Jerome Myles,Texas A&M Aggies,WR,2025,FR,333000,0,10012,0,0,0,0,0,0,0.0,18.4,3
+Jhase Thomas,LSU Tigers,S,2025,FR,131000,0,30393,5,0,0,0,0,0,0.0,10.7,2
+John Campbell,Tennessee Volunteers,OT,2022,FR,189093,1,9610,11,0,0,0,0,0,0.0,19.0,0
+John Campbell,Tennessee Volunteers,OT,2023,SO,304049,1,12300,11,0,0,0,0,0,0.0,19.0,0
+John Campbell,Tennessee Volunteers,OT,2024,JR,457968,1,15745,11,0,0,0,0,0,0.0,19.0,0
+John Campbell,Tennessee Volunteers,OT,2025,SR,255000,0,20153,54,0,0,0,0,0,0.0,19.0,0
+John Mateer,Oklahoma Sooners,QB,2023,FR,381378,1,49675,11,0,0,0,0,0,0.0,15.9,3
+John Mateer,Oklahoma Sooners,QB,2024,SO,591941,1,63584,11,0,0,0,0,0,0.0,15.9,3
+John Mateer,Oklahoma Sooners,QB,2025,JR,2000000,0,81388,36,2885,21,431,8,2,0.0,15.9,3
+Jonah Williams,Texas Longhorns,S,2025,FR,442000,0,29207,8,0,0,0,0,9,0.0,18.6,1
+Jontae Gilbert,Georgia Bulldogs,DB,2025,FR,152000,0,11564,1,0,0,0,0,0,0.0,21.4,1
+Joseph Jonah-Ajonye,Georgia Bulldogs,DL,2025,FR,232000,0,5224,18,0,0,0,0,9,0.0,21.4,1
+Joseph Mbatchou,Florida Gators,DL,2025,FR,109000,0,1934,9,0,0,0,0,11,0.0,8.2,3
+Josh Thompson,LSU Tigers,OL,2022,FR,154820,1,1164,11,0,0,0,0,0,0.0,10.7,2
+Josh Thompson,LSU Tigers,OL,2023,SO,233771,1,1490,11,0,0,0,0,0,0.0,10.7,2
+Josh Thompson,LSU Tigers,OL,2024,JR,330662,1,1908,11,0,0,0,0,0,0.0,10.7,2
+Josh Thompson,LSU Tigers,OL,2025,SR,514000,0,2442,6,0,0,0,0,0,0.0,10.7,2
+Josiah Thompson,South Carolina Gamecocks,OT,2024,FR,287622,1,3223,11,0,0,0,0,0,0.0,9.0,3
+Josiah Thompson,South Carolina Gamecocks,OT,2025,SO,182000,0,4126,24,0,0,0,0,0,0.0,9.0,3
+Jourdin Crawford,Auburn Tigers,DL,2025,FR,100000,0,6158,9,0,0,0,0,2,0.0,11.1,9
+Juan Gaston,Georgia Bulldogs,OL,2025,FR,166000,0,8137,13,0,0,0,0,0,0.0,21.4,1
+Julian Humphrey,Texas A&M Aggies,CB,2022,FR,98388,1,43451,11,0,0,0,0,0,0.0,18.4,3
+Julian Humphrey,Texas A&M Aggies,CB,2023,SO,177407,1,55617,11,0,0,0,0,11,0.0,18.4,3
+Julian Humphrey,Texas A&M Aggies,CB,2024,JR,260601,1,71190,11,0,0,0,0,10,0.0,18.4,3
+Julian Humphrey,Texas A&M Aggies,CB,2025,SR,187000,0,91123,33,0,0,0,0,7,0.0,18.4,3
+Justin Hill,Alabama Crimson Tide,LB,2025,FR,173000,0,16160,15,0,0,0,0,10,0.0,19.0,2
+Justin Okoronkwo,South Carolina Gamecocks,LB,2024,FR,197589,1,4394,11,0,0,0,0,13,0.0,9.0,3
+Justin Okoronkwo,South Carolina Gamecocks,LB,2025,SO,269000,0,5624,25,0,0,0,0,63,0.0,9.0,3
+Justin Williams,Georgia Bulldogs,ILB,2024,FR,142190,1,9000,11,0,0,0,0,2,0.0,21.4,1
+Justin Williams,Georgia Bulldogs,ILB,2025,SO,287000,0,11520,26,0,0,0,0,36,0.0,21.4,1
+Justus Terry,Texas Longhorns,DL,2025,FR,825000,0,22882,10,0,0,0,0,8,0.0,18.6,1
+KJ Bolden,Georgia Bulldogs,DB,2024,FR,425571,1,72430,11,0,0,0,0,54,1.0,21.4,1
+KJ Bolden,Georgia Bulldogs,DB,2025,SO,758000,0,92710,28,0,0,0,0,76,0.0,21.4,1
+KJ Edwards,Texas A&M Aggies,RB,2025,FR,175000,0,14148,1,0,0,0,0,0,0.0,18.4,3
+Kade Phillips,Texas Longhorns,CB,2025,FR,422000,0,6652,12,0,0,0,0,22,0.0,18.6,1
+Kaliq Lockett,Texas Longhorns,WR,2025,FR,425000,0,14146,5,0,47,0,1,0,0.0,18.6,1
+Kam Dewberry,Alabama Crimson Tide,OL,2022,FR,183677,1,4868,11,0,0,0,0,0,0.0,19.0,2
+Kam Dewberry,Alabama Crimson Tide,OL,2023,SO,289260,1,6231,11,0,0,0,0,0,0.0,19.0,2
+Kam Dewberry,Alabama Crimson Tide,OL,2024,JR,426708,1,7976,11,0,0,0,0,0,0.0,19.0,2
+Kam Dewberry,Alabama Crimson Tide,OL,2025,SR,330000,0,10209,46,0,0,0,0,0,0.0,19.0,2
+Kam Franklin,Ole Miss Rebels,EDGE,2023,FR,139536,1,12053,11,0,0,0,0,0,0.0,19.3,3
+Kam Franklin,Ole Miss Rebels,EDGE,2024,SO,258725,1,15428,11,0,0,0,0,11,2.5,19.3,3
+Kam Franklin,Ole Miss Rebels,EDGE,2025,JR,613000,0,19748,22,0,0,0,0,69,5.0,19.3,3
+Kamran James,Florida Gators,EDG,2023,FR,121305,1,8160,11,0,0,0,0,4,0.0,8.2,3
+Kamran James,Florida Gators,EDG,2024,SO,282529,1,10445,11,0,0,0,0,25,1.0,8.2,3
+Kamran James,Florida Gators,EDG,2025,JR,296000,0,13369,37,0,0,0,0,44,3.5,8.2,3
+Keelon Russell,Alabama Crimson Tide,QB,2025,FR,1300000,0,105414,2,143,0,17,0,0,0.0,19.0,2
+Kelby Collins,Alabama Crimson Tide,DL,2023,FR,273054,1,12635,11,0,0,0,0,24,2.0,19.0,2
+Kelby Collins,Alabama Crimson Tide,DL,2024,SO,268937,1,16173,11,0,0,0,0,7,0.5,19.0,2
+Kelby Collins,Alabama Crimson Tide,DL,2025,JR,201000,0,20701,32,0,0,0,0,10,2.0,19.0,2
+Keon Sabb,Alabama Crimson Tide,DB,2023,FR,151311,1,30667,11,0,0,0,0,0,0.0,19.0,2
+Keon Sabb,Alabama Crimson Tide,DB,2024,SO,345285,1,39253,11,0,0,0,0,39,0.0,19.0,2
+Keon Sabb,Alabama Crimson Tide,DB,2025,JR,529000,0,50244,40,0,0,0,1,52,1.0,19.0,2
+Kewan Lacy,Ole Miss Rebels,RB,2024,FR,191529,1,107520,11,0,9,104,0,0,0.0,19.3,3
+Kewan Lacy,Ole Miss Rebels,RB,2025,SO,1000000,0,137625,21,0,177,1567,24,0,0.0,19.3,3
+Kip Lewis,Oklahoma Sooners,LB,2022,FR,87443,1,5281,11,0,0,0,0,0,0.0,15.9,3
+Kip Lewis,Oklahoma Sooners,LB,2023,SO,127928,1,6760,11,0,0,0,0,0,0.0,15.9,3
+Kip Lewis,Oklahoma Sooners,LB,2024,JR,293706,1,8653,11,0,0,0,0,57,0.0,15.9,3
+Kip Lewis,Oklahoma Sooners,LB,2025,SR,620000,0,11076,44,0,0,0,2,76,4.0,15.9,3
+LJ McCray,Florida Gators,EDG,2024,FR,193927,1,10371,11,0,0,0,0,12,0.5,8.2,3
+LJ McCray,Florida Gators,EDG,2025,SO,212000,0,13275,14,0,0,0,0,13,0.5,8.2,3
+LaNorris Sellers,South Carolina Gamecocks,QB,2024,FR,2094669,1,77388,11,2267,0,662,24,1,0.0,9.0,3
+LaNorris Sellers,South Carolina Gamecocks,QB,2025,SO,2700000,0,99056,27,2437,21,270,5,1,0.0,9.0,3
+Lamont Rogers,Texas A&M Aggies,OT,2025,FR,684000,0,3075,4,0,0,0,0,0,0.0,18.4,3
+Lance Heard,Kentucky Wildcats,OL,2023,FR,219005,1,3724,11,0,0,0,0,0,0.0,5.1,12
+Lance Heard,Kentucky Wildcats,OL,2024,SO,318461,1,4766,11,0,0,0,0,0,0.0,5.1,12
+Lance Heard,Kentucky Wildcats,OL,2025,JR,823000,0,6101,36,0,0,0,0,0,0.0,5.1,12
+Lance Jackson,Texas Longhorns,EDGE,2024,FR,255746,1,8882,11,0,0,0,0,0,0.0,18.6,1
+Lance Jackson,Texas Longhorns,EDGE,2025,SO,328000,0,11369,13,0,0,0,0,16,2.0,18.6,1
+Langston Patterson,Vanderbilt Commodores,LB,2022,FR,63942,1,1129,11,0,0,0,0,5,0.0,17.0,8
+Langston Patterson,Vanderbilt Commodores,LB,2023,SO,180121,1,1445,11,0,0,0,0,74,1.0,17.0,8
+Langston Patterson,Vanderbilt Commodores,LB,2024,JR,219022,1,1850,11,0,0,0,0,74,0.0,17.0,8
+Langston Patterson,Vanderbilt Commodores,LB,2025,SR,181000,0,2368,47,0,0,0,0,69,0.0,17.0,8
+Lotzeir Brooks,Alabama Crimson Tide,WR,2025,FR,146000,0,30565,14,0,441,7,2,3,0.0,19.0,2
+Malik Autry,Auburn Tigers,DL,2025,FR,195000,0,13567,9,0,0,0,0,8,0.0,11.1,9
+Malik Clark,South Carolina Gamecocks,WR,2025,FR,148000,0,5996,4,0,9,0,0,0,0.0,9.0,3
+Marcel Reed,Texas A&M Aggies,QB,2024,FR,1107738,1,91006,11,1572,0,501,18,0,0.0,18.4,3
+Marcel Reed,Texas A&M Aggies,QB,2025,SO,1100000,0,116488,27,3169,4,493,6,1,0.0,18.4,3
+Marco Jones,Texas A&M Aggies,EDGE,2024,FR,155462,1,11120,11,0,0,0,0,0,0.0,18.4,3
+Marco Jones,Texas A&M Aggies,EDGE,2025,SO,288000,0,14233,13,0,0,0,0,21,2.5,18.4,3
+Marcus Ratcliffe,Texas A&M Aggies,S,2023,FR,98944,1,2460,11,0,0,0,0,0,0.0,18.4,3
+Marcus Ratcliffe,Texas A&M Aggies,S,2024,SO,229123,1,3149,11,0,0,0,0,47,0.0,18.4,3
+Marcus Ratcliffe,Texas A&M Aggies,S,2025,JR,624000,0,4031,38,0,0,0,0,66,0.0,18.4,3
+Mario Craver,Texas A&M Aggies,WR,2024,FR,219224,1,36720,11,0,368,7,3,0,0.0,18.4,3
+Mario Craver,Texas A&M Aggies,WR,2025,SO,1000000,0,47002,21,0,917,81,5,2,0.0,18.4,3
+Mariyon Dye,Tennessee Volunteers,DL,2025,FR,174000,0,6614,7,0,0,0,0,8,1.0,19.0,0
+Marshall Pritchett,Alabama Crimson Tide,TE,2025,FR,149000,0,27439,15,0,0,0,0,1,0.0,19.0,2
+Matt Zollers,Missouri Tigers,QB,2024,FR,151716,1,12988,11,0,0,0,0,0,0.0,13.1,8
+Matt Zollers,Missouri Tigers,QB,2025,SO,436000,0,16625,8,503,0,-23,0,0,0.0,13.1,8
+Max Wright,Texas A&M Aggies,TE,2022,FR,118166,1,3250,11,0,129,0,1,0,0.0,18.4,3
+Max Wright,Texas A&M Aggies,TE,2023,SO,179639,1,4160,11,0,185,0,1,1,0.0,18.4,3
+Max Wright,Texas A&M Aggies,TE,2024,JR,179569,1,5324,11,0,0,0,0,0,0.0,18.4,3
+Max Wright,Texas A&M Aggies,TE,2025,SR,138000,0,6815,53,0,247,0,1,1,0.0,18.4,3
+Melvin Siani,Texas Longhorns,OT,2022,FR,229204,1,4532,11,0,0,0,0,0,0.0,18.6,1
+Melvin Siani,Texas Longhorns,OT,2023,SO,360199,1,5801,11,0,0,0,0,0,0.0,18.6,1
+Melvin Siani,Texas Longhorns,OT,2024,JR,530249,1,7426,11,0,0,0,0,0,0.0,18.6,1
+Melvin Siani,Texas Longhorns,OT,2025,SR,565000,0,9505,28,0,0,0,0,0,0.0,18.6,1
+Michael Carroll,Alabama Crimson Tide,OL,2025,FR,808000,0,6803,14,0,0,0,0,0,0.0,19.0,2
+Michael Fasusi,Oklahoma Sooners,OT,2025,FR,933000,0,9583,11,0,0,0,0,0,0.0,15.9,3
+Mike Matthews,Tennessee Volunteers,WR,2023,FR,97031,1,17656,11,0,0,0,0,0,0.0,19.0,0
+Mike Matthews,Tennessee Volunteers,WR,2024,SO,160004,1,22599,11,0,90,0,2,0,0.0,19.0,0
+Mike Matthews,Tennessee Volunteers,WR,2025,JR,376000,0,28927,24,0,813,32,4,0,0.0,19.0,0
+Mikkel Skinner,Kentucky Wildcats,TE,2025,FR,102000,0,12265,4,0,0,0,0,0,0.0,5.1,12
+Morice Blackwell,Texas Longhorns,LB,2022,FR,113965,1,6572,11,0,0,0,0,0,0.0,18.6,1
+Morice Blackwell,Texas Longhorns,LB,2023,SO,167804,1,8412,11,0,0,0,0,0,0.0,18.6,1
+Morice Blackwell,Texas Longhorns,LB,2024,JR,287605,1,10767,11,0,0,0,0,24,0.0,18.6,1
+Morice Blackwell,Texas Longhorns,LB,2025,SR,274000,0,13782,48,0,0,0,0,30,0.0,18.6,1
+Myles Graham,Florida Gators,ILB,2024,FR,174506,1,17367,11,0,0,0,0,28,1.0,8.2,3
+Myles Graham,Florida Gators,ILB,2025,SO,309000,0,22230,25,0,0,0,0,76,2.0,8.2,3
+Naeshaun Montgomery,Missouri Tigers,WR,2024,FR,83674,1,17198,11,0,0,0,0,0,0.0,13.1,8
+Naeshaun Montgomery,Missouri Tigers,WR,2025,SO,115000,0,22014,4,0,26,0,0,0,0.0,13.1,8
+Nate Frazier,Georgia Bulldogs,RB,2024,FR,309453,1,40393,11,0,68,634,8,0,0.0,21.4,1
+Nate Frazier,Georgia Bulldogs,RB,2025,SO,979000,0,51703,27,0,116,947,7,0,0.0,21.4,1
+Nathaniel Peat,Missouri Tigers,RB,2022,FR,103561,1,1599,11,0,66,400,3,1,0.0,13.1,8
+Nathaniel Peat,Missouri Tigers,RB,2023,SO,141798,1,2047,11,0,81,317,4,0,0.0,13.1,8
+Nathaniel Peat,Missouri Tigers,RB,2024,JR,117495,1,2620,11,0,0,0,0,0,0.0,13.1,8
+Nathaniel Peat,Missouri Tigers,RB,2025,SR,116000,0,3354,54,0,0,0,0,0,0.0,13.1,8
+Nic Anderson,LSU Tigers,WR,2023,FR,136497,1,10586,11,0,0,0,0,0,0.0,10.7,2
+Nic Anderson,LSU Tigers,WR,2024,SO,185245,1,13550,11,0,0,0,0,0,0.0,10.7,2
+Nic Anderson,LSU Tigers,WR,2025,JR,472000,0,17344,27,0,106,5,2,0,0.0,10.7,2
+Nicholas Rodriguez,Missouri Tigers,LB,2023,FR,68752,1,3157,11,0,0,0,0,0,0.0,13.1,8
+Nicholas Rodriguez,Missouri Tigers,LB,2024,SO,106579,1,4041,11,0,0,0,0,16,0.0,13.1,8
+Nicholas Rodriguez,Missouri Tigers,LB,2025,JR,317000,0,5173,24,0,0,0,0,61,1.5,13.1,8
+Nikhai Hill-Green,Alabama Crimson Tide,LB,2022,FR,92528,1,7118,11,0,0,0,0,0,0.0,19.0,2
+Nikhai Hill-Green,Alabama Crimson Tide,LB,2023,SO,136560,1,9111,11,0,0,0,0,0,0.0,19.0,2
+Nikhai Hill-Green,Alabama Crimson Tide,LB,2024,JR,188790,1,11662,11,0,0,0,0,0,0.0,19.0,2
+Nikhai Hill-Green,Alabama Crimson Tide,LB,2025,SR,151000,0,14927,55,0,0,0,0,54,0.0,19.0,2
+Nyck Harbor,South Carolina Gamecocks,WR,2022,FR,112387,1,46977,11,0,0,0,0,0,0.0,9.0,3
+Nyck Harbor,South Carolina Gamecocks,WR,2023,SO,231231,1,60130,11,0,195,10,1,1,0.0,9.0,3
+Nyck Harbor,South Carolina Gamecocks,WR,2024,JR,409035,1,76966,11,0,315,1,3,2,0.0,9.0,3
+Nyck Harbor,South Carolina Gamecocks,WR,2025,SR,343000,0,98517,36,0,618,12,6,3,0.0,9.0,3
+Nyles Gaddy,Missouri Tigers,DL,2022,FR,57786,1,7193,11,0,0,0,0,0,0.0,13.1,8
+Nyles Gaddy,Missouri Tigers,DL,2023,SO,142396,1,9207,11,0,0,0,0,21,4.0,13.1,8
+Nyles Gaddy,Missouri Tigers,DL,2024,JR,128047,1,11784,11,0,0,0,0,0,0.0,13.1,8
+Nyles Gaddy,Missouri Tigers,DL,2025,SR,110000,0,15084,14,0,0,0,0,22,4.0,13.1,8
+Omari Thomas,Tennessee Volunteers,DL,2022,FR,162274,1,6868,11,0,0,0,0,25,2.0,19.0,0
+Omari Thomas,Tennessee Volunteers,DL,2023,SO,287752,1,8792,11,0,0,0,0,31,1.0,19.0,0
+Omari Thomas,Tennessee Volunteers,DL,2024,JR,328148,1,11253,11,0,0,0,0,21,1.0,19.0,0
+Omari Thomas,Tennessee Volunteers,DL,2025,SR,253000,0,14404,61,0,0,0,0,0,0.0,19.0,0
+Patrick Kutas,Ole Miss Rebels,IOL,2022,FR,138493,1,3026,11,0,0,0,0,0,0.0,19.3,3
+Patrick Kutas,Ole Miss Rebels,IOL,2023,SO,215070,1,3873,11,0,0,0,0,2,0.0,19.3,3
+Patrick Kutas,Ole Miss Rebels,IOL,2024,JR,312865,1,4958,11,0,0,0,0,0,0.0,19.3,3
+Patrick Kutas,Ole Miss Rebels,IOL,2025,SR,232000,0,6346,41,0,0,0,0,0,0.0,19.3,3
+Peyton Bowen,Oklahoma Sooners,S,2022,FR,88886,1,11283,11,0,0,0,0,0,0.0,15.9,3
+Peyton Bowen,Oklahoma Sooners,S,2023,SO,135541,1,14443,11,0,0,0,0,0,0.0,15.9,3
+Peyton Bowen,Oklahoma Sooners,S,2024,JR,274464,1,18487,11,0,0,0,0,30,0.0,15.9,3
+Peyton Bowen,Oklahoma Sooners,S,2025,SR,294000,0,23663,39,0,0,0,0,46,0.0,15.9,3
+Peyton Williams,South Carolina Gamecocks,S,2022,FR,103131,1,1041,11,0,0,0,0,3,0.0,9.0,3
+Peyton Williams,South Carolina Gamecocks,S,2023,SO,141719,1,1332,11,0,0,0,0,0,0.0,9.0,3
+Peyton Williams,South Carolina Gamecocks,S,2024,JR,224897,1,1705,11,0,0,0,0,15,0.0,9.0,3
+Peyton Williams,South Carolina Gamecocks,S,2025,SR,218000,0,2183,28,0,0,0,0,50,1.0,9.0,3
+Phillip Wright III,LSU Tigers,WR,2025,FR,130000,0,8556,2,0,2,0,0,1,0.0,10.7,2
+Qua Russaw,Alabama Crimson Tide,LB,2024,FR,234269,1,11524,11,0,0,0,0,30,1.0,19.0,2
+Qua Russaw,Alabama Crimson Tide,LB,2025,SO,291000,0,14751,22,0,0,0,0,13,1.0,19.0,2
+"Quincy Rhodes, Jr.",Arkansas Razorbacks,DL,2023,FR,145856,1,5101,11,0,0,0,0,1,0.0,6.6,12
+"Quincy Rhodes, Jr.",Arkansas Razorbacks,DL,2024,SO,271816,1,6530,11,0,0,0,0,13,1.0,6.6,12
+"Quincy Rhodes, Jr.",Arkansas Razorbacks,DL,2025,JR,458000,0,8358,33,0,0,0,0,43,8.0,6.6,12
+Raleek Brown,Texas Longhorns,RB,2022,FR,111964,1,20901,11,0,0,0,0,0,0.0,18.6,1
+Raleek Brown,Texas Longhorns,RB,2023,SO,166701,1,26753,11,0,0,0,0,0,0.0,18.6,1
+Raleek Brown,Texas Longhorns,RB,2024,JR,232488,1,34244,11,0,0,0,0,0,0.0,18.6,1
+Raleek Brown,Texas Longhorns,RB,2025,SR,535000,0,43832,30,0,239,1141,6,0,0.0,18.6,1
+Rasheem Biles,Texas Longhorns,LB,2022,FR,110434,1,4617,11,0,0,0,0,0,0.0,18.6,1
+Rasheem Biles,Texas Longhorns,LB,2023,SO,160928,1,5909,11,0,0,0,0,0,0.0,18.6,1
+Rasheem Biles,Texas Longhorns,LB,2024,JR,219663,1,7564,11,0,0,0,0,0,0.0,18.6,1
+Rasheem Biles,Texas Longhorns,LB,2025,SR,595000,0,9682,31,0,0,0,3,100,4.5,18.6,1
+Robert Woodyard Jr.,Missouri Tigers,LB,2022,FR,53436,1,5556,11,0,0,0,0,4,0.0,13.1,8
+Robert Woodyard Jr.,Missouri Tigers,LB,2023,SO,75571,1,7112,11,0,0,0,0,0,0.0,13.1,8
+Robert Woodyard Jr.,Missouri Tigers,LB,2024,JR,121071,1,9103,11,0,0,0,0,17,0.0,13.1,8
+Robert Woodyard Jr.,Missouri Tigers,LB,2025,SR,330000,0,11652,29,0,0,0,0,67,2.0,13.1,8
+Ryan Fodje,Oklahoma Sooners,OT,2025,FR,139000,0,3460,13,0,0,0,0,0,0.0,15.9,3
+Ryan Montgomery,Georgia Bulldogs,QB,2025,FR,224000,0,10951,1,12,0,0,0,0,0.0,21.4,1
+Ryan Williams,Alabama Crimson Tide,WR,2024,FR,1337640,1,590201,11,0,857,48,10,0,0.0,19.0,2
+Ryan Williams,Alabama Crimson Tide,WR,2025,SO,1600000,0,755457,27,0,689,21,4,0,0.0,19.0,2
+Ryan Wingo,Texas Longhorns,WR,2024,FR,396929,1,31427,11,0,345,87,2,1,0.0,18.6,1
+Ryan Wingo,Texas Longhorns,WR,2025,SO,1400000,0,40226,29,0,834,42,7,1,0.0,18.6,1
+Sam Leavitt,LSU Tigers,QB,2023,FR,327375,1,35834,11,0,0,0,0,0,0.0,10.7,2
+Sam Leavitt,LSU Tigers,QB,2024,SO,503262,1,45867,11,0,0,0,0,0,0.0,10.7,2
+Sam Leavitt,LSU Tigers,QB,2025,JR,4000000,0,58710,24,1628,0,306,5,0,0.0,10.7,2
+Santana Banner,Missouri Tigers,S,2023,FR,67671,1,1937,11,0,0,0,0,0,0.0,13.1,8
+Santana Banner,Missouri Tigers,S,2024,SO,91190,1,2479,11,0,0,0,0,0,0.0,13.1,8
+Santana Banner,Missouri Tigers,S,2025,JR,116000,0,3173,30,0,0,0,0,59,0.0,13.1,8
+Suntarine Perkins,Ole Miss Rebels,EDGE,2022,FR,74291,1,2213,11,0,0,0,0,0,0.0,19.3,3
+Suntarine Perkins,Ole Miss Rebels,EDGE,2023,SO,248525,1,2833,11,0,0,0,0,36,3.5,19.3,3
+Suntarine Perkins,Ole Miss Rebels,EDGE,2024,JR,542391,1,3627,11,0,0,0,0,58,10.5,19.3,3
+Suntarine Perkins,Ole Miss Rebels,EDGE,2025,SR,519000,0,4642,41,0,0,0,0,81,4.5,19.3,3
+Talyn Taylor,Georgia Bulldogs,WR,2025,FR,386000,0,12274,6,0,28,0,0,2,0.0,21.4,1
+Tavion Gadson,Kentucky Wildcats,DL,2024,FR,153727,1,1228,11,0,0,0,0,0,0.0,5.1,12
+Tavion Gadson,Kentucky Wildcats,DL,2025,SO,887000,0,1572,17,0,0,0,0,28,2.5,5.1,12
+Taylor Wein,Oklahoma Sooners,EDGE,2023,FR,134321,1,4644,11,0,0,0,0,0,0.0,15.9,3
+Taylor Wein,Oklahoma Sooners,EDGE,2024,SO,198522,1,5944,11,0,0,0,0,2,0.0,15.9,3
+Taylor Wein,Oklahoma Sooners,EDGE,2025,JR,842000,0,7608,26,0,0,0,0,39,7.0,15.9,3
+Terry Bussey,Texas A&M Aggies,WR,2023,FR,95372,1,20524,11,0,0,0,0,0,0.0,18.4,3
+Terry Bussey,Texas A&M Aggies,WR,2024,SO,190459,1,26270,11,0,179,97,2,0,0.0,18.4,3
+Terry Bussey,Texas A&M Aggies,WR,2025,JR,153000,0,33626,25,0,195,1,1,1,0.0,18.4,3
+Tramell Jones Jr.,Florida Gators,QB,2025,FR,160000,0,13450,2,191,0,10,0,0,0.0,8.2,3
+Trey Washington,Ole Miss Rebels,S,2022,FR,94699,1,2989,11,0,0,0,0,21,0.0,19.3,3
+Trey Washington,Ole Miss Rebels,S,2023,SO,251768,1,3826,11,0,0,0,0,75,0.0,19.3,3
+Trey Washington,Ole Miss Rebels,S,2024,JR,275127,1,4898,11,0,0,0,0,54,0.0,19.3,3
+Trey Washington,Ole Miss Rebels,S,2025,SR,297000,0,6269,52,0,0,0,0,4,0.0,19.3,3
+Trey'Dez Green,LSU Tigers,TE,2024,FR,221668,1,40618,11,0,48,0,2,0,0.0,10.7,2
+Trey'Dez Green,LSU Tigers,TE,2025,SO,767000,0,51991,24,0,433,0,7,0,0.0,10.7,2
+Trinidad Chambliss,Ole Miss Rebels,QB,2022,FR,290205,1,76345,11,0,0,0,0,0,0.0,19.3,3
+Trinidad Chambliss,Ole Miss Rebels,QB,2023,SO,490531,1,97722,11,0,0,0,0,0,0.0,19.3,3
+Trinidad Chambliss,Ole Miss Rebels,QB,2024,JR,776657,1,125084,11,0,0,0,0,0,0.0,19.3,3
+Trinidad Chambliss,Ole Miss Rebels,QB,2025,SR,1600000,0,160107,15,3937,8,527,8,1,0.0,19.3,3
+Tristen Keys,Tennessee Volunteers,WR,2025,FR,396000,0,47489,0,0,0,0,0,0,0.0,19.0,0
+Trystan Haynes,Oklahoma Sooners,CB,2025,FR,121000,0,3385,1,0,0,0,0,1,0.0,15.9,3
+Tyler Hibbler,Missouri Tigers,S,2024,FR,86493,1,2430,11,0,0,0,0,0,0.0,13.1,8
+Tyler Hibbler,Missouri Tigers,S,2025,SO,117000,0,3110,20,0,0,0,0,2,0.0,13.1,8
+Tyler Lockhart,Mississippi State Bulldogs,LB,2025,FR,118000,0,3797,12,0,0,0,0,34,0.0,3.4,16
+Tyler Redmond,Tennessee Volunteers,CB,2024,FR,113544,1,4541,11,0,0,0,0,0,0.0,19.0,0
+Tyler Redmond,Tennessee Volunteers,CB,2025,SO,550000,0,5813,0,0,0,0,0,43,0.0,19.0,0
+Vernell Brown III,Florida Gators,WR,2025,FR,322000,0,58313,10,0,512,14,0,1,0.0,8.2,3
+Wendell Moe,Tennessee Volunteers,IOL,2022,FR,119689,1,1217,11,0,0,0,0,0,0.0,19.0,0
+Wendell Moe,Tennessee Volunteers,IOL,2023,SO,181113,1,1558,11,0,0,0,0,0,0.0,19.0,0
+Wendell Moe,Tennessee Volunteers,IOL,2024,JR,256704,1,1994,11,0,0,0,0,0,0.0,19.0,0
+Wendell Moe,Tennessee Volunteers,IOL,2025,SR,390000,0,2552,40,0,0,0,0,0,0.0,19.0,0
+Whit Weeks,LSU Tigers,LB,2023,FR,278925,1,61055,11,0,0,0,0,42,0.5,10.7,2
+Whit Weeks,LSU Tigers,LB,2024,SO,850682,1,78151,11,0,0,0,0,105,3.0,10.7,2
+Whit Weeks,LSU Tigers,LB,2025,JR,414000,0,100033,32,0,0,0,0,28,1.0,10.7,2
+Wilkin Formby,Texas A&M Aggies,OT,2023,FR,244397,1,9252,11,0,0,0,0,0,0.0,18.4,3
+Wilkin Formby,Texas A&M Aggies,OT,2024,SO,364733,1,11842,11,0,0,0,0,0,0.0,18.4,3
+Wilkin Formby,Texas A&M Aggies,OT,2025,JR,454000,0,15158,27,0,0,0,0,0,0.0,18.4,3
+Will Echoles,Ole Miss Rebels,DT,2024,FR,219075,1,11585,11,0,0,0,0,7,0.5,19.3,3
+Will Echoles,Ole Miss Rebels,DT,2025,SO,1000000,0,14829,23,0,0,0,0,68,5.0,19.3,3
+Winston Watkins Jr.,Ole Miss Rebels,WR,2025,FR,212000,0,125508,15,0,373,21,1,0,0.0,19.3,3
+Xavier Atkins,Auburn Tigers,LB,2024,FR,111834,1,12278,11,0,0,0,0,3,0.0,11.1,9
+Xavier Atkins,Auburn Tigers,LB,2025,SO,679000,0,15716,19,0,0,0,0,84,9.0,11.1,9
+Yhonzae Pierre,Alabama Crimson Tide,LB,2024,FR,177786,1,12381,11,0,0,0,0,5,0.0,19.0,2
+Yhonzae Pierre,Alabama Crimson Tide,LB,2025,SO,976000,0,15848,26,0,0,0,0,52,8.0,19.0,2
+Zabien Brown,Alabama Crimson Tide,DB,2024,FR,256784,1,49860,11,0,0,0,0,17,0.0,19.0,2
+Zabien Brown,Alabama Crimson Tide,DB,2025,SO,624000,0,63821,28,0,0,0,2,39,0.0,19.0,2
+Zamari Walton,Ole Miss Rebels,CB,2022,FR,74184,1,7992,11,0,0,0,0,0,0.0,19.3,3
+Zamari Walton,Ole Miss Rebels,CB,2023,SO,169575,1,10230,11,0,0,0,0,36,0.0,19.3,3
+Zamari Walton,Ole Miss Rebels,CB,2024,JR,158335,1,13095,11,0,0,0,0,0,0.0,19.3,3
+Zamari Walton,Ole Miss Rebels,CB,2025,SR,130000,0,16761,61,0,0,0,0,0,0.0,19.3,3
+Zayden Walker,Georgia Bulldogs,ILB,2025,FR,386000,0,8995,10,0,0,0,0,6,2.0,21.4,1
