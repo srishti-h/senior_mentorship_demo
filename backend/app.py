@@ -21,7 +21,9 @@ from routes.players   import players_bp
 from routes.instagram import instagram_bp
 from routes.news      import news_bp
 from routes.predict   import predict_bp, init_predict
-from utils.data_loader import load_players
+from routes.history   import history_bp
+from utils.data_loader    import load_players
+from utils.history_loader import load_history
 
 # ─── Logging ──────────────────────────────────────────────────────────────────
 logging.basicConfig(
@@ -40,6 +42,7 @@ app.register_blueprint(players_bp)
 app.register_blueprint(instagram_bp)
 app.register_blueprint(news_bp)
 app.register_blueprint(predict_bp)
+app.register_blueprint(history_bp)
 
 # ─── Load model artifacts ─────────────────────────────────────────────────────
 def _load_model():
@@ -72,6 +75,7 @@ def health():
 # ─── Startup (runs for both gunicorn and direct python app.py) ───────────────
 load_players()
 _load_model()
+load_history()   # no-op if sec_history.csv not yet generated
 
 # ─── Entry ────────────────────────────────────────────────────────────────────
 if __name__ == "__main__":

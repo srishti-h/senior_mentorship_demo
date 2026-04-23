@@ -708,8 +708,11 @@ async function openProfile(idx){
     <div class="p2">
       <div>
         <div class="pstat" style="border-color:${c.border};margin-bottom:14px">
-          <div class="box-title" style="margin-bottom:14px">VALUE vs. POSITION GROUP</div>
-          <div style="position:relative;height:140px"><canvas id="profileChart" role="img" aria-label="Value vs position group for ${a.name}">NIL value vs. ${a.pos} position group.</canvas></div>
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
+            <div class="box-title"><span id="profile-chart-title">NIL TREND</span></div>
+            <div id="profile-chart-legend" style="display:none;font-size:9px;color:#333;letter-spacing:.06em">● ACTUAL &nbsp; ○ ESTIMATED</div>
+          </div>
+          <div style="position:relative;height:140px"><canvas id="profileChart" role="img" aria-label="NIL career trend for ${a.name}">NIL career arc.</canvas></div>
         </div>
         <div class="pstat" style="border-color:${c.border}">
           <div class="box-title" style="margin-bottom:12px">VALUE BREAKDOWN</div>
@@ -756,19 +759,63 @@ async function openProfile(idx){
       if(newsEl) newsEl.innerHTML='<div style="color:#333;font-size:11px;padding:8px 0">Could not load news.</div>';
     });
 
-  setTimeout(()=>{
-    const canvas=document.getElementById('profileChart');
-    if(!canvas)return;
-    if(profileChartInst){profileChartInst.destroy();profileChartInst=null;}
+  // Try to load real career history; fall back to position-group comparison
+  fetch(BACKEND+'/players/'+encodeURIComponent(a.name)+'/history',{signal:AbortSignal.timeout(6000)})
+    .then(r=>r.ok?r.json():null).catch(()=>null)
+    .then(hist=>renderProfileChart(a,c,hist,posMin,posAvg,posMax));
+}
+
+function renderProfileChart(a,c,hist,posMin,posAvg,posMax){
+  const canvas=document.getElementById('profileChart');
+  if(!canvas)return;
+  if(profileChartInst){profileChartInst.destroy();profileChartInst=null;}
+  const titleEl=document.getElementById('profile-chart-title');
+
+  const seasons=(hist&&hist.seasons&&hist.seasons.length>=2)?hist.seasons:null;
+
+  if(seasons){
+    if(titleEl) titleEl.textContent='CAREER NIL ARC';
+    const legEl=document.getElementById('profile-chart-legend');
+    if(legEl) legEl.style.display='block';
+    const labels=seasons.map(s=>`${s.year} (${s.class})`);
+    const values=seasons.map(s=>+(s.nil_value/1e6).toFixed(2));
+    const isEst =seasons.map(s=>s.nil_estimated);
+    profileChartInst=new Chart(canvas,{
+      type:'line',
+      data:{
+        labels,
+        datasets:[{
+          label:'NIL Value',data:values,
+          borderColor:c.accent,backgroundColor:c.accent+'18',
+          fill:true,tension:0.3,borderWidth:2,pointRadius:5,
+          pointBackgroundColor:isEst.map(e=>e?'transparent':c.accent),
+          pointBorderColor:isEst.map(e=>e?c.accent+'88':c.accent),
+          pointBorderWidth:isEst.map(e=>e?1.5:2),
+          segment:{
+            borderDash:ctx=>isEst[ctx.p1DataIndex]?[4,4]:undefined,
+            borderColor:ctx=>isEst[ctx.p1DataIndex]?c.accent+'66':c.accent,
+          }
+        }]
+      },
+      options:{
+        responsive:true,maintainAspectRatio:false,
+        plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>{
+          const s=seasons[ctx.dataIndex];
+          return '$'+ctx.parsed.y.toFixed(2)+'M'+(s.nil_estimated?' (est.)':' (actual)');
+        }}}},
+        scales:{
+          x:{grid:{color:'rgba(255,255,255,0.04)'},ticks:{color:'#444',font:{size:9}}},
+          y:{grid:{color:'rgba(255,255,255,0.04)'},ticks:{color:'#444',font:{size:10},callback:v=>'$'+v+'M'},min:0}
+        }
+      }
+    });
+  } else {
+    if(titleEl) titleEl.textContent='VALUE vs. POSITION GROUP';
     profileChartInst=new Chart(canvas,{
       type:'bar',
       data:{
         labels:['Pos. Min','Pos. Avg','This Athlete','Pos. Max'],
-        datasets:[{
-          data:[posMin,posAvg,a.val,posMax],
-          backgroundColor:['#1e1e1e','#2a2a2a',c.accent,'#222'],
-          borderRadius:3,borderSkipped:false
-        }]
+        datasets:[{data:[posMin,posAvg,a.val,posMax],backgroundColor:['#1e1e1e','#2a2a2a',c.accent,'#222'],borderRadius:3,borderSkipped:false}]
       },
       options:{
         responsive:true,maintainAspectRatio:false,
@@ -779,7 +826,7 @@ async function openProfile(idx){
         }
       }
     });
-  },50);
+  }
 }
 
 function renderDepth(){

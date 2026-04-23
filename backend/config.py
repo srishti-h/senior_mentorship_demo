@@ -19,8 +19,9 @@ import os
 BACKEND_DIR   = os.path.dirname(__file__)
 ROOT_DIR      = os.path.dirname(BACKEND_DIR)
 
-ARTIFACTS_DIR = os.path.join(BACKEND_DIR, "model_artifacts")
-CSV_PATH      = os.path.join(ROOT_DIR,    "sec_final_training_data.csv")
+ARTIFACTS_DIR    = os.path.join(BACKEND_DIR, "model_artifacts")
+CSV_PATH         = os.path.join(ROOT_DIR,    "sec_final_training_data.csv")
+HISTORY_CSV_PATH = os.path.join(ROOT_DIR,    "sec_history.csv")
 
 # ─── Server ───────────────────────────────────────────────────────────────────
 HOST  = "0.0.0.0"
