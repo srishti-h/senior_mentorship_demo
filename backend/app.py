@@ -81,6 +81,12 @@ _load_model()
 load_history()   # no-op if sec_history.csv not yet generated
 init_db()        # create analytics.db if not present
 
+# Seed analytics with synthetic activity if the DB is empty (e.g. fresh deploy)
+from utils.analytics import seed_events
+_active_players = [p for p in load_players() if p.get("nil_value")]
+if _active_players:
+    seed_events(_active_players, days=30)
+
 # ─── Entry ────────────────────────────────────────────────────────────────────
 if __name__ == "__main__":
     logger.info(f"Server → http://localhost:{PORT}")

@@ -93,6 +93,75 @@ def get_top_starred(limit: int = 10, days: int = None) -> list:
         return [dict(r) for r in c.execute(query, params).fetchall()]
 
 
+def get_event_count() -> int:
+    with _conn() as c:
+        return c.execute("SELECT COUNT(*) FROM events").fetchone()[0]
+
+
+def seed_events(players: list, days: int = 30):
+    """
+    Generate synthetic baseline activity so the analytics tab has data from the
+    first deploy. Skips if events already exist.
+    """
+    import random
+    from datetime import datetime, timedelta, timezone
+
+    if get_event_count() > 0:
+        return
+
+    random.seed(42)
+
+    POSITION_WEIGHTS = {
+        "QB": 1.0, "WR": 0.85, "RB": 0.75, "TE": 0.6,
+        "CB": 0.5, "DB": 0.45, "LB": 0.55, "DL": 0.4,
+        "DE": 0.5, "EDGE": 0.5, "OL": 0.3,
+    }
+
+    max_val = max((p.get("nil_value") or 1) for p in players)
+    weights = []
+    for p in players:
+        pos_w = POSITION_WEIGHTS.get(p.get("position", ""), 0.3)
+        val_w = ((p.get("nil_value") or 1) / max_val) ** 0.5
+        weights.append(pos_w * val_w + 0.1)
+
+    events = []
+    n_agents = 100
+
+    for day in range(days - 1, -1, -1):
+        base = datetime.now(timezone.utc) - timedelta(days=day)
+        for agent_idx in range(n_agents):
+            agent_id = f"agent_{agent_idx + 1:03d}"
+            viewed = random.choices(players, weights=weights, k=random.randint(2, 8))
+            for p in viewed:
+                ts = base.replace(
+                    hour=random.randint(7, 23),
+                    minute=random.randint(0, 59),
+                    second=random.randint(0, 59),
+                    microsecond=0,
+                ).isoformat()
+                events.append({
+                    "event_type": "view",
+                    "player_name": p["name"],
+                    "team": p.get("team", ""),
+                    "position": p.get("position", ""),
+                    "agent_id": agent_id,
+                    "timestamp": ts,
+                })
+                pos_w = POSITION_WEIGHTS.get(p.get("position", ""), 0.3)
+                if random.random() < pos_w * 0.25:
+                    events.append({
+                        "event_type": "star",
+                        "player_name": p["name"],
+                        "team": p.get("team", ""),
+                        "position": p.get("position", ""),
+                        "agent_id": agent_id,
+                        "timestamp": ts,
+                    })
+
+    log_events_bulk(events)
+    logger.info(f"Analytics seeded: {len(events)} events ({days} days, {n_agents} agents)")
+
+
 def get_trending(limit: int = 10) -> list:
     """Players with biggest view-count increase in the last 7 days vs the prior 7."""
     with _conn() as c:
