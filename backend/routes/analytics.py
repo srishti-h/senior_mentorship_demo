@@ -7,13 +7,23 @@ GET  /analytics/trending       Biggest view-count movers (last 7 vs prior 7 days
 POST /events                   Log a single user event (view | star | unstar)
 """
 from flask import Blueprint, jsonify, request
+from config import ANALYTICS_WHITELIST
 from utils.analytics import log_event, get_top_searched, get_top_starred, get_trending
 
 analytics_bp = Blueprint("analytics", __name__)
 
 
+def _check_whitelist():
+    email = (request.headers.get("X-User-Email") or "").strip().lower()
+    if email not in {e.lower() for e in ANALYTICS_WHITELIST}:
+        return jsonify({"error": "Not authorized"}), 403
+    return None
+
+
 @analytics_bp.get("/analytics/top-searched")
 def top_searched():
+    err = _check_whitelist()
+    if err: return err
     limit = min(int(request.args.get("limit", 10)), 50)
     days  = request.args.get("days", type=int)
     return jsonify(get_top_searched(limit=limit, days=days))
@@ -21,6 +31,8 @@ def top_searched():
 
 @analytics_bp.get("/analytics/top-starred")
 def top_starred():
+    err = _check_whitelist()
+    if err: return err
     limit = min(int(request.args.get("limit", 10)), 50)
     days  = request.args.get("days", type=int)
     return jsonify(get_top_starred(limit=limit, days=days))
@@ -28,6 +40,8 @@ def top_starred():
 
 @analytics_bp.get("/analytics/trending")
 def trending():
+    err = _check_whitelist()
+    if err: return err
     limit = min(int(request.args.get("limit", 10)), 50)
     return jsonify(get_trending(limit=limit))
 

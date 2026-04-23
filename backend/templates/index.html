@@ -277,7 +277,7 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:13px 2
     <button class="nb active" id="nav-overview" onclick="showPage('overview')">MARKET OVERVIEW</button>
     <button class="nb" id="nav-explorer" onclick="showPage('explorer')">ATHLETE EXPLORER</button>
     <button class="nb" id="nav-predictor" onclick="showPage('predictor')">NIL PREDICTOR</button>
-    <button class="nb" id="nav-analytics" onclick="showPage('analytics')">ANALYTICS</button>
+    <button class="nb" id="nav-analytics" onclick="showPage('analytics')" style="display:none">ANALYTICS</button>
   </div>
   <div style="display:flex;align-items:center;gap:10px">
     <div class="api-status" id="api-status">API —</div>
@@ -645,10 +645,18 @@ function showPage(id){
 
 // ── Analytics ────────────────────────────────────────────────────────────────
 async function loadAnalytics(){
+  if(!isAnalyticsUser()){
+    document.getElementById('al-searched').innerHTML='<div class="al-empty">Not authorized.</div>';
+    document.getElementById('al-starred').innerHTML='<div class="al-empty">Not authorized.</div>';
+    document.getElementById('al-trending').innerHTML='<div class="al-empty">Not authorized.</div>';
+    return;
+  }
+  const email=(window.currentUser.email||'').toLowerCase();
+  const hdrs={'X-User-Email':email};
   const [searched,starred,trending]=await Promise.all([
-    fetch(BACKEND+'/analytics/top-searched?limit=10').then(r=>r.json()).catch(()=>[]),
-    fetch(BACKEND+'/analytics/top-starred?limit=10').then(r=>r.json()).catch(()=>[]),
-    fetch(BACKEND+'/analytics/trending?limit=10').then(r=>r.json()).catch(()=>[]),
+    fetch(BACKEND+'/analytics/top-searched?limit=10',{headers:hdrs}).then(r=>r.json()).catch(()=>[]),
+    fetch(BACKEND+'/analytics/top-starred?limit=10',{headers:hdrs}).then(r=>r.json()).catch(()=>[]),
+    fetch(BACKEND+'/analytics/trending?limit=10',{headers:hdrs}).then(r=>r.json()).catch(()=>[]),
   ]);
   renderAlList('al-searched',searched,'views','VIEWS');
   renderAlList('al-starred',starred,'stars','STARS');
@@ -988,6 +996,8 @@ function renderOverviewChart(){
 
 // PREDICTOR — connected to Flask backend at localhost:8000
 const BACKEND='';
+const ANALYTICS_WHITELIST=new Set(['hazra.srishti@gmail.com','likhi@gmail.com','send2dar@gmail.com']);
+function isAnalyticsUser(){ return window.currentUser && ANALYTICS_WHITELIST.has((window.currentUser.email||'').toLowerCase()); }
 
 const TEAM_DATA={
   'Alabama':    {full:'Alabama Crimson Tide',      fpi:19.0,  tier:2},
@@ -1425,6 +1435,7 @@ function setError(msg){ document.getElementById('auth-error').textContent=msg||'
 // ── Auth state ────────────────────────────────────────────────────────────
 onAuthStateChanged(auth, async (user) => {
   window.currentUser = user;
+  const analyticsBtn = document.getElementById('nav-analytics');
   if(user){
     window.hideAuthOverlay();
     window.refreshUserMenu();
@@ -1432,8 +1443,10 @@ onAuthStateChanged(auth, async (user) => {
     filterAthletes();
     await ensureUserDoc(user);
     await loadUserData(user.uid);
+    if(analyticsBtn) analyticsBtn.style.display = isAnalyticsUser() ? '' : 'none';
   } else {
     document.getElementById('user-menu-wrap').style.display='none';
+    if(analyticsBtn) analyticsBtn.style.display='none';
     window.showAuthOverlay();
     applyPredictorGate();
     filterAthletes();

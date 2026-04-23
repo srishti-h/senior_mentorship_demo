@@ -43,5 +43,12 @@ SCRAPE_HEADERS = {
     "Accept-Language": "en-US,en;q=0.5",
 }
 
+# ─── Analytics access control ────────────────────────────────────────────────
+ANALYTICS_WHITELIST = {
+    "hazra.srishti@gmail.com",
+    "likhi@gmail.com",
+    "send2dar@gmail.com",
+}
+
 # ─── NIL Model ────────────────────────────────────────────────────────────────
 PREDICTION_SIGMA = 0.55   # log-space uncertainty used for CI bands
