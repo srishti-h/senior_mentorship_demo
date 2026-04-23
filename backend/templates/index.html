@@ -204,6 +204,14 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:13px 2
 .locked-banner-sub{font-size:10px;color:#2a2a2a;letter-spacing:.04em}
 .locked-banner-btn{background:#e84343;color:#fff;border:none;border-radius:5px;padding:8px 18px;font-size:11px;font-weight:800;letter-spacing:.09em;cursor:pointer;margin-top:4px}
 .pred-gate{position:absolute;inset:0;background:rgba(8,8,8,.88);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;border-radius:9px;backdrop-filter:blur(6px);z-index:10}
+.name-wrap{position:relative}
+.name-dd{position:absolute;top:100%;left:0;right:0;background:#181818;border:1px solid #333;border-top:none;border-radius:0 0 6px 6px;z-index:200;max-height:220px;overflow-y:auto;display:none}
+.name-opt{display:flex;align-items:center;gap:8px;padding:9px 12px;cursor:pointer;border-bottom:1px solid #222}
+.name-opt:last-child{border-bottom:none}
+.name-opt:hover{background:#222}
+.name-opt-info{flex:1;min-width:0}
+.name-opt-name{font-size:12px;font-weight:700;color:#ccc}
+.name-opt-school{font-size:10px;color:#555;margin-top:1px}
 .pred-gate-title{font-size:14px;font-weight:800;color:#fff;letter-spacing:.1em}
 .pred-gate-sub{font-size:11px;color:#555;letter-spacing:.05em;text-align:center;max-width:280px;line-height:1.6}
 .pred-gate-btn{background:#e84343;color:#fff;border:none;border-radius:6px;padding:10px 22px;font-size:12px;font-weight:800;letter-spacing:.1em;cursor:pointer;margin-top:4px}
@@ -349,8 +357,10 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:13px 2
         <div class="stats-section">
           <div class="stats-section-title">IDENTITY</div>
           <div class="fg frow">
-            <div><label class="fl2">ATHLETE NAME <span style="color:#444;font-weight:400">(display only)</span></label>
-              <input class="fi" id="p-name" placeholder="e.g. Arch Manning">
+            <div class="name-wrap">
+              <label class="fl2">ATHLETE NAME <span style="color:#444;font-weight:400">(type to search &amp; auto-fill)</span></label>
+              <input class="fi" id="p-name" placeholder="e.g. Arch Manning" oninput="predNameSearch()" autocomplete="off">
+              <div class="name-dd" id="p-name-dd"></div>
             </div>
             <div><label class="fl2">CLASS</label>
               <select class="fi" id="p-class">
@@ -917,6 +927,82 @@ function onPositionChange(){
   });
 }
 
+// ── Predictor name autocomplete ───────────────────────────────────────────────
+let _predSearchTimer=null;
+let _predResults=[];
+
+// Map backend position codes to predictor form values
+const POS_REMAP={OT:'OL',IOL:'OL',LS:'OL',DB:'CB',DT:'DE',DL:'DE',EDGE:'DE',EDG:'DE',ILB:'LB',OLB:'LB',BCK:'RB'};
+
+// Reverse TEAM_DATA: full name → short name (for school select)
+const TEAM_FULL_TO_SHORT={};
+Object.entries(TEAM_DATA).forEach(([s,d])=>{TEAM_FULL_TO_SHORT[d.full]=s;});
+
+function predNameSearch(){
+  const q=(document.getElementById('p-name').value||'').trim();
+  const dd=document.getElementById('p-name-dd');
+  clearTimeout(_predSearchTimer);
+  if(q.length<2){dd.style.display='none';return;}
+  _predSearchTimer=setTimeout(async()=>{
+    try{
+      const r=await fetch(BACKEND+'/players?q='+encodeURIComponent(q)+'&limit=8',{signal:AbortSignal.timeout(3000)});
+      const d=await r.json();
+      _predResults=(d.players||[]).filter(p=>p.nil_value);
+      if(!_predResults.length){dd.style.display='none';return;}
+      const school=p=>TEAM_SHORT[p.team]||p.team;
+      dd.innerHTML=_predResults.map((p,i)=>{
+        const c=sc2(school(p));
+        return`<div class="name-opt" onclick="predFillFrom(${i})">
+          <div style="font-size:9px;font-weight:800;padding:2px 5px;border-radius:3px;flex-shrink:0;${ps(p.position)}">${p.position}</div>
+          <div class="name-opt-info">
+            <div class="name-opt-name">${p.name}</div>
+            <div class="name-opt-school">${school(p)}</div>
+          </div>
+          <div style="font-size:11px;font-weight:700;color:${c.accent}">$${(p.nil_value/1e6).toFixed(2)}M</div>
+        </div>`;
+      }).join('');
+      dd.style.display='block';
+    }catch{dd.style.display='none';}
+  },260);
+}
+
+function predFillFrom(i){
+  const p=_predResults[i];
+  if(!p) return;
+  document.getElementById('p-name-dd').style.display='none';
+  document.getElementById('p-name').value=p.name;
+
+  const set=(id,v)=>{const el=document.getElementById(id);if(el&&v!=null)el.value=v;};
+
+  // Identity + physical
+  set('p-class', p.class||'JR');
+  set('p-height', p.height_in||72);
+  set('p-weight', p.weight_lb||210);
+  set('p-games',  p.games_played||12);
+  set('p-followers', p.follower_count||0);
+
+  // School — match by short name
+  const shortSchool=TEAM_FULL_TO_SHORT[p.team]||TEAM_SHORT[p.team]||p.team;
+  const schoolEl=document.getElementById('p-school');
+  if(schoolEl){
+    const opt=[...schoolEl.options].find(o=>o.value===shortSchool||o.text===shortSchool);
+    if(opt) schoolEl.value=opt.value;
+  }
+
+  // Position — remap backend codes to form values
+  const pos=POS_REMAP[p.position]||p.position;
+  const posEl=document.getElementById('p-pos');
+  if(posEl){posEl.value=pos;onPositionChange();}
+
+  // Stats — set the field relevant to this position
+  const td=p.season_scoring_td||0;
+  set('p-pass-yards', p.season_pass_yards||0); set('p-pass-td', pos==='QB'?td:0);
+  set('p-rec-yards',  p.season_rec_yards||0);  set('p-rec-td',  (pos==='WR'||pos==='TE')?td:0);
+  set('p-rush-yards', p.season_rush_yards||0); set('p-rush-td', pos==='RB'?td:0);
+  set('p-tackles', p.season_def_tackles||0);
+  set('p-sacks',   p.season_def_sacks||0);
+}
+
 async function checkBackendHealth(){
   const el=document.getElementById('api-status');
   try{
@@ -1073,6 +1159,9 @@ window.toggleUserMenu = function(){
 document.addEventListener('click',function(e){
   const wrap=document.getElementById('user-menu-wrap');
   if(wrap && !wrap.contains(e.target)) document.getElementById('ud-drop').classList.remove('open');
+  const dd=document.getElementById('p-name-dd');
+  const inp=document.getElementById('p-name');
+  if(dd && inp && !dd.contains(e.target) && e.target!==inp) dd.style.display='none';
 });
 
 // Gate predictor for guests
