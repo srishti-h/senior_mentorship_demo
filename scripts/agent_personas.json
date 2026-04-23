@@ -1,0 +1,2352 @@
+[
+  {
+    "id": "agent_092",
+    "name": "Nathan Miller",
+    "archetype": "casual_browser",
+    "team_affinity": [
+      "South Carolina"
+    ],
+    "position_weights": {
+      "QB": 0.8,
+      "WR": 0.65,
+      "RB": 0.6,
+      "TE": 0.27,
+      "CB": 0.11,
+      "DB": 0.29,
+      "LB": 0.27,
+      "DL": 0.13,
+      "DE": 0.16,
+      "EDGE": 0.05,
+      "OL": 0.06
+    },
+    "engagement_rate": 0.17,
+    "news_sensitivity": 0.41,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_007",
+    "name": "Paul Bell",
+    "archetype": "brand_manager",
+    "team_affinity": [],
+    "position_weights": {
+      "QB": 1.0,
+      "WR": 0.95,
+      "RB": 0.57,
+      "TE": 0.33,
+      "CB": 0.23,
+      "DB": 0.34,
+      "LB": 0.22,
+      "DL": 0.18,
+      "DE": 0.22,
+      "EDGE": 0.19,
+      "OL": 0.05
+    },
+    "engagement_rate": 0.41,
+    "news_sensitivity": 0.88,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_053",
+    "name": "Tyler Young",
+    "archetype": "fantasy_analyst",
+    "team_affinity": [],
+    "position_weights": {
+      "QB": 0.97,
+      "WR": 0.88,
+      "RB": 0.76,
+      "TE": 0.59,
+      "CB": 0.28,
+      "DB": 0.18,
+      "LB": 0.3,
+      "DL": 0.16,
+      "DE": 0.13,
+      "EDGE": 0.05,
+      "OL": 0.19
+    },
+    "engagement_rate": 0.23,
+    "news_sensitivity": 0.79,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_078",
+    "name": "Jeffrey Fisher",
+    "archetype": "sports_agent",
+    "team_affinity": [],
+    "position_weights": {
+      "QB": 0.73,
+      "WR": 0.65,
+      "RB": 0.67,
+      "TE": 0.5,
+      "CB": 0.55,
+      "DB": 0.44,
+      "LB": 0.68,
+      "DL": 0.64,
+      "DE": 0.7,
+      "EDGE": 0.77,
+      "OL": 0.46
+    },
+    "engagement_rate": 0.16,
+    "news_sensitivity": 0.92,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_001",
+    "name": "Gabriel Moore",
+    "archetype": "brand_manager",
+    "team_affinity": [],
+    "position_weights": {
+      "QB": 0.91,
+      "WR": 0.86,
+      "RB": 0.44,
+      "TE": 0.45,
+      "CB": 0.34,
+      "DB": 0.38,
+      "LB": 0.12,
+      "DL": 0.18,
+      "DE": 0.11,
+      "EDGE": 0.14,
+      "OL": 0.1
+    },
+    "engagement_rate": 0.31,
+    "news_sensitivity": 0.66,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_021",
+    "name": "David Phillips",
+    "archetype": "die_hard_fan",
+    "team_affinity": [
+      "Auburn",
+      "Arkansas"
+    ],
+    "position_weights": {
+      "QB": 0.85,
+      "WR": 0.72,
+      "RB": 0.86,
+      "TE": 0.68,
+      "CB": 0.58,
+      "DB": 0.62,
+      "LB": 0.63,
+      "DL": 0.69,
+      "DE": 0.67,
+      "EDGE": 0.7,
+      "OL": 0.46
+    },
+    "engagement_rate": 0.66,
+    "news_sensitivity": 0.71,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_086",
+    "name": "Tyler Baker",
+    "archetype": "casual_browser",
+    "team_affinity": [
+      "Texas"
+    ],
+    "position_weights": {
+      "QB": 0.84,
+      "WR": 0.73,
+      "RB": 0.58,
+      "TE": 0.37,
+      "CB": 0.17,
+      "DB": 0.22,
+      "LB": 0.13,
+      "DL": 0.07,
+      "DE": 0.19,
+      "EDGE": 0.14,
+      "OL": 0.08
+    },
+    "engagement_rate": 0.14,
+    "news_sensitivity": 0.48,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_076",
+    "name": "Nathan Cook",
+    "archetype": "sports_agent",
+    "team_affinity": [],
+    "position_weights": {
+      "QB": 0.77,
+      "WR": 0.67,
+      "RB": 0.74,
+      "TE": 0.66,
+      "CB": 0.51,
+      "DB": 0.42,
+      "LB": 0.61,
+      "DL": 0.53,
+      "DE": 0.72,
+      "EDGE": 0.73,
+      "OL": 0.35
+    },
+    "engagement_rate": 0.25,
+    "news_sensitivity": 0.82,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_027",
+    "name": "Hannah Gonzalez",
+    "archetype": "die_hard_fan",
+    "team_affinity": [
+      "LSU",
+      "Texas A&M"
+    ],
+    "position_weights": {
+      "QB": 0.9,
+      "WR": 0.83,
+      "RB": 0.77,
+      "TE": 0.66,
+      "CB": 0.65,
+      "DB": 0.63,
+      "LB": 0.64,
+      "DL": 0.54,
+      "DE": 0.5,
+      "EDGE": 0.55,
+      "OL": 0.4
+    },
+    "engagement_rate": 0.65,
+    "news_sensitivity": 0.72,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_070",
+    "name": "Henry Ross",
+    "archetype": "fantasy_analyst",
+    "team_affinity": [],
+    "position_weights": {
+      "QB": 0.82,
+      "WR": 0.94,
+      "RB": 0.79,
+      "TE": 0.68,
+      "CB": 0.16,
+      "DB": 0.13,
+      "LB": 0.13,
+      "DL": 0.12,
+      "DE": 0.12,
+      "EDGE": 0.14,
+      "OL": 0.08
+    },
+    "engagement_rate": 0.32,
+    "news_sensitivity": 0.59,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_042",
+    "name": "Ralph Jackson",
+    "archetype": "die_hard_fan",
+    "team_affinity": [
+      "Vanderbilt",
+      "Georgia"
+    ],
+    "position_weights": {
+      "QB": 0.97,
+      "WR": 0.81,
+      "RB": 0.79,
+      "TE": 0.59,
+      "CB": 0.54,
+      "DB": 0.51,
+      "LB": 0.79,
+      "DL": 0.6,
+      "DE": 0.66,
+      "EDGE": 0.58,
+      "OL": 0.31
+    },
+    "engagement_rate": 0.59,
+    "news_sensitivity": 0.72,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_060",
+    "name": "Alexander Hall",
+    "archetype": "fantasy_analyst",
+    "team_affinity": [],
+    "position_weights": {
+      "QB": 0.93,
+      "WR": 0.92,
+      "RB": 0.84,
+      "TE": 0.64,
+      "CB": 0.23,
+      "DB": 0.27,
+      "LB": 0.23,
+      "DL": 0.18,
+      "DE": 0.13,
+      "EDGE": 0.06,
+      "OL": 0.09
+    },
+    "engagement_rate": 0.32,
+    "news_sensitivity": 0.72,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_031",
+    "name": "Roy Lopez",
+    "archetype": "die_hard_fan",
+    "team_affinity": [
+      "Auburn",
+      "Georgia"
+    ],
+    "position_weights": {
+      "QB": 0.88,
+      "WR": 0.77,
+      "RB": 0.79,
+      "TE": 0.51,
+      "CB": 0.67,
+      "DB": 0.58,
+      "LB": 0.75,
+      "DL": 0.69,
+      "DE": 0.5,
+      "EDGE": 0.68,
+      "OL": 0.42
+    },
+    "engagement_rate": 0.54,
+    "news_sensitivity": 0.98,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_029",
+    "name": "Nicholas Martin",
+    "archetype": "die_hard_fan",
+    "team_affinity": [
+      "Mississippi State",
+      "LSU"
+    ],
+    "position_weights": {
+      "QB": 0.96,
+      "WR": 0.83,
+      "RB": 0.9,
+      "TE": 0.62,
+      "CB": 0.69,
+      "DB": 0.68,
+      "LB": 0.72,
+      "DL": 0.64,
+      "DE": 0.6,
+      "EDGE": 0.67,
+      "OL": 0.41
+    },
+    "engagement_rate": 0.67,
+    "news_sensitivity": 0.92,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_039",
+    "name": "Frank Green",
+    "archetype": "die_hard_fan",
+    "team_affinity": [
+      "Texas",
+      "Vanderbilt"
+    ],
+    "position_weights": {
+      "QB": 0.8,
+      "WR": 0.89,
+      "RB": 0.72,
+      "TE": 0.64,
+      "CB": 0.6,
+      "DB": 0.65,
+      "LB": 0.74,
+      "DL": 0.63,
+      "DE": 0.6,
+      "EDGE": 0.66,
+      "OL": 0.32
+    },
+    "engagement_rate": 0.47,
+    "news_sensitivity": 0.91,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_082",
+    "name": "Arthur Barnes",
+    "archetype": "sports_agent",
+    "team_affinity": [],
+    "position_weights": {
+      "QB": 0.82,
+      "WR": 0.74,
+      "RB": 0.78,
+      "TE": 0.63,
+      "CB": 0.6,
+      "DB": 0.46,
+      "LB": 0.79,
+      "DL": 0.56,
+      "DE": 0.69,
+      "EDGE": 0.69,
+      "OL": 0.43
+    },
+    "engagement_rate": 0.27,
+    "news_sensitivity": 0.85,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_071",
+    "name": "Keith Gray",
+    "archetype": "sports_agent",
+    "team_affinity": [],
+    "position_weights": {
+      "QB": 0.79,
+      "WR": 0.76,
+      "RB": 0.62,
+      "TE": 0.63,
+      "CB": 0.58,
+      "DB": 0.51,
+      "LB": 0.77,
+      "DL": 0.59,
+      "DE": 0.78,
+      "EDGE": 0.68,
+      "OL": 0.47
+    },
+    "engagement_rate": 0.21,
+    "news_sensitivity": 0.88,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_093",
+    "name": "Paul Barnes",
+    "archetype": "casual_browser",
+    "team_affinity": [
+      "Vanderbilt"
+    ],
+    "position_weights": {
+      "QB": 0.79,
+      "WR": 0.6,
+      "RB": 0.42,
+      "TE": 0.25,
+      "CB": 0.27,
+      "DB": 0.21,
+      "LB": 0.25,
+      "DL": 0.11,
+      "DE": 0.05,
+      "EDGE": 0.06,
+      "OL": 0.06
+    },
+    "engagement_rate": 0.06,
+    "news_sensitivity": 0.33,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_022",
+    "name": "Hannah Mitchell",
+    "archetype": "die_hard_fan",
+    "team_affinity": [
+      "Kentucky",
+      "South Carolina"
+    ],
+    "position_weights": {
+      "QB": 0.93,
+      "WR": 0.85,
+      "RB": 0.75,
+      "TE": 0.53,
+      "CB": 0.64,
+      "DB": 0.58,
+      "LB": 0.61,
+      "DL": 0.59,
+      "DE": 0.54,
+      "EDGE": 0.68,
+      "OL": 0.37
+    },
+    "engagement_rate": 0.65,
+    "news_sensitivity": 0.96,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_056",
+    "name": "Matthew Barnes",
+    "archetype": "fantasy_analyst",
+    "team_affinity": [],
+    "position_weights": {
+      "QB": 0.93,
+      "WR": 0.97,
+      "RB": 0.79,
+      "TE": 0.64,
+      "CB": 0.28,
+      "DB": 0.11,
+      "LB": 0.26,
+      "DL": 0.06,
+      "DE": 0.07,
+      "EDGE": 0.05,
+      "OL": 0.11
+    },
+    "engagement_rate": 0.31,
+    "news_sensitivity": 0.74,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_100",
+    "name": "Madison Sanders",
+    "archetype": "casual_browser",
+    "team_affinity": [
+      "Florida"
+    ],
+    "position_weights": {
+      "QB": 0.89,
+      "WR": 0.63,
+      "RB": 0.52,
+      "TE": 0.36,
+      "CB": 0.11,
+      "DB": 0.11,
+      "LB": 0.26,
+      "DL": 0.07,
+      "DE": 0.08,
+      "EDGE": 0.11,
+      "OL": 0.12
+    },
+    "engagement_rate": 0.15,
+    "news_sensitivity": 0.48,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_003",
+    "name": "Gregory Gray",
+    "archetype": "brand_manager",
+    "team_affinity": [],
+    "position_weights": {
+      "QB": 0.95,
+      "WR": 0.81,
+      "RB": 0.49,
+      "TE": 0.32,
+      "CB": 0.38,
+      "DB": 0.22,
+      "LB": 0.16,
+      "DL": 0.23,
+      "DE": 0.28,
+      "EDGE": 0.17,
+      "OL": 0.05
+    },
+    "engagement_rate": 0.31,
+    "news_sensitivity": 0.8,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_059",
+    "name": "Ralph Adams",
+    "archetype": "fantasy_analyst",
+    "team_affinity": [],
+    "position_weights": {
+      "QB": 0.8,
+      "WR": 0.97,
+      "RB": 0.78,
+      "TE": 0.5,
+      "CB": 0.27,
+      "DB": 0.26,
+      "LB": 0.29,
+      "DL": 0.18,
+      "DE": 0.15,
+      "EDGE": 0.17,
+      "OL": 0.18
+    },
+    "engagement_rate": 0.36,
+    "news_sensitivity": 0.57,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_073",
+    "name": "Carl Mitchell",
+    "archetype": "sports_agent",
+    "team_affinity": [],
+    "position_weights": {
+      "QB": 0.83,
+      "WR": 0.68,
+      "RB": 0.77,
+      "TE": 0.69,
+      "CB": 0.48,
+      "DB": 0.58,
+      "LB": 0.61,
+      "DL": 0.56,
+      "DE": 0.66,
+      "EDGE": 0.62,
+      "OL": 0.4
+    },
+    "engagement_rate": 0.17,
+    "news_sensitivity": 0.82,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_025",
+    "name": "Hannah Gutierrez",
+    "archetype": "die_hard_fan",
+    "team_affinity": [
+      "Auburn",
+      "Florida"
+    ],
+    "position_weights": {
+      "QB": 0.89,
+      "WR": 0.89,
+      "RB": 0.88,
+      "TE": 0.62,
+      "CB": 0.63,
+      "DB": 0.52,
+      "LB": 0.78,
+      "DL": 0.6,
+      "DE": 0.63,
+      "EDGE": 0.57,
+      "OL": 0.44
+    },
+    "engagement_rate": 0.57,
+    "news_sensitivity": 0.76,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_014",
+    "name": "Charles Murphy",
+    "archetype": "die_hard_fan",
+    "team_affinity": [
+      "Tennessee",
+      "Alabama"
+    ],
+    "position_weights": {
+      "QB": 0.93,
+      "WR": 0.81,
+      "RB": 0.7,
+      "TE": 0.52,
+      "CB": 0.65,
+      "DB": 0.55,
+      "LB": 0.68,
+      "DL": 0.6,
+      "DE": 0.67,
+      "EDGE": 0.68,
+      "OL": 0.33
+    },
+    "engagement_rate": 0.4,
+    "news_sensitivity": 0.82,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_017",
+    "name": "Jonathan Walker",
+    "archetype": "die_hard_fan",
+    "team_affinity": [
+      "Arkansas",
+      "Tennessee"
+    ],
+    "position_weights": {
+      "QB": 0.85,
+      "WR": 0.73,
+      "RB": 0.83,
+      "TE": 0.59,
+      "CB": 0.69,
+      "DB": 0.69,
+      "LB": 0.6,
+      "DL": 0.62,
+      "DE": 0.61,
+      "EDGE": 0.52,
+      "OL": 0.41
+    },
+    "engagement_rate": 0.55,
+    "news_sensitivity": 0.74,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_043",
+    "name": "Joshua Richardson",
+    "archetype": "die_hard_fan",
+    "team_affinity": [
+      "Oklahoma",
+      "Georgia"
+    ],
+    "position_weights": {
+      "QB": 1.0,
+      "WR": 0.72,
+      "RB": 0.85,
+      "TE": 0.62,
+      "CB": 0.66,
+      "DB": 0.55,
+      "LB": 0.7,
+      "DL": 0.59,
+      "DE": 0.59,
+      "EDGE": 0.67,
+      "OL": 0.5
+    },
+    "engagement_rate": 0.49,
+    "news_sensitivity": 0.89,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_038",
+    "name": "Ethan Nguyen",
+    "archetype": "die_hard_fan",
+    "team_affinity": [
+      "Texas",
+      "Florida"
+    ],
+    "position_weights": {
+      "QB": 0.97,
+      "WR": 0.87,
+      "RB": 0.72,
+      "TE": 0.68,
+      "CB": 0.55,
+      "DB": 0.59,
+      "LB": 0.72,
+      "DL": 0.58,
+      "DE": 0.51,
+      "EDGE": 0.67,
+      "OL": 0.34
+    },
+    "engagement_rate": 0.46,
+    "news_sensitivity": 0.94,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_094",
+    "name": "Joe Cook",
+    "archetype": "casual_browser",
+    "team_affinity": [
+      "LSU"
+    ],
+    "position_weights": {
+      "QB": 0.72,
+      "WR": 0.78,
+      "RB": 0.52,
+      "TE": 0.2,
+      "CB": 0.2,
+      "DB": 0.15,
+      "LB": 0.13,
+      "DL": 0.09,
+      "DE": 0.12,
+      "EDGE": 0.05,
+      "OL": 0.08
+    },
+    "engagement_rate": 0.15,
+    "news_sensitivity": 0.23,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_052",
+    "name": "Ashley Nelson",
+    "archetype": "fantasy_analyst",
+    "team_affinity": [],
+    "position_weights": {
+      "QB": 0.97,
+      "WR": 0.92,
+      "RB": 0.83,
+      "TE": 0.67,
+      "CB": 0.19,
+      "DB": 0.2,
+      "LB": 0.17,
+      "DL": 0.15,
+      "DE": 0.08,
+      "EDGE": 0.19,
+      "OL": 0.17
+    },
+    "engagement_rate": 0.4,
+    "news_sensitivity": 0.57,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_083",
+    "name": "Alexander Bailey",
+    "archetype": "sports_agent",
+    "team_affinity": [],
+    "position_weights": {
+      "QB": 0.71,
+      "WR": 0.69,
+      "RB": 0.61,
+      "TE": 0.57,
+      "CB": 0.46,
+      "DB": 0.53,
+      "LB": 0.8,
+      "DL": 0.52,
+      "DE": 0.72,
+      "EDGE": 0.68,
+      "OL": 0.42
+    },
+    "engagement_rate": 0.29,
+    "news_sensitivity": 0.88,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_062",
+    "name": "Frank Moore",
+    "archetype": "fantasy_analyst",
+    "team_affinity": [],
+    "position_weights": {
+      "QB": 0.89,
+      "WR": 0.82,
+      "RB": 0.85,
+      "TE": 0.55,
+      "CB": 0.24,
+      "DB": 0.23,
+      "LB": 0.18,
+      "DL": 0.17,
+      "DE": 0.11,
+      "EDGE": 0.05,
+      "OL": 0.08
+    },
+    "engagement_rate": 0.25,
+    "news_sensitivity": 0.54,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_006",
+    "name": "Arthur Russell",
+    "archetype": "brand_manager",
+    "team_affinity": [],
+    "position_weights": {
+      "QB": 0.96,
+      "WR": 0.93,
+      "RB": 0.48,
+      "TE": 0.48,
+      "CB": 0.29,
+      "DB": 0.25,
+      "LB": 0.15,
+      "DL": 0.21,
+      "DE": 0.15,
+      "EDGE": 0.22,
+      "OL": 0.18
+    },
+    "engagement_rate": 0.38,
+    "news_sensitivity": 0.67,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_044",
+    "name": "Billy Gutierrez",
+    "archetype": "die_hard_fan",
+    "team_affinity": [
+      "Tennessee",
+      "South Carolina"
+    ],
+    "position_weights": {
+      "QB": 0.84,
+      "WR": 0.74,
+      "RB": 0.83,
+      "TE": 0.53,
+      "CB": 0.53,
+      "DB": 0.52,
+      "LB": 0.6,
+      "DL": 0.59,
+      "DE": 0.62,
+      "EDGE": 0.56,
+      "OL": 0.35
+    },
+    "engagement_rate": 0.61,
+    "news_sensitivity": 0.91,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_030",
+    "name": "Walter Rivera",
+    "archetype": "die_hard_fan",
+    "team_affinity": [
+      "Texas",
+      "South Carolina"
+    ],
+    "position_weights": {
+      "QB": 0.85,
+      "WR": 0.83,
+      "RB": 0.85,
+      "TE": 0.6,
+      "CB": 0.63,
+      "DB": 0.55,
+      "LB": 0.62,
+      "DL": 0.56,
+      "DE": 0.55,
+      "EDGE": 0.56,
+      "OL": 0.41
+    },
+    "engagement_rate": 0.44,
+    "news_sensitivity": 0.77,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_040",
+    "name": "Benjamin Long",
+    "archetype": "die_hard_fan",
+    "team_affinity": [
+      "Missouri",
+      "Ole Miss"
+    ],
+    "position_weights": {
+      "QB": 0.91,
+      "WR": 0.77,
+      "RB": 0.9,
+      "TE": 0.61,
+      "CB": 0.57,
+      "DB": 0.59,
+      "LB": 0.66,
+      "DL": 0.55,
+      "DE": 0.64,
+      "EDGE": 0.56,
+      "OL": 0.45
+    },
+    "engagement_rate": 0.69,
+    "news_sensitivity": 0.91,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_075",
+    "name": "Stephen Brown",
+    "archetype": "sports_agent",
+    "team_affinity": [],
+    "position_weights": {
+      "QB": 0.74,
+      "WR": 0.74,
+      "RB": 0.66,
+      "TE": 0.57,
+      "CB": 0.4,
+      "DB": 0.57,
+      "LB": 0.71,
+      "DL": 0.58,
+      "DE": 0.63,
+      "EDGE": 0.73,
+      "OL": 0.31
+    },
+    "engagement_rate": 0.26,
+    "news_sensitivity": 0.75,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_061",
+    "name": "Daniel Adams",
+    "archetype": "fantasy_analyst",
+    "team_affinity": [],
+    "position_weights": {
+      "QB": 0.87,
+      "WR": 0.88,
+      "RB": 0.74,
+      "TE": 0.66,
+      "CB": 0.28,
+      "DB": 0.17,
+      "LB": 0.2,
+      "DL": 0.05,
+      "DE": 0.05,
+      "EDGE": 0.18,
+      "OL": 0.19
+    },
+    "engagement_rate": 0.39,
+    "news_sensitivity": 0.59,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_049",
+    "name": "James Long",
+    "archetype": "die_hard_fan",
+    "team_affinity": [
+      "Mississippi State",
+      "Auburn"
+    ],
+    "position_weights": {
+      "QB": 0.81,
+      "WR": 0.8,
+      "RB": 0.82,
+      "TE": 0.6,
+      "CB": 0.59,
+      "DB": 0.51,
+      "LB": 0.65,
+      "DL": 0.53,
+      "DE": 0.56,
+      "EDGE": 0.68,
+      "OL": 0.4
+    },
+    "engagement_rate": 0.41,
+    "news_sensitivity": 0.89,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_002",
+    "name": "Albert Powell",
+    "archetype": "brand_manager",
+    "team_affinity": [],
+    "position_weights": {
+      "QB": 1.0,
+      "WR": 0.84,
+      "RB": 0.52,
+      "TE": 0.46,
+      "CB": 0.2,
+      "DB": 0.36,
+      "LB": 0.24,
+      "DL": 0.17,
+      "DE": 0.13,
+      "EDGE": 0.29,
+      "OL": 0.07
+    },
+    "engagement_rate": 0.32,
+    "news_sensitivity": 0.63,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_088",
+    "name": "Frank Fisher",
+    "archetype": "casual_browser",
+    "team_affinity": [
+      "Vanderbilt"
+    ],
+    "position_weights": {
+      "QB": 0.74,
+      "WR": 0.8,
+      "RB": 0.43,
+      "TE": 0.26,
+      "CB": 0.26,
+      "DB": 0.2,
+      "LB": 0.21,
+      "DL": 0.15,
+      "DE": 0.11,
+      "EDGE": 0.13,
+      "OL": 0.18
+    },
+    "engagement_rate": 0.14,
+    "news_sensitivity": 0.38,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_081",
+    "name": "Isabella Carter",
+    "archetype": "sports_agent",
+    "team_affinity": [],
+    "position_weights": {
+      "QB": 0.77,
+      "WR": 0.79,
+      "RB": 0.73,
+      "TE": 0.53,
+      "CB": 0.42,
+      "DB": 0.45,
+      "LB": 0.63,
+      "DL": 0.53,
+      "DE": 0.75,
+      "EDGE": 0.62,
+      "OL": 0.49
+    },
+    "engagement_rate": 0.24,
+    "news_sensitivity": 0.82,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_009",
+    "name": "Anthony Cruz",
+    "archetype": "brand_manager",
+    "team_affinity": [],
+    "position_weights": {
+      "QB": 0.96,
+      "WR": 0.93,
+      "RB": 0.52,
+      "TE": 0.33,
+      "CB": 0.35,
+      "DB": 0.31,
+      "LB": 0.26,
+      "DL": 0.21,
+      "DE": 0.1,
+      "EDGE": 0.16,
+      "OL": 0.05
+    },
+    "engagement_rate": 0.49,
+    "news_sensitivity": 0.86,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_013",
+    "name": "Alexander Morris",
+    "archetype": "die_hard_fan",
+    "team_affinity": [
+      "Kentucky",
+      "Ole Miss"
+    ],
+    "position_weights": {
+      "QB": 0.97,
+      "WR": 0.71,
+      "RB": 0.83,
+      "TE": 0.63,
+      "CB": 0.51,
+      "DB": 0.65,
+      "LB": 0.76,
+      "DL": 0.52,
+      "DE": 0.54,
+      "EDGE": 0.61,
+      "OL": 0.33
+    },
+    "engagement_rate": 0.46,
+    "news_sensitivity": 0.84,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_008",
+    "name": "Wayne Ortiz",
+    "archetype": "brand_manager",
+    "team_affinity": [],
+    "position_weights": {
+      "QB": 0.92,
+      "WR": 0.98,
+      "RB": 0.55,
+      "TE": 0.45,
+      "CB": 0.27,
+      "DB": 0.26,
+      "LB": 0.13,
+      "DL": 0.1,
+      "DE": 0.24,
+      "EDGE": 0.24,
+      "OL": 0.19
+    },
+    "engagement_rate": 0.45,
+    "news_sensitivity": 0.75,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_087",
+    "name": "Benjamin Diaz",
+    "archetype": "casual_browser",
+    "team_affinity": [
+      "South Carolina"
+    ],
+    "position_weights": {
+      "QB": 0.83,
+      "WR": 0.67,
+      "RB": 0.43,
+      "TE": 0.34,
+      "CB": 0.29,
+      "DB": 0.3,
+      "LB": 0.28,
+      "DL": 0.05,
+      "DE": 0.13,
+      "EDGE": 0.1,
+      "OL": 0.05
+    },
+    "engagement_rate": 0.1,
+    "news_sensitivity": 0.49,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_033",
+    "name": "Ethan Jackson",
+    "archetype": "die_hard_fan",
+    "team_affinity": [
+      "Alabama",
+      "Mississippi State"
+    ],
+    "position_weights": {
+      "QB": 0.88,
+      "WR": 0.81,
+      "RB": 0.71,
+      "TE": 0.63,
+      "CB": 0.53,
+      "DB": 0.59,
+      "LB": 0.61,
+      "DL": 0.58,
+      "DE": 0.54,
+      "EDGE": 0.57,
+      "OL": 0.45
+    },
+    "engagement_rate": 0.51,
+    "news_sensitivity": 0.93,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_085",
+    "name": "Sarah Murphy",
+    "archetype": "sports_agent",
+    "team_affinity": [],
+    "position_weights": {
+      "QB": 0.9,
+      "WR": 0.7,
+      "RB": 0.72,
+      "TE": 0.57,
+      "CB": 0.58,
+      "DB": 0.48,
+      "LB": 0.75,
+      "DL": 0.64,
+      "DE": 0.61,
+      "EDGE": 0.73,
+      "OL": 0.37
+    },
+    "engagement_rate": 0.2,
+    "news_sensitivity": 0.84,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_066",
+    "name": "Wayne Turner",
+    "archetype": "fantasy_analyst",
+    "team_affinity": [],
+    "position_weights": {
+      "QB": 0.91,
+      "WR": 1.0,
+      "RB": 0.77,
+      "TE": 0.58,
+      "CB": 0.14,
+      "DB": 0.12,
+      "LB": 0.27,
+      "DL": 0.09,
+      "DE": 0.13,
+      "EDGE": 0.13,
+      "OL": 0.12
+    },
+    "engagement_rate": 0.2,
+    "news_sensitivity": 0.74,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_065",
+    "name": "Nathan Brooks",
+    "archetype": "fantasy_analyst",
+    "team_affinity": [],
+    "position_weights": {
+      "QB": 0.95,
+      "WR": 0.83,
+      "RB": 0.78,
+      "TE": 0.52,
+      "CB": 0.2,
+      "DB": 0.18,
+      "LB": 0.29,
+      "DL": 0.05,
+      "DE": 0.07,
+      "EDGE": 0.09,
+      "OL": 0.19
+    },
+    "engagement_rate": 0.37,
+    "news_sensitivity": 0.53,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_090",
+    "name": "Benjamin Morgan",
+    "archetype": "casual_browser",
+    "team_affinity": [
+      "Auburn"
+    ],
+    "position_weights": {
+      "QB": 0.77,
+      "WR": 0.79,
+      "RB": 0.6,
+      "TE": 0.29,
+      "CB": 0.16,
+      "DB": 0.18,
+      "LB": 0.21,
+      "DL": 0.19,
+      "DE": 0.16,
+      "EDGE": 0.16,
+      "OL": 0.05
+    },
+    "engagement_rate": 0.09,
+    "news_sensitivity": 0.39,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_054",
+    "name": "Patrick Thomas",
+    "archetype": "fantasy_analyst",
+    "team_affinity": [],
+    "position_weights": {
+      "QB": 0.97,
+      "WR": 0.89,
+      "RB": 0.81,
+      "TE": 0.59,
+      "CB": 0.24,
+      "DB": 0.18,
+      "LB": 0.23,
+      "DL": 0.05,
+      "DE": 0.09,
+      "EDGE": 0.19,
+      "OL": 0.07
+    },
+    "engagement_rate": 0.34,
+    "news_sensitivity": 0.69,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_096",
+    "name": "Sean Roberts",
+    "archetype": "casual_browser",
+    "team_affinity": [
+      "Florida"
+    ],
+    "position_weights": {
+      "QB": 0.87,
+      "WR": 0.74,
+      "RB": 0.6,
+      "TE": 0.3,
+      "CB": 0.14,
+      "DB": 0.13,
+      "LB": 0.24,
+      "DL": 0.19,
+      "DE": 0.05,
+      "EDGE": 0.05,
+      "OL": 0.16
+    },
+    "engagement_rate": 0.18,
+    "news_sensitivity": 0.29,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_011",
+    "name": "Henry Perez",
+    "archetype": "die_hard_fan",
+    "team_affinity": [
+      "Auburn",
+      "Missouri"
+    ],
+    "position_weights": {
+      "QB": 0.86,
+      "WR": 0.9,
+      "RB": 0.83,
+      "TE": 0.59,
+      "CB": 0.6,
+      "DB": 0.52,
+      "LB": 0.64,
+      "DL": 0.57,
+      "DE": 0.62,
+      "EDGE": 0.55,
+      "OL": 0.34
+    },
+    "engagement_rate": 0.42,
+    "news_sensitivity": 0.89,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_055",
+    "name": "Patrick Sanders",
+    "archetype": "fantasy_analyst",
+    "team_affinity": [],
+    "position_weights": {
+      "QB": 0.97,
+      "WR": 0.88,
+      "RB": 0.76,
+      "TE": 0.64,
+      "CB": 0.25,
+      "DB": 0.27,
+      "LB": 0.11,
+      "DL": 0.05,
+      "DE": 0.13,
+      "EDGE": 0.18,
+      "OL": 0.2
+    },
+    "engagement_rate": 0.35,
+    "news_sensitivity": 0.63,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_020",
+    "name": "Steven Hughes",
+    "archetype": "die_hard_fan",
+    "team_affinity": [
+      "Texas",
+      "LSU"
+    ],
+    "position_weights": {
+      "QB": 0.95,
+      "WR": 0.81,
+      "RB": 0.79,
+      "TE": 0.5,
+      "CB": 0.52,
+      "DB": 0.68,
+      "LB": 0.78,
+      "DL": 0.61,
+      "DE": 0.67,
+      "EDGE": 0.62,
+      "OL": 0.33
+    },
+    "engagement_rate": 0.44,
+    "news_sensitivity": 0.79,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_069",
+    "name": "Peter Henderson",
+    "archetype": "fantasy_analyst",
+    "team_affinity": [],
+    "position_weights": {
+      "QB": 0.87,
+      "WR": 0.92,
+      "RB": 0.79,
+      "TE": 0.54,
+      "CB": 0.22,
+      "DB": 0.25,
+      "LB": 0.28,
+      "DL": 0.13,
+      "DE": 0.06,
+      "EDGE": 0.13,
+      "OL": 0.05
+    },
+    "engagement_rate": 0.4,
+    "news_sensitivity": 0.75,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_019",
+    "name": "Anthony Perry",
+    "archetype": "die_hard_fan",
+    "team_affinity": [
+      "Texas A&M",
+      "Vanderbilt"
+    ],
+    "position_weights": {
+      "QB": 0.86,
+      "WR": 0.74,
+      "RB": 0.77,
+      "TE": 0.64,
+      "CB": 0.67,
+      "DB": 0.6,
+      "LB": 0.65,
+      "DL": 0.68,
+      "DE": 0.51,
+      "EDGE": 0.63,
+      "OL": 0.47
+    },
+    "engagement_rate": 0.41,
+    "news_sensitivity": 0.8,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_035",
+    "name": "Alan Moore",
+    "archetype": "die_hard_fan",
+    "team_affinity": [
+      "Auburn",
+      "Ole Miss"
+    ],
+    "position_weights": {
+      "QB": 0.94,
+      "WR": 0.85,
+      "RB": 0.73,
+      "TE": 0.62,
+      "CB": 0.65,
+      "DB": 0.52,
+      "LB": 0.76,
+      "DL": 0.69,
+      "DE": 0.52,
+      "EDGE": 0.51,
+      "OL": 0.36
+    },
+    "engagement_rate": 0.6,
+    "news_sensitivity": 0.99,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_089",
+    "name": "Joshua Lee",
+    "archetype": "casual_browser",
+    "team_affinity": [
+      "Florida"
+    ],
+    "position_weights": {
+      "QB": 0.87,
+      "WR": 0.75,
+      "RB": 0.56,
+      "TE": 0.23,
+      "CB": 0.19,
+      "DB": 0.18,
+      "LB": 0.24,
+      "DL": 0.05,
+      "DE": 0.09,
+      "EDGE": 0.06,
+      "OL": 0.15
+    },
+    "engagement_rate": 0.12,
+    "news_sensitivity": 0.36,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_005",
+    "name": "Harold Jenkins",
+    "archetype": "brand_manager",
+    "team_affinity": [],
+    "position_weights": {
+      "QB": 0.95,
+      "WR": 0.89,
+      "RB": 0.45,
+      "TE": 0.49,
+      "CB": 0.34,
+      "DB": 0.24,
+      "LB": 0.16,
+      "DL": 0.25,
+      "DE": 0.11,
+      "EDGE": 0.26,
+      "OL": 0.16
+    },
+    "engagement_rate": 0.38,
+    "news_sensitivity": 0.62,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_046",
+    "name": "Arthur Baker",
+    "archetype": "die_hard_fan",
+    "team_affinity": [
+      "Mississippi State",
+      "Georgia"
+    ],
+    "position_weights": {
+      "QB": 0.89,
+      "WR": 0.76,
+      "RB": 0.78,
+      "TE": 0.55,
+      "CB": 0.61,
+      "DB": 0.59,
+      "LB": 0.72,
+      "DL": 0.68,
+      "DE": 0.65,
+      "EDGE": 0.62,
+      "OL": 0.31
+    },
+    "engagement_rate": 0.47,
+    "news_sensitivity": 0.9,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_045",
+    "name": "Kyle Martinez",
+    "archetype": "die_hard_fan",
+    "team_affinity": [
+      "Ole Miss",
+      "Mississippi State"
+    ],
+    "position_weights": {
+      "QB": 0.85,
+      "WR": 0.86,
+      "RB": 0.82,
+      "TE": 0.66,
+      "CB": 0.54,
+      "DB": 0.52,
+      "LB": 0.64,
+      "DL": 0.53,
+      "DE": 0.55,
+      "EDGE": 0.53,
+      "OL": 0.31
+    },
+    "engagement_rate": 0.64,
+    "news_sensitivity": 0.88,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_091",
+    "name": "Dennis Cox",
+    "archetype": "casual_browser",
+    "team_affinity": [
+      "Tennessee"
+    ],
+    "position_weights": {
+      "QB": 0.84,
+      "WR": 0.7,
+      "RB": 0.42,
+      "TE": 0.22,
+      "CB": 0.13,
+      "DB": 0.19,
+      "LB": 0.2,
+      "DL": 0.17,
+      "DE": 0.05,
+      "EDGE": 0.18,
+      "OL": 0.16
+    },
+    "engagement_rate": 0.18,
+    "news_sensitivity": 0.48,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_012",
+    "name": "Jacob Wilson",
+    "archetype": "die_hard_fan",
+    "team_affinity": [
+      "Georgia",
+      "Kentucky"
+    ],
+    "position_weights": {
+      "QB": 0.87,
+      "WR": 0.8,
+      "RB": 0.76,
+      "TE": 0.6,
+      "CB": 0.61,
+      "DB": 0.64,
+      "LB": 0.78,
+      "DL": 0.62,
+      "DE": 0.55,
+      "EDGE": 0.59,
+      "OL": 0.38
+    },
+    "engagement_rate": 0.43,
+    "news_sensitivity": 0.9,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_099",
+    "name": "Benjamin Rivera",
+    "archetype": "casual_browser",
+    "team_affinity": [
+      "Kentucky"
+    ],
+    "position_weights": {
+      "QB": 0.73,
+      "WR": 0.69,
+      "RB": 0.49,
+      "TE": 0.35,
+      "CB": 0.28,
+      "DB": 0.22,
+      "LB": 0.19,
+      "DL": 0.13,
+      "DE": 0.16,
+      "EDGE": 0.05,
+      "OL": 0.13
+    },
+    "engagement_rate": 0.11,
+    "news_sensitivity": 0.35,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_023",
+    "name": "Ryan Brown",
+    "archetype": "die_hard_fan",
+    "team_affinity": [
+      "Auburn",
+      "Vanderbilt"
+    ],
+    "position_weights": {
+      "QB": 0.87,
+      "WR": 0.87,
+      "RB": 0.89,
+      "TE": 0.56,
+      "CB": 0.63,
+      "DB": 0.58,
+      "LB": 0.8,
+      "DL": 0.61,
+      "DE": 0.69,
+      "EDGE": 0.52,
+      "OL": 0.49
+    },
+    "engagement_rate": 0.45,
+    "news_sensitivity": 0.99,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_077",
+    "name": "Zachary Flores",
+    "archetype": "sports_agent",
+    "team_affinity": [],
+    "position_weights": {
+      "QB": 0.75,
+      "WR": 0.75,
+      "RB": 0.62,
+      "TE": 0.59,
+      "CB": 0.46,
+      "DB": 0.54,
+      "LB": 0.7,
+      "DL": 0.63,
+      "DE": 0.61,
+      "EDGE": 0.68,
+      "OL": 0.42
+    },
+    "engagement_rate": 0.15,
+    "news_sensitivity": 0.78,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_097",
+    "name": "Benjamin Bell",
+    "archetype": "casual_browser",
+    "team_affinity": [
+      "South Carolina"
+    ],
+    "position_weights": {
+      "QB": 0.9,
+      "WR": 0.71,
+      "RB": 0.45,
+      "TE": 0.35,
+      "CB": 0.14,
+      "DB": 0.17,
+      "LB": 0.26,
+      "DL": 0.17,
+      "DE": 0.07,
+      "EDGE": 0.05,
+      "OL": 0.07
+    },
+    "engagement_rate": 0.18,
+    "news_sensitivity": 0.42,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_095",
+    "name": "Jack Wilson",
+    "archetype": "casual_browser",
+    "team_affinity": [
+      "Alabama"
+    ],
+    "position_weights": {
+      "QB": 0.78,
+      "WR": 0.69,
+      "RB": 0.53,
+      "TE": 0.4,
+      "CB": 0.15,
+      "DB": 0.1,
+      "LB": 0.26,
+      "DL": 0.07,
+      "DE": 0.15,
+      "EDGE": 0.13,
+      "OL": 0.15
+    },
+    "engagement_rate": 0.16,
+    "news_sensitivity": 0.3,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_080",
+    "name": "Jack Taylor",
+    "archetype": "sports_agent",
+    "team_affinity": [],
+    "position_weights": {
+      "QB": 0.79,
+      "WR": 0.62,
+      "RB": 0.69,
+      "TE": 0.58,
+      "CB": 0.42,
+      "DB": 0.57,
+      "LB": 0.75,
+      "DL": 0.54,
+      "DE": 0.76,
+      "EDGE": 0.62,
+      "OL": 0.43
+    },
+    "engagement_rate": 0.23,
+    "news_sensitivity": 0.75,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_026",
+    "name": "Alan Torres",
+    "archetype": "die_hard_fan",
+    "team_affinity": [
+      "Florida",
+      "Oklahoma"
+    ],
+    "position_weights": {
+      "QB": 0.91,
+      "WR": 0.78,
+      "RB": 0.87,
+      "TE": 0.56,
+      "CB": 0.54,
+      "DB": 0.66,
+      "LB": 0.72,
+      "DL": 0.56,
+      "DE": 0.59,
+      "EDGE": 0.64,
+      "OL": 0.4
+    },
+    "engagement_rate": 0.64,
+    "news_sensitivity": 0.99,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_063",
+    "name": "Dennis Sanders",
+    "archetype": "fantasy_analyst",
+    "team_affinity": [],
+    "position_weights": {
+      "QB": 0.95,
+      "WR": 0.85,
+      "RB": 0.78,
+      "TE": 0.63,
+      "CB": 0.17,
+      "DB": 0.23,
+      "LB": 0.19,
+      "DL": 0.12,
+      "DE": 0.19,
+      "EDGE": 0.07,
+      "OL": 0.12
+    },
+    "engagement_rate": 0.33,
+    "news_sensitivity": 0.69,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_037",
+    "name": "Logan Roberts",
+    "archetype": "die_hard_fan",
+    "team_affinity": [
+      "Alabama",
+      "Kentucky"
+    ],
+    "position_weights": {
+      "QB": 0.88,
+      "WR": 0.8,
+      "RB": 0.79,
+      "TE": 0.57,
+      "CB": 0.68,
+      "DB": 0.59,
+      "LB": 0.63,
+      "DL": 0.54,
+      "DE": 0.6,
+      "EDGE": 0.63,
+      "OL": 0.42
+    },
+    "engagement_rate": 0.68,
+    "news_sensitivity": 0.93,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_028",
+    "name": "Nathan Cruz",
+    "archetype": "die_hard_fan",
+    "team_affinity": [
+      "Auburn",
+      "Missouri"
+    ],
+    "position_weights": {
+      "QB": 0.94,
+      "WR": 0.8,
+      "RB": 0.75,
+      "TE": 0.63,
+      "CB": 0.5,
+      "DB": 0.65,
+      "LB": 0.75,
+      "DL": 0.52,
+      "DE": 0.59,
+      "EDGE": 0.54,
+      "OL": 0.49
+    },
+    "engagement_rate": 0.56,
+    "news_sensitivity": 0.72,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_058",
+    "name": "Kevin Martinez",
+    "archetype": "fantasy_analyst",
+    "team_affinity": [],
+    "position_weights": {
+      "QB": 0.89,
+      "WR": 0.87,
+      "RB": 0.82,
+      "TE": 0.63,
+      "CB": 0.18,
+      "DB": 0.15,
+      "LB": 0.27,
+      "DL": 0.05,
+      "DE": 0.08,
+      "EDGE": 0.1,
+      "OL": 0.05
+    },
+    "engagement_rate": 0.31,
+    "news_sensitivity": 0.67,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_079",
+    "name": "David Nguyen",
+    "archetype": "sports_agent",
+    "team_affinity": [],
+    "position_weights": {
+      "QB": 0.7,
+      "WR": 0.78,
+      "RB": 0.77,
+      "TE": 0.62,
+      "CB": 0.51,
+      "DB": 0.54,
+      "LB": 0.68,
+      "DL": 0.52,
+      "DE": 0.6,
+      "EDGE": 0.66,
+      "OL": 0.46
+    },
+    "engagement_rate": 0.24,
+    "news_sensitivity": 0.91,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_034",
+    "name": "Nathan Wright",
+    "archetype": "die_hard_fan",
+    "team_affinity": [
+      "LSU",
+      "Ole Miss"
+    ],
+    "position_weights": {
+      "QB": 0.8,
+      "WR": 0.81,
+      "RB": 0.9,
+      "TE": 0.57,
+      "CB": 0.63,
+      "DB": 0.66,
+      "LB": 0.73,
+      "DL": 0.65,
+      "DE": 0.69,
+      "EDGE": 0.54,
+      "OL": 0.3
+    },
+    "engagement_rate": 0.45,
+    "news_sensitivity": 0.74,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_016",
+    "name": "Gerald Lee",
+    "archetype": "die_hard_fan",
+    "team_affinity": [
+      "Georgia",
+      "Texas"
+    ],
+    "position_weights": {
+      "QB": 0.82,
+      "WR": 0.74,
+      "RB": 0.82,
+      "TE": 0.64,
+      "CB": 0.55,
+      "DB": 0.52,
+      "LB": 0.78,
+      "DL": 0.55,
+      "DE": 0.62,
+      "EDGE": 0.62,
+      "OL": 0.38
+    },
+    "engagement_rate": 0.58,
+    "news_sensitivity": 0.86,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_072",
+    "name": "Samuel Morris",
+    "archetype": "sports_agent",
+    "team_affinity": [],
+    "position_weights": {
+      "QB": 0.76,
+      "WR": 0.65,
+      "RB": 0.79,
+      "TE": 0.64,
+      "CB": 0.49,
+      "DB": 0.42,
+      "LB": 0.62,
+      "DL": 0.59,
+      "DE": 0.75,
+      "EDGE": 0.67,
+      "OL": 0.33
+    },
+    "engagement_rate": 0.16,
+    "news_sensitivity": 0.94,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_050",
+    "name": "Gary Sullivan",
+    "archetype": "die_hard_fan",
+    "team_affinity": [
+      "Florida",
+      "Texas A&M"
+    ],
+    "position_weights": {
+      "QB": 0.91,
+      "WR": 0.81,
+      "RB": 0.72,
+      "TE": 0.7,
+      "CB": 0.68,
+      "DB": 0.59,
+      "LB": 0.62,
+      "DL": 0.67,
+      "DE": 0.6,
+      "EDGE": 0.64,
+      "OL": 0.4
+    },
+    "engagement_rate": 0.48,
+    "news_sensitivity": 0.95,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_067",
+    "name": "Nicholas Jackson",
+    "archetype": "fantasy_analyst",
+    "team_affinity": [],
+    "position_weights": {
+      "QB": 0.96,
+      "WR": 0.84,
+      "RB": 0.87,
+      "TE": 0.61,
+      "CB": 0.22,
+      "DB": 0.26,
+      "LB": 0.15,
+      "DL": 0.15,
+      "DE": 0.16,
+      "EDGE": 0.12,
+      "OL": 0.06
+    },
+    "engagement_rate": 0.4,
+    "news_sensitivity": 0.8,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_064",
+    "name": "Ethan Powell",
+    "archetype": "fantasy_analyst",
+    "team_affinity": [],
+    "position_weights": {
+      "QB": 0.86,
+      "WR": 0.88,
+      "RB": 0.73,
+      "TE": 0.69,
+      "CB": 0.16,
+      "DB": 0.2,
+      "LB": 0.12,
+      "DL": 0.18,
+      "DE": 0.05,
+      "EDGE": 0.09,
+      "OL": 0.13
+    },
+    "engagement_rate": 0.35,
+    "news_sensitivity": 0.78,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_024",
+    "name": "Jonathan Jones",
+    "archetype": "die_hard_fan",
+    "team_affinity": [
+      "Tennessee",
+      "Oklahoma"
+    ],
+    "position_weights": {
+      "QB": 0.89,
+      "WR": 0.85,
+      "RB": 0.76,
+      "TE": 0.62,
+      "CB": 0.6,
+      "DB": 0.58,
+      "LB": 0.72,
+      "DL": 0.55,
+      "DE": 0.64,
+      "EDGE": 0.5,
+      "OL": 0.49
+    },
+    "engagement_rate": 0.56,
+    "news_sensitivity": 0.92,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_004",
+    "name": "Sophia Adams",
+    "archetype": "brand_manager",
+    "team_affinity": [],
+    "position_weights": {
+      "QB": 1.0,
+      "WR": 0.97,
+      "RB": 0.57,
+      "TE": 0.38,
+      "CB": 0.29,
+      "DB": 0.37,
+      "LB": 0.13,
+      "DL": 0.17,
+      "DE": 0.23,
+      "EDGE": 0.24,
+      "OL": 0.14
+    },
+    "engagement_rate": 0.31,
+    "news_sensitivity": 0.79,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_015",
+    "name": "Kyle Baker",
+    "archetype": "die_hard_fan",
+    "team_affinity": [
+      "Kentucky",
+      "Missouri"
+    ],
+    "position_weights": {
+      "QB": 0.99,
+      "WR": 0.9,
+      "RB": 0.81,
+      "TE": 0.64,
+      "CB": 0.53,
+      "DB": 0.56,
+      "LB": 0.79,
+      "DL": 0.62,
+      "DE": 0.61,
+      "EDGE": 0.65,
+      "OL": 0.31
+    },
+    "engagement_rate": 0.58,
+    "news_sensitivity": 0.85,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_032",
+    "name": "Brandon Butler",
+    "archetype": "die_hard_fan",
+    "team_affinity": [
+      "South Carolina",
+      "Kentucky"
+    ],
+    "position_weights": {
+      "QB": 0.98,
+      "WR": 0.87,
+      "RB": 0.81,
+      "TE": 0.65,
+      "CB": 0.66,
+      "DB": 0.68,
+      "LB": 0.7,
+      "DL": 0.55,
+      "DE": 0.6,
+      "EDGE": 0.58,
+      "OL": 0.43
+    },
+    "engagement_rate": 0.64,
+    "news_sensitivity": 0.92,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_036",
+    "name": "Aaron Russell",
+    "archetype": "die_hard_fan",
+    "team_affinity": [
+      "Auburn",
+      "Georgia"
+    ],
+    "position_weights": {
+      "QB": 0.92,
+      "WR": 0.87,
+      "RB": 0.75,
+      "TE": 0.64,
+      "CB": 0.56,
+      "DB": 0.64,
+      "LB": 0.76,
+      "DL": 0.66,
+      "DE": 0.61,
+      "EDGE": 0.51,
+      "OL": 0.41
+    },
+    "engagement_rate": 0.6,
+    "news_sensitivity": 0.72,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_084",
+    "name": "David Rivera",
+    "archetype": "sports_agent",
+    "team_affinity": [],
+    "position_weights": {
+      "QB": 0.88,
+      "WR": 0.71,
+      "RB": 0.64,
+      "TE": 0.62,
+      "CB": 0.5,
+      "DB": 0.59,
+      "LB": 0.69,
+      "DL": 0.66,
+      "DE": 0.77,
+      "EDGE": 0.8,
+      "OL": 0.32
+    },
+    "engagement_rate": 0.25,
+    "news_sensitivity": 0.71,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_041",
+    "name": "Ronald Perez",
+    "archetype": "die_hard_fan",
+    "team_affinity": [
+      "Vanderbilt",
+      "Texas A&M"
+    ],
+    "position_weights": {
+      "QB": 0.94,
+      "WR": 0.9,
+      "RB": 0.8,
+      "TE": 0.56,
+      "CB": 0.52,
+      "DB": 0.54,
+      "LB": 0.65,
+      "DL": 0.54,
+      "DE": 0.5,
+      "EDGE": 0.61,
+      "OL": 0.35
+    },
+    "engagement_rate": 0.69,
+    "news_sensitivity": 0.87,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_051",
+    "name": "Walter Sanchez",
+    "archetype": "fantasy_analyst",
+    "team_affinity": [],
+    "position_weights": {
+      "QB": 0.89,
+      "WR": 0.83,
+      "RB": 0.74,
+      "TE": 0.62,
+      "CB": 0.25,
+      "DB": 0.13,
+      "LB": 0.11,
+      "DL": 0.15,
+      "DE": 0.17,
+      "EDGE": 0.07,
+      "OL": 0.16
+    },
+    "engagement_rate": 0.25,
+    "news_sensitivity": 0.5,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_047",
+    "name": "Lawrence Brooks",
+    "archetype": "die_hard_fan",
+    "team_affinity": [
+      "Alabama",
+      "South Carolina"
+    ],
+    "position_weights": {
+      "QB": 0.93,
+      "WR": 0.75,
+      "RB": 0.71,
+      "TE": 0.65,
+      "CB": 0.59,
+      "DB": 0.63,
+      "LB": 0.78,
+      "DL": 0.54,
+      "DE": 0.62,
+      "EDGE": 0.63,
+      "OL": 0.4
+    },
+    "engagement_rate": 0.43,
+    "news_sensitivity": 0.8,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_068",
+    "name": "Sean Wright",
+    "archetype": "fantasy_analyst",
+    "team_affinity": [],
+    "position_weights": {
+      "QB": 0.96,
+      "WR": 0.82,
+      "RB": 0.87,
+      "TE": 0.53,
+      "CB": 0.17,
+      "DB": 0.26,
+      "LB": 0.22,
+      "DL": 0.05,
+      "DE": 0.05,
+      "EDGE": 0.05,
+      "OL": 0.08
+    },
+    "engagement_rate": 0.22,
+    "news_sensitivity": 0.52,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_018",
+    "name": "Gregory Wilson",
+    "archetype": "die_hard_fan",
+    "team_affinity": [
+      "Ole Miss",
+      "Florida"
+    ],
+    "position_weights": {
+      "QB": 0.86,
+      "WR": 0.79,
+      "RB": 0.81,
+      "TE": 0.56,
+      "CB": 0.7,
+      "DB": 0.66,
+      "LB": 0.71,
+      "DL": 0.63,
+      "DE": 0.61,
+      "EDGE": 0.69,
+      "OL": 0.32
+    },
+    "engagement_rate": 0.66,
+    "news_sensitivity": 0.78,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_074",
+    "name": "Anthony Carter",
+    "archetype": "sports_agent",
+    "team_affinity": [],
+    "position_weights": {
+      "QB": 0.87,
+      "WR": 0.67,
+      "RB": 0.75,
+      "TE": 0.61,
+      "CB": 0.56,
+      "DB": 0.57,
+      "LB": 0.79,
+      "DL": 0.66,
+      "DE": 0.72,
+      "EDGE": 0.73,
+      "OL": 0.31
+    },
+    "engagement_rate": 0.29,
+    "news_sensitivity": 0.91,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_010",
+    "name": "Benjamin Allen",
+    "archetype": "brand_manager",
+    "team_affinity": [],
+    "position_weights": {
+      "QB": 0.91,
+      "WR": 0.98,
+      "RB": 0.59,
+      "TE": 0.32,
+      "CB": 0.3,
+      "DB": 0.21,
+      "LB": 0.25,
+      "DL": 0.25,
+      "DE": 0.13,
+      "EDGE": 0.2,
+      "OL": 0.11
+    },
+    "engagement_rate": 0.35,
+    "news_sensitivity": 0.86,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_098",
+    "name": "Tyler Roberts",
+    "archetype": "casual_browser",
+    "team_affinity": [
+      "Florida"
+    ],
+    "position_weights": {
+      "QB": 0.8,
+      "WR": 0.7,
+      "RB": 0.58,
+      "TE": 0.3,
+      "CB": 0.26,
+      "DB": 0.25,
+      "LB": 0.12,
+      "DL": 0.12,
+      "DE": 0.16,
+      "EDGE": 0.11,
+      "OL": 0.06
+    },
+    "engagement_rate": 0.06,
+    "news_sensitivity": 0.4,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_057",
+    "name": "Brian Harris",
+    "archetype": "fantasy_analyst",
+    "team_affinity": [],
+    "position_weights": {
+      "QB": 0.82,
+      "WR": 0.97,
+      "RB": 0.82,
+      "TE": 0.55,
+      "CB": 0.28,
+      "DB": 0.13,
+      "LB": 0.19,
+      "DL": 0.05,
+      "DE": 0.05,
+      "EDGE": 0.05,
+      "OL": 0.16
+    },
+    "engagement_rate": 0.38,
+    "news_sensitivity": 0.7,
+    "interest_scores": {}
+  },
+  {
+    "id": "agent_048",
+    "name": "Patrick Campbell",
+    "archetype": "die_hard_fan",
+    "team_affinity": [
+      "Tennessee",
+      "Kentucky"
+    ],
+    "position_weights": {
+      "QB": 0.83,
+      "WR": 0.78,
+      "RB": 0.8,
+      "TE": 0.63,
+      "CB": 0.58,
+      "DB": 0.65,
+      "LB": 0.61,
+      "DL": 0.52,
+      "DE": 0.55,
+      "EDGE": 0.52,
+      "OL": 0.45
+    },
+    "engagement_rate": 0.66,
+    "news_sensitivity": 0.95,
+    "interest_scores": {}
+  }
+]

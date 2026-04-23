@@ -26,7 +26,7 @@ logger = logging.getLogger(__name__)
 
 # ─── In-memory caches ─────────────────────────────────────────────────────────
 _ig_cache:   dict[str, tuple[int, float]] = {}
-_news_cache: tuple[list, float] | None    = None
+_news_cache = None
 
 
 # ─── Real curated SEC/NIL headlines (verified URLs, used as fallback) ─────────
@@ -86,7 +86,7 @@ FALLBACK_NEWS = [
 
 # ─── Instagram ────────────────────────────────────────────────────────────────
 
-def scrape_instagram_followers(username: str) -> int | None:
+def scrape_instagram_followers(username: str):
     """
     Fetch live follower count for a public Instagram profile.
     Returns int on success, None on failure.

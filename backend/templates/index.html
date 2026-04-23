@@ -197,6 +197,16 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:13px 2
 .star-btn.starred{color:#f59e0b}
 .star-btn:hover{color:#f59e0b}
 
+/* ── ANALYTICS ────────────────────────────── */
+.al-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.al-row{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid #181818}
+.al-row:last-child{border-bottom:none}
+.al-rank{font-size:12px;color:#444;width:20px;flex-shrink:0;font-weight:700}
+.al-name{font-size:12px;font-weight:700}
+.al-sub{font-size:10px;color:#555;margin-top:1px}
+.al-cnt{font-size:14px;font-weight:800}
+.al-empty{color:#2a2a2a;font-size:12px;padding:24px 0;text-align:center;line-height:1.7}
+
 /* ── LOCKED CONTENT ───────────────────────── */
 .locked-banner{grid-column:1/-1;display:flex;flex-direction:column;align-items:center;gap:10px;padding:28px 20px;background:#0d0d0d;border:1px dashed #1e1e1e;border-radius:9px;text-align:center}
 .locked-banner-icon{font-size:28px;opacity:.25}
@@ -267,6 +277,7 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:13px 2
     <button class="nb active" id="nav-overview" onclick="showPage('overview')">MARKET OVERVIEW</button>
     <button class="nb" id="nav-explorer" onclick="showPage('explorer')">ATHLETE EXPLORER</button>
     <button class="nb" id="nav-predictor" onclick="showPage('predictor')">NIL PREDICTOR</button>
+    <button class="nb" id="nav-analytics" onclick="showPage('analytics')">ANALYTICS</button>
   </div>
   <div style="display:flex;align-items:center;gap:10px">
     <div class="api-status" id="api-status">API —</div>
@@ -511,6 +522,28 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:13px 2
 </div>
 </div>
 
+<!-- ANALYTICS -->
+<div class="page" id="page-analytics">
+  <div class="pg-title">PLATFORM ANALYTICS</div>
+  <div class="pg-sub">Aggregate activity across 100 simulated market participants + real users</div>
+  <div class="al-grid">
+    <div class="card-box">
+      <div class="box-title">MOST SEARCHED</div>
+      <div id="al-searched"><div class="al-empty">Loading...</div></div>
+    </div>
+    <div class="card-box">
+      <div class="box-title">MOST STARRED</div>
+      <div id="al-starred"><div class="al-empty">Loading...</div></div>
+    </div>
+    <div class="card-box">
+      <div class="box-title">TRENDING NOW</div>
+      <div style="font-size:10px;color:#333;letter-spacing:.06em;margin-bottom:10px">BIGGEST MOVERS — LAST 7 DAYS</div>
+      <div id="al-trending"><div class="al-empty">Loading...</div></div>
+    </div>
+  </div>
+  <div style="margin-top:12px;text-align:right;font-size:10px;color:#2a2a2a;letter-spacing:.06em" id="al-updated"></div>
+</div>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script>
 const SC = {
@@ -607,6 +640,67 @@ function showPage(id){
   document.getElementById('page-'+id).classList.add('active');
   const navBtn=document.getElementById('nav-'+id);
   if(navBtn)navBtn.classList.add('active');
+  if(id==='analytics') loadAnalytics();
+}
+
+// ── Analytics ────────────────────────────────────────────────────────────────
+async function loadAnalytics(){
+  const [searched,starred,trending]=await Promise.all([
+    fetch(BACKEND+'/analytics/top-searched?limit=10').then(r=>r.json()).catch(()=>[]),
+    fetch(BACKEND+'/analytics/top-starred?limit=10').then(r=>r.json()).catch(()=>[]),
+    fetch(BACKEND+'/analytics/trending?limit=10').then(r=>r.json()).catch(()=>[]),
+  ]);
+  renderAlList('al-searched',searched,'views','VIEWS');
+  renderAlList('al-starred',starred,'stars','STARS');
+  renderAlTrending('al-trending',trending);
+  const upd=document.getElementById('al-updated');
+  if(upd) upd.textContent='Updated '+new Date().toLocaleTimeString();
+}
+
+function renderAlList(elId,data,countKey,label){
+  const el=document.getElementById(elId);
+  if(!el) return;
+  if(!data||!data.length){
+    el.innerHTML='<div class="al-empty">No data yet.<br>Run: python3 scripts/simulate_reactions.py</div>';
+    return;
+  }
+  el.innerHTML=data.map((r,i)=>{
+    const a=SORTED.find(x=>x.name===r.player_name);
+    const accent=a?sc2(a.school).accent:'#e84343';
+    return`<div class="al-row">
+      <div class="al-rank">${i+1}</div>
+      <div style="flex:1">
+        <div class="al-name">${r.player_name}</div>
+        <div class="al-sub">${r.position||''}${r.position&&r.team?' · ':''}${r.team||''}</div>
+      </div>
+      <div style="text-align:right">
+        <div class="al-cnt" style="color:${accent}">${(r[countKey]||0).toLocaleString()}</div>
+        <div style="font-size:9px;color:#333;letter-spacing:.07em">${label}</div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function renderAlTrending(elId,data){
+  const el=document.getElementById(elId);
+  if(!el) return;
+  if(!data||!data.length){
+    el.innerHTML='<div class="al-empty">No data yet.<br>Run: python3 scripts/simulate_reactions.py --days 14</div>';
+    return;
+  }
+  el.innerHTML=data.map((r,i)=>{
+    return`<div class="al-row">
+      <div class="al-rank">${i+1}</div>
+      <div style="flex:1">
+        <div class="al-name">${r.player_name}</div>
+        <div class="al-sub">${r.position||''}${r.position&&r.team?' · ':''}${r.team||''}</div>
+      </div>
+      <div style="text-align:right">
+        <div class="al-cnt" style="color:#22c55e">+${r.delta}</div>
+        <div style="font-size:9px;color:#333;letter-spacing:.07em">${r.recent_views} VIEWS</div>
+      </div>
+    </div>`;
+  }).join('');
 }
 
 function setFilter(f,btn){
@@ -1379,6 +1473,10 @@ window.toggleStar = async function(name, idx){
   const entry={name:a.name,school:a.school,pos:a.pos,val:a.val};
   const ref=doc(db,'users',uid);
   const isStarred=(window.userStarred||[]).includes(name);
+  // Log star/unstar event to analytics (fire-and-forget)
+  fetch(BACKEND+'/events',{method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({event_type:isStarred?'unstar':'star',player_name:name,team:a.school||'',position:a.pos||''})
+  }).catch(()=>{});
   if(isStarred){
     window.userStarred=(window.userStarred||[]).filter(n=>n!==name);
     const snap=await getDoc(ref);
@@ -1395,6 +1493,10 @@ window.toggleStar = async function(name, idx){
 
 // ── History ───────────────────────────────────────────────────────────────
 window.addToHistory = async function(a){
+  // Log view event to analytics (fire-and-forget, no await)
+  fetch(BACKEND+'/events',{method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({event_type:'view',player_name:a.name,team:a.school||'',position:a.pos||''})
+  }).catch(()=>{});
   if(!window.currentUser) return;
   const uid=window.currentUser.uid;
   const entry={name:a.name,school:a.school,pos:a.pos,val:a.val,viewedAt:new Date().toISOString()};

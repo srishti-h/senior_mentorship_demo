@@ -22,8 +22,10 @@ from routes.instagram import instagram_bp
 from routes.news      import news_bp
 from routes.predict   import predict_bp, init_predict
 from routes.history   import history_bp
+from routes.analytics import analytics_bp
 from utils.data_loader    import load_players
 from utils.history_loader import load_history
+from utils.analytics      import init_db
 
 # ─── Logging ──────────────────────────────────────────────────────────────────
 logging.basicConfig(
@@ -43,6 +45,7 @@ app.register_blueprint(instagram_bp)
 app.register_blueprint(news_bp)
 app.register_blueprint(predict_bp)
 app.register_blueprint(history_bp)
+app.register_blueprint(analytics_bp)
 
 # ─── Load model artifacts ─────────────────────────────────────────────────────
 def _load_model():
@@ -76,6 +79,7 @@ def health():
 load_players()
 _load_model()
 load_history()   # no-op if sec_history.csv not yet generated
+init_db()        # create analytics.db if not present
 
 # ─── Entry ────────────────────────────────────────────────────────────────────
 if __name__ == "__main__":
