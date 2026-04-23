@@ -83,7 +83,7 @@ CFBD_TO_FULL = {
 
 # ── CFBD helpers ──────────────────────────────────────────────────────────────
 
-def cfbd_get(path: str, api_key: str, params: dict | None = None, delay: float = 1.1) -> list:
+def cfbd_get(path: str, api_key: str, params=None, delay: float = 1.1) -> list:
     headers = {"Authorization": f"Bearer {api_key}"}
     resp = requests.get(f"{CFBD_BASE}{path}", headers=headers, params=params or {}, timeout=20)
     if resp.status_code == 429:
@@ -175,7 +175,7 @@ def fetch_year_stats(year: int, api_key: str) -> dict[str, dict]:
 
 # ── Model helpers ─────────────────────────────────────────────────────────────
 
-def estimate_nil(payload: dict, year: int) -> int | None:
+def estimate_nil(payload: dict, year: int):
     try:
         X    = engineer_features(payload, _meta)
         logy = _model.predict(_scaler.transform(X))[0]
@@ -186,7 +186,7 @@ def estimate_nil(payload: dict, year: int) -> int | None:
         return None
 
 
-def class_at_offset(current_class: str, years_ago: int) -> str | None:
+def class_at_offset(current_class: str, years_ago: int):
     """Return historical class given current class and years back. None if pre-college."""
     try:
         idx = CLASS_ORDER.index(current_class) - years_ago
