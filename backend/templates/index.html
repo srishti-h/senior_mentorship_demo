@@ -482,6 +482,15 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:13px 2
           <div class="res-lbl">ESTIMATED MARKET VALUE</div>
           <div class="res-big" id="res-big"></div>
           <div class="res-ci" id="res-ci"></div>
+          <div id="res-actual-row" style="display:none;background:#111;border:1px solid #1e1e1e;border-radius:6px;padding:10px 14px;margin-top:4px">
+            <div style="font-size:9px;color:#555;letter-spacing:.1em;margin-bottom:6px">MARKET DATA vs. MODEL</div>
+            <div style="display:flex;gap:14px;flex-wrap:wrap">
+              <div><div style="font-size:9px;color:#555;letter-spacing:.08em;margin-bottom:2px">ACTUAL NIL</div><div id="res-actual-val" style="font-size:15px;font-weight:800;color:#22c55e"></div></div>
+              <div><div style="font-size:9px;color:#555;letter-spacing:.08em;margin-bottom:2px">MODEL ESTIMATE</div><div id="res-model-val" style="font-size:15px;font-weight:800;color:#e84343"></div></div>
+              <div><div style="font-size:9px;color:#555;letter-spacing:.08em;margin-bottom:2px">DIFFERENCE</div><div id="res-diff-val" style="font-size:15px;font-weight:800"></div></div>
+            </div>
+            <div id="res-diff-explain" style="font-size:11px;color:#555;margin-top:8px;line-height:1.6"></div>
+          </div>
           <div class="res-sep"></div>
           <div style="display:flex;justify-content:space-between;align-items:center">
             <div class="res-breakdown-title">MODEL DETAILS</div>
@@ -930,6 +939,7 @@ function onPositionChange(){
 // ── Predictor name autocomplete ───────────────────────────────────────────────
 let _predSearchTimer=null;
 let _predResults=[];
+let _predActualNIL=null;   // actual NIL when auto-populated from real athlete
 
 // Map backend position codes to predictor form values
 const POS_REMAP={OT:'OL',IOL:'OL',LS:'OL',DB:'CB',DT:'DE',DL:'DE',EDGE:'DE',EDG:'DE',ILB:'LB',OLB:'LB',BCK:'RB'};
@@ -941,6 +951,7 @@ Object.entries(TEAM_DATA).forEach(([s,d])=>{TEAM_FULL_TO_SHORT[d.full]=s;});
 function predNameSearch(){
   const q=(document.getElementById('p-name').value||'').trim();
   const dd=document.getElementById('p-name-dd');
+  _predActualNIL=null;   // clear until a result is selected
   clearTimeout(_predSearchTimer);
   if(q.length<2){dd.style.display='none';return;}
   _predSearchTimer=setTimeout(async()=>{
@@ -971,6 +982,7 @@ function predFillFrom(i){
   if(!p) return;
   document.getElementById('p-name-dd').style.display='none';
   document.getElementById('p-name').value=p.name;
+  _predActualNIL=p.nil_value||null;
 
   const set=(id,v)=>{const el=document.getElementById(id);if(el&&v!=null)el.value=v;};
 
@@ -1094,6 +1106,31 @@ async function generateValuation(){
       `playing at an ${tierLabel} with a ${fpiLabel} of ${td.fpi}, `+
       `and season production of ${posStats} across ${payload.games_played} games. `+
       `The model's confidence interval spans ${fmt(r.ci_low)}–${fmt(r.ci_high)}, reflecting the inherent variability in NIL deal-making at the ${r.pos_group||pos} position.`;
+
+    // Actual vs model comparison (only when populated from a real athlete)
+    const actualRow=document.getElementById('res-actual-row');
+    if(_predActualNIL&&actualRow){
+      const actual=_predActualNIL;
+      const predicted=r.predicted_nil;
+      const diff=actual-predicted;
+      const diffPct=Math.round(diff/predicted*100);
+      const overUnder=diff>0?'over':'under';
+      const absPct=Math.abs(diffPct);
+      document.getElementById('res-actual-val').textContent=fmt(actual);
+      document.getElementById('res-model-val').textContent=fmt(predicted);
+      const diffEl=document.getElementById('res-diff-val');
+      diffEl.textContent=(diff>=0?'+':'')+fmt(diff);
+      diffEl.style.color=diff>=0?'#22c55e':'#e84343';
+      const reason=absPct<10?'closely aligns with':`is ${absPct}% ${overUnder} what the model predicts from stats alone`;
+      const why=diff>0
+        ?'Likely factors: brand partnerships, off-field marketability, or agent-driven deals exceeding statistical value.'
+        :'Likely factors: limited brand deals, early-career NIL, or market valuation lagging behind on-field production.';
+      document.getElementById('res-diff-explain').textContent=
+        `The actual market valuation ${reason} the model's statistical estimate. ${absPct>=10?why:''}`;
+      actualRow.style.display='block';
+    } else if(actualRow){
+      actualRow.style.display='none';
+    }
 
     document.getElementById('res-loading').style.display='none';
     document.getElementById('res-content').style.display='flex';
