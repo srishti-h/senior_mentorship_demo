@@ -5,12 +5,39 @@ CSV is expected at: SENIOR_MENTORSHIP_DEMO/sec_final_training_data.csv
 """
 
 import csv
+import json
 import logging
-from config import CSV_PATH
+import os
+from config import CSV_PATH, BACKEND_DIR
+
+PHOTO_MAP_PATH = os.path.join(BACKEND_DIR, "data", "photo_map.json")
+_photo_map: dict = {}
 
 logger = logging.getLogger(__name__)
 
 _players: list[dict] = []
+
+
+def _load_photo_map() -> dict:
+    global _photo_map
+    if _photo_map:
+        return _photo_map
+    try:
+        with open(PHOTO_MAP_PATH, encoding="utf-8") as f:
+            raw = json.load(f)
+        # Build lookup keyed by comma-stripped lowercase name
+        for espn_name, url in raw.items():
+            normalised = " ".join(espn_name.replace(",", "").split()).lower()
+            _photo_map[normalised] = url
+        logger.info(f"Loaded {len(_photo_map)} ESPN photos")
+    except FileNotFoundError:
+        logger.warning("photo_map.json not found — photos will be unavailable")
+    return _photo_map
+
+
+def _lookup_photo(name: str, photos: dict) -> str:
+    normalised = " ".join(name.replace(",", "").split()).lower()
+    return photos.get(normalised, "")
 
 
 def _int(v: str, default: int = 0) -> int:
@@ -37,6 +64,7 @@ def load_players() -> list[dict]:
         return _players
 
     try:
+        photos = _load_photo_map()
         with open(CSV_PATH, newline="", encoding="utf-8") as f:
             reader = csv.DictReader(f)
             for row in reader:
@@ -73,6 +101,7 @@ def load_players() -> list[dict]:
                     "season_def_sacks":   _float(row.get("season_def_sacks")),
                     "career_def_sacks":   _float(row.get("career_def_sacks")),
                     "nil_value":          nil_val,
+                    "photo_url":          _lookup_photo(row["name"].strip(), photos),
                 })
 
         logger.info(f"Loaded {len(_players)} players from {CSV_PATH}")
