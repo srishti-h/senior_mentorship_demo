@@ -199,13 +199,13 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:13px 2
 
 /* ── ANALYTICS ────────────────────────────── */
 .al-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.al-row{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid #181818}
+.al-row{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid #222}
 .al-row:last-child{border-bottom:none}
-.al-rank{font-size:12px;color:#444;width:20px;flex-shrink:0;font-weight:700}
-.al-name{font-size:12px;font-weight:700}
-.al-sub{font-size:10px;color:#555;margin-top:1px}
+.al-rank{font-size:12px;color:#666;width:20px;flex-shrink:0;font-weight:700}
+.al-name{font-size:12px;font-weight:700;color:#ccc}
+.al-sub{font-size:10px;color:#666;margin-top:1px;letter-spacing:.04em}
 .al-cnt{font-size:14px;font-weight:800}
-.al-empty{color:#2a2a2a;font-size:12px;padding:24px 0;text-align:center;line-height:1.7}
+.al-empty{color:#555;font-size:12px;padding:24px 0;text-align:center;line-height:1.7}
 
 /* ── LOCKED CONTENT ───────────────────────── */
 .locked-banner{grid-column:1/-1;display:flex;flex-direction:column;align-items:center;gap:10px;padding:28px 20px;background:#0d0d0d;border:1px dashed #1e1e1e;border-radius:9px;text-align:center}
@@ -537,11 +537,11 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:13px 2
     </div>
     <div class="card-box">
       <div class="box-title">TRENDING NOW</div>
-      <div style="font-size:10px;color:#333;letter-spacing:.06em;margin-bottom:10px">BIGGEST MOVERS — LAST 7 DAYS</div>
+      <div style="font-size:10px;color:#666;letter-spacing:.08em;margin-bottom:10px">BIGGEST MOVERS — LAST 7 DAYS</div>
       <div id="al-trending"><div class="al-empty">Loading...</div></div>
     </div>
   </div>
-  <div style="margin-top:12px;text-align:right;font-size:10px;color:#2a2a2a;letter-spacing:.06em" id="al-updated"></div>
+  <div style="margin-top:12px;text-align:right;font-size:10px;color:#555;letter-spacing:.06em" id="al-updated"></div>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
@@ -708,7 +708,7 @@ function renderAlList(elId,data,countKey,label){
       </div>
       <div style="text-align:right">
         <div class="al-cnt" style="color:${accent}">${(r[countKey]||0).toLocaleString()}</div>
-        <div style="font-size:9px;color:#333;letter-spacing:.07em">${label}</div>
+        <div style="font-size:9px;color:#555;letter-spacing:.07em">${label}</div>
       </div>
     </div>`;
   }).join('');
@@ -730,7 +730,7 @@ function renderAlTrending(elId,data){
       </div>
       <div style="text-align:right">
         <div class="al-cnt" style="color:#22c55e">+${r.delta}</div>
-        <div style="font-size:9px;color:#333;letter-spacing:.07em">${r.recent_views} VIEWS</div>
+        <div style="font-size:9px;color:#555;letter-spacing:.07em">${r.recent_views} VIEWS</div>
       </div>
     </div>`;
   }).join('');
